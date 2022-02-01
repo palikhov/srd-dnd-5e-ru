@@ -9,7 +9,7 @@
 
 **Организатор:** Антон Палихов aka Palant
 
-**Участники перевода:** Featona, Damir, Mongo, HellFell,
+**Участники перевода:** Featona, Damir, Mongo, HellFell, xattttta, Дмитрий Курильчик aka Gravedigger
 
 **Корректоры:**
 
