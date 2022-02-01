@@ -33,6 +33,10 @@
 
 ## Дополнительно
 
-**[ШИРМА МАСТЕРА](https://trello.com/b/jSJXkgGP/srd-51-rus)**
+**[ШИРМА МАСТЕРА](https://trello.com/b/jSJXkgGP/srd-51-rus)** 
+
+идея взята из  [Ширма мастера D&D на английском](https://trello.com/b/o0EeHEnl/dmscreen)
+
+также [E5E GM Screen](https://trello.com/b/fYy9TQEy/gm-screen)
 
 
