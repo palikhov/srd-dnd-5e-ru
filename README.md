@@ -9,7 +9,7 @@
 
 **Организатор:** Антон Палихов aka Palant
 
-**Участники перевода:** Featona, Damir, Mongo, HellFell,
+**Участники перевода:** Featona, Damir, Mongo, HellFell, xattttta, Дмитрий Курильчик aka Gravedigger
 
 **Корректоры:**
 
@@ -28,5 +28,15 @@
 Перевод на платформе smartcat.ai
 
 Ресурсы связанные с переводом: 
+
+---
+
+## Дополнительно
+
+**[ШИРМА МАСТЕРА](https://trello.com/b/jSJXkgGP/srd-51-rus)** 
+
+идея взята из  [Ширма мастера D&D на английском](https://trello.com/b/o0EeHEnl/dmscreen)
+
+также [E5E GM Screen](https://trello.com/b/fYy9TQEy/gm-screen)
 
 
