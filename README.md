@@ -39,4 +39,8 @@
 
 также [E5E GM Screen](https://trello.com/b/fYy9TQEy/gm-screen)
 
+## 5e srd
 
+https://open5e.com/
+
+https://5thsrd.org/
