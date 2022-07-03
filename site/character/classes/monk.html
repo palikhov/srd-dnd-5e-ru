@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Монах - 5th Edition SRD</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u041c\u043e\u043d\u0430\u0445";
+        var mkdocs_page_input_path = "character\\classes\\monk.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../index.html" class="icon icon-home"> 5th Edition SRD
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../index.html">О ресурсе</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Приключения</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/between_adventures.html">Между Приключениями</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/movement.html">Перемещение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/planes_of_existence.html">Планы существования</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/resting.html">Отдых</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/the_environmen.html">Окружающая среда</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/time.html">Время</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Снаряжение</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/adventuring_gear.html">Снаряжение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/armor.html">Доспехи</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/coins.html">Монеты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/equipment_packs.html">Наборы снаряжения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/mounts_and_vehicles.html">Верховые животные и транспортные средства</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/selling_treasure.html">Продажа Сокровищ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/tools.html">Инструменты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/trade_goods.html">Товары</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/weapons.html">Оружие</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Персонаж</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">Основы</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../alignment.html">Мировоззрение</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../backgrounds.html">Предыстории</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../fantasy-historical_pantheons.html">Фэнтезийно-исторические пантеоны</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../languages.html">Языки</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Классы</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="barbarian.html">Варвар</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="bard.html">Бард</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="cleric.html">Клерик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="druid.html">Друид</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="fighter.html">Воин</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="monk.html">Монах</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#_2">Классовые Свойства</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_3">Хиты</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_4">Владение инструментами и навыками</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_5">Снаряжение</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_7">Ци</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_12">Монастырская традиция</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_13">Отражение снарядов</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_14">Увеличение характеристик</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_15">Медленное падение</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_16">Дополнительная Атака</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_17">Ошеломляющий удар</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_18">Энергетические удары</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_19">Изворотливость</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_20">Спокойствие разума</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_21">Чистота тела</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_22">Язык Солнца и Луны</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_23">Алмазная Душа</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_24">Безвременное тело</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_25">Пустое тело</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_26">Совершенство</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_27">Монастырские традиции</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_28">Путь открытой ладони</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="paladin.html">Паладин</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="ranger.html">Следопыт</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="rogue.html">Плут</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="sorcerer.html">Чародей</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="warlock.html">Колдун</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="wizard.html">Волшебник</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Расы</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../races/index.html">О расах</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/dragonborn.html">Драконорожденный</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/dwarf.html">Дварф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/elf.html">Эльф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/gnome.html">Гном</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/half-elf.html">Полуэльф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/half-orc.html">Полуорк</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/halfling.html">Халфлинг</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/human.html">Человек</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/tiefling.html">Тифлинг</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Сражение</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/actions_in_combat.html">Действия в бою</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/cover.html">Укрытие</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/damage_and_healing.html">Урон и лечение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/making_an_attack.html">Совершение атаки</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/mounted_combat.html">Сражение верхом</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/movement_and_position.html">Перемещения и позиция</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/order_of_combat.html">Порядок Сражения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/underwater_combat.html">Сражение под водой</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Правила для Игрока</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/advantage_and_disadvantage.html">Преимущество и помеха</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/conditions.html">Состояния</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/expenses.html">Расходы</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/feats.html">Черты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/inspiration.html">Вдохновение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/leveling_up.html">Повышение уровня</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/multiclassing.html">Мультикласс</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/proficiency_bonus.html">Бонус владения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Характеристики</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/ability_checks.html">Проверка Характеристик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/ability_scores.html">Использование характеристик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/saving_throws.html">Спасброски</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/charisma.html">Харизма</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/constitution.html">Телосложение</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/dexterity.html">Ловкость</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/intelligence.html">Интеллект</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/strength.html">Сила</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/wisdom.html">Мудрость</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Правила для Мастера</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/diseases.html">Болезни</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/legendary_creatures.html">Легендарные существа</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/madness.html">Безумие</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/magic_items.html">Волшебные предметы</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/monsters.html">Чудовища</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/nonplayer_characters.html">Неигровые Персонажи</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/objects.html">Объекты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/poisons.html">Яды</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/sentient_magical_items.html">Разумные магические предметы</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">5th Edition SRD</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Персонаж &raquo;</li>
+          <li>Классы &raquo;</li><li>Монах</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">Монах</h1>
+<h2 id="_2">Классовые Свойства</h2>
+<p>Монахи обладают следующими классовыми свойствами.</p>
+<h3 id="_3">Хиты</h3>
+<p><strong>Кость хитов:</strong> 1к8 за каждый уровень монаха<br />
+<strong>Хиты на 1 уровне:</strong> 8 + ваш модификатор Телосложения<br />
+<strong>Хиты на следующих уровнях:</strong> 1к8 (или 5) + ваш модификатор Телосложения за каждый уровень монаха после первого  </p>
+<h3 id="_4">Владение инструментами и навыками</h3>
+<p><strong>Владение доспехами:</strong> нет
+<strong>Владение оружием:</strong> Простое оружие, короткие мечи<br />
+<strong>Владение инструментами:</strong> Выберите один вид инструмента ремесленника либо музыкального инструмента<br />
+<strong>Спасброски:</strong> Сила, Ловкость<br />
+<strong>Навыки:</strong> Выберите два навыка из следующих: Акробатика, Атлетика, История, Проницательность, Религия, Скрытность  </p>
+<h3 id="_5">Снаряжение</h3>
+<p>Вы начинаете со следующим снаряжением в дополнение к снаряжению, полученному за вашу предысторию:</p>
+<ul>
+<li>(а) короткий меч или (б) любое простое оружие  </li>
+<li>(a) набор исследователя подземелий или (б) набор путешественника  </li>
+<li>10 дротиков  </li>
+</ul>
+<p><strong> Монах </strong></p>
+<table>
+<thead>
+<tr>
+<th>Уровень</th>
+<th>Бонус владения</th>
+<th>Боевые искусства</th>
+<th>Очки ци</th>
+<th>Перемещение без доспеха</th>
+<th>Особенности</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>+2</td>
+<td>1к4</td>
+<td>—</td>
+<td>-</td>
+<td>Защита без доспеха, Боевые искусства</td>
+</tr>
+<tr>
+<td>2</td>
+<td>+2</td>
+<td>1к4</td>
+<td>2</td>
+<td>+10 футов</td>
+<td>Перемещение без доспеха, Ци</td>
+</tr>
+<tr>
+<td>3</td>
+<td>+2</td>
+<td>1к4</td>
+<td>3</td>
+<td>+10 футов</td>
+<td>Монашеская традиция, Отражение снарядов</td>
+</tr>
+<tr>
+<td>4</td>
+<td>+2</td>
+<td>1к4</td>
+<td>4</td>
+<td>+10 футов</td>
+<td>Медленное падение, Увеличение характеристик</td>
+</tr>
+<tr>
+<td>5</td>
+<td>+3</td>
+<td>1к6</td>
+<td>5</td>
+<td>+10 футов</td>
+<td>Дополнительная атака, Ошеломляющий удар</td>
+</tr>
+<tr>
+<td>6</td>
+<td>+3</td>
+<td>1к6</td>
+<td>6</td>
+<td>+15 футов</td>
+<td>Умение монастырской традиции, Удары силой ци</td>
+</tr>
+<tr>
+<td>7</td>
+<td>+3</td>
+<td>1к6</td>
+<td>7</td>
+<td>+15 футов</td>
+<td>Спокойствие разума, Уклонение</td>
+</tr>
+<tr>
+<td>8</td>
+<td>+3</td>
+<td>1к6</td>
+<td>8</td>
+<td>+15 футов</td>
+<td>Увеличение характеристик</td>
+</tr>
+<tr>
+<td>9</td>
+<td>+4</td>
+<td>1к6</td>
+<td>9</td>
+<td>+15 футов</td>
+<td>Улучшенное перемещение без доспеха</td>
+</tr>
+<tr>
+<td>10</td>
+<td>+4</td>
+<td>1к6</td>
+<td>10</td>
+<td>+20 футов</td>
+<td>Чистота тела</td>
+</tr>
+<tr>
+<td>11</td>
+<td>+4</td>
+<td>1к8</td>
+<td>11</td>
+<td>+20 футов</td>
+<td>Умение монастырской традиции</td>
+</tr>
+<tr>
+<td>12</td>
+<td>+4</td>
+<td>1к8</td>
+<td>12</td>
+<td>+20 футов</td>
+<td>Увеличение характеристик</td>
+</tr>
+<tr>
+<td>13</td>
+<td>+5</td>
+<td>1к8</td>
+<td>13</td>
+<td>+20 футов</td>
+<td>Язык Солнца и Луны</td>
+</tr>
+<tr>
+<td>14</td>
+<td>+5</td>
+<td>1к8</td>
+<td>14</td>
+<td>+25 футов</td>
+<td>Алмазная Душа</td>
+</tr>
+<tr>
+<td>15</td>
+<td>+5</td>
+<td>1к8</td>
+<td>15</td>
+<td>+25 футов</td>
+<td>Безвременное тело</td>
+</tr>
+<tr>
+<td>16</td>
+<td>+5</td>
+<td>1к8</td>
+<td>16</td>
+<td>+25 футов</td>
+<td>Увеличение характеристик</td>
+</tr>
+<tr>
+<td>17</td>
+<td>+6</td>
+<td>1к10</td>
+<td>17</td>
+<td>+25 футов</td>
+<td>Умение монастырской традиции</td>
+</tr>
+<tr>
+<td>18</td>
+<td>+6</td>
+<td>1к10</td>
+<td>18</td>
+<td>+30 футов</td>
+<td>Пустое тело</td>
+</tr>
+<tr>
+<td>19</td>
+<td>+6</td>
+<td>1к10</td>
+<td>19</td>
+<td>+30 футов</td>
+<td>Увеличение характеристик</td>
+</tr>
+<tr>
+<td>20</td>
+<td>+6</td>
+<td>1к10</td>
+<td>20</td>
+<td>+30 футов</td>
+<td>Совершенство</td>
+</tr>
+<tr>
+<td>### Защита без доспеха</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- - -</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Начиная с 1 уровня, пока вы не носите ни доспех, ни щит, ваш Уровень Защиты равен 10 + модификатор Ловкости + модификатор Мудрости.</p>
+<h4 id="_6">Боевые искусства</h4>
+<hr />
+<p>На 1 уровне ваше знание боевых искусств позволяет вам эффективно использовать в бою безоружные удары и оружие монахов — короткие мечи, а также любое простое оружие, не имеющее свойств «двуручное» и «тяжёлое».</p>
+<p>Вы получаете следующие преимущества, пока вы безоружны или держите только монашеское оружие и не носите доспех и не используете щит</p>
+<ul>
+<li>
+<p>Вы можете использовать Ловкость вместо Силы для бросков атаки и урона для ваших невооруженных ударов и монашеского оружия.</p>
+</li>
+<li>
+<p>Вы можете бросить к4 вместо обычного урона вашего невооруженного удара или оружия монаха. Эта кость изменяется по мере получения вами уровней монаха, как показано в столбце Боевые искусства таблицы "Монах".</p>
+</li>
+<li>
+<p>Когда вы используете действие Атака для совершения невооруженных ударов или ударов монашеским оружием во время своего хода, бонусным действием вы можете сделать один невооруженный удар. Например, если вы совершили действие Атака и атаковали боевым посохом, вы можете совершить бонусным действием невооруженный удар, при условии, что в этом ходу вы ещё не совершали бонусное действие.</p>
+</li>
+</ul>
+<p>Некоторые монастыри используют специализированные формы монашеского оружия. Например, вы можете использовать дубинку, которая представляет собой два куска дерева, соединенных короткой цепью (называемой нунчаки) или серп с более коротким и прямым лезвием (называемым Кама). Какое бы имя вы ни использовали для оружия монаха, вы можете использовать игровую статистику, предоставленную для этого оружия.</p>
+<h3 id="_7">Ци</h3>
+<hr />
+<p>Начиная со 2 уровня ваши тренировки позволяют вам управлять мистической энергией ци. Ваш доступ к этой энергии выражается количеством очков ци. Ваш уровень монаха определяет это количество, согласно колонке «очки ци».</p>
+<p>Вы можете использовать эти очки чтобы активировать различные умения ци.  Вначале вам известны следующие три умения:  Поступь ветра, Терпеливая оборона и Шквал ударов.  С повышением уровня в этом классе вы выучите новые умения ци.</p>
+<p>Все потраченные очки ци восполняются по окончании короткого или длинного отдыха.  Вы должны потратить как минимум 30 минут на медитацию для их восстановления.</p>
+<p>Некоторые из ваших умений ци требуют от цели спасброска, позволяющего избежать эффекта.  УС такого спасброска определяется следующим образом:</p>
+<blockquote>
+<p><strong>УС спасброска ци</strong> = 8 + бонус владения + модификатор Мудрости</p>
+</blockquote>
+<h4 id="_8">Шквал ударов</h4>
+<p>Сразу же после того, как вы в свой ход совершили действие Атака, вы можете потратить 1 очко ци, чтобы совершить бонусным действием два невооруженных удара.</p>
+<h4 id="_9">Терпеливая оборона</h4>
+<p>Вы тратите 1 очко ци в свой ход, чтобы совершить бонусным действием Уклонение.</p>
+<h4 id="_10">Поступь ветра</h4>
+<p>Вы можете потратить 1 очко ци в свой ход, чтобы совершить бонусным действием Отход или Рывок. В этот ход дальность ваших прыжков удваивается.</p>
+<h4 id="_11">Перемещение без доспеха</h4>
+<hr />
+<p>Начиная со 2 уровня ваша скорость увеличивается на 10 футов, если вы не носите доспехов и щит.  Этот бонус увеличивается, когда вы достигаете определенных уровней монаха, как показано в таблице Монах.</p>
+<p>На 9 уровне вы получаете возможность в свой ход перемещаться по вертикальным поверхностям и по поверхности жидкости, не падая во время движения.</p>
+<h3 id="_12">Монастырская традиция</h3>
+<hr />
+<p>При достижении 3 уровня вы выбираете монастырскую традицию, которой следуете: Путь открытой ладони, Путь тени, или Путь четырёх стихий. Все они описаны далее.  Выбранная традиция обеспечивает вам дополнительные умения на 3, 6, 11 и 17 уровнях.</p>
+<h3 id="_13">Отражение снарядов</h3>
+<hr />
+<p>Начиная с 3 уровня вы можете реакцией отразить или поймать снаряд, если по вам попали атакой дальнобойным оружием.  Если вы делаете это, урон снижается на 1к10 + модификатор Ловкости + уровень монаха.</p>
+<p>Если вы снизили урон до 0, вы можете поймать снаряд в случае, если он достаточно мал, чтоб держать его одной рукой, и одна из ваших рук свободна.  Если вы поймаете ракету таким образом, вы можете потратить 1 очко ци, чтобы совершить дальнюю атаку с оружием или боеприпасами, которые вы только что поймали, как часть той же реакции. Вы совершаете эту атаку с мастерством, независимо от ваших навыков оружия, и ракета считается оружием монаха для атаки, которая имеет нормальную дальность 20 футов и большую дальность 60 футов.</p>
+<h3 id="_14">Увеличение характеристик</h3>
+<hr />
+<p>При достижении 4, 8, 12, 16 и 19 уровней вы можете повысить значение одной из ваших характеристик на 2 или двух характеристик на 1.  Как обычно, значение характеристики при этом не должно превысить 20.</p>
+<h3 id="_15">Медленное падение</h3>
+<hr />
+<p>Начиная с 4 уровня, если вы упали, вы можете реакцией уменьшить урон от падения на значение, равное вашему уровню монаха, умноженному на пять.</p>
+<h3 id="_16">Дополнительная Атака</h3>
+<hr />
+<p>Начиная с 5 уровня, если вы в свой ход совершаете действие Атака, вы можете совершить две атаки вместо одной.</p>
+<h3 id="_17">Ошеломляющий удар</h3>
+<hr />
+<p>Начиная с 5 уровня вы можете взаимодействовать с энергией ци, текущей в теле вашего противника.  Если вы попали по другому существу атакой оружием ближнего боя или невооруженным ударом, вы можете потратить 1 очко ци, чтобы нанести ошеломляющий удар. Цель должна преуспеть в спасброске Телосложения, иначе она станет ошеломлённой до конца вашего следующего хода.</p>
+<h3 id="_18">Энергетические удары</h3>
+<hr />
+<p>Начиная с 6 уровня ваши безоружные удары считаются магическими при определении преодоления сопротивления и иммунитета к немагическим атакам и урону.</p>
+<h3 id="_19">Изворотливость</h3>
+<hr />
+<p>На 7-м уровне ваша инстинктивная ловкость позволяет вам уклоняться от некоторых эффектов области, таких как дыхание молнии синего дракона или заклинание <em>огненного шара</em>. Если вы попадаете под действие эффекта, который позволяет вам совершить спасбросок Ловкости, чтобы получить только половину урона, вместо этого вы не получаете вовсе никакого урона, если спасбросок был успешен, и только половину урона, если он был провален.</p>
+<h3 id="_20">Спокойствие разума</h3>
+<hr />
+<p>Начиная с 7 уровня вы можете действием окончить один из действующих на вас эффектов, делающих вас очарованным или испуганным.</p>
+<h3 id="_21">Чистота тела</h3>
+<hr />
+<p>На 10-м уровне ваше владение ци, протекающей через вас, делает вас невосприимчивым к болезням и яду.</p>
+<h3 id="_22">Язык Солнца и Луны</h3>
+<hr />
+<p>Начиная с 13 уровня вы понимаете, как взаимодействовать с энергией ци в чужом разуме, и теперь вы понимаете речь на любом языке. Кроме того, все существа, способные понимать хотя бы один язык, понимают то, что вы сказали.</p>
+<h3 id="_23">Алмазная Душа</h3>
+<hr />
+<p>Начиная с 14 уровня ваше мастерство ци предоставляет вам владение всеми спасбросками.</p>
+<p>Кроме того, если вы провалили спасбросок, вы можете повторить его, потратив 1 очко ци, и должны использовать второй результат.</p>
+<h3 id="_24">Безвременное тело</h3>
+<hr />
+<p>На 15 уровне ваша ци поддерживает вас, и ваше тело больше не подвержено признакам старения. Вы не можете быть состарены магически.  Впрочем, вы всё ещё можете умереть от старости. Кроме того, вам больше не требуется еда и вода.</p>
+<h3 id="_25">Пустое тело</h3>
+<hr />
+<p>Начиная с 18 уровня вы можете действием потратить 4 очка ци, чтобы стать невидимым на 1 минуту.  В течение этого времени вы получаете сопротивление всем видам урона кроме урона силовым полем.</p>
+<p>Кроме того, вы можете потратить 8 очков ци, чтобы использовать заклинание <em>проекция в астрал</em> без применения материальных компонентов.  Вы не можете перемещать кого-либо вместе с собой.</p>
+<h3 id="_26">Совершенство</h3>
+<hr />
+<p>На 20 уровне, если при броске инициативы у вас нет очков ци, вы получаете 4 таких очка.</p>
+<h2 id="_27">Монастырские традиции</h2>
+<p>Три традиции монашеских ого преследования практик распространены в монастырях, разбросанных по всей мультивселенной. Большинство монастырей практикуют исключительно одну традицию, но некоторые чтят три традиции и обучают каждого монаха в соответствии с его способностями и интересами. Все три традиции основываются на одних и тех же базовых техниках. Различия проявляются при более глубоком изучении.  Поэтому монах должен выбрать ту или иную традицию только по достижении 3 уровня.</p>
+<h3 id="_28">Путь открытой ладони</h3>
+<hr />
+<p>Монахи, избравшие этот путь, являются непревзойдёнными мастерами боевых искусств, вне зависимости от того, вооружены ли они.  Они изучают техники, позволяющие толкать и опрокидывать противника, а также лечить себя, манипулируя энергией ци.</p>
+<h4 id="_29">Техники открытой ладони</h4>
+<p>При выборе этой традиции на 3 уровне вы получаете возможность манипулировать вражеской энергией ци, направляя свою собственную. Если вы попадаете по существу одной из атак, дарованных Шквалом ударов, вы можете наложить на цель один из следующих эффектов: </p>
+<ul>
+<li>Цель должна преуспеть в спасброске Ловкости, иначе она сбивается с ног.</li>
+<li>Цель должна совершить спасбросок Силы.   В случае провала вы можете толкнуть её от себя на расстояние до 15 футов.</li>
+<li>Цель не может совершать реакции до конца вашего следующего хода.</li>
+</ul>
+<h4 id="_30">Исцеление тела</h4>
+<p>На 6 уровне вы получаете способность лечить себя.  Вы можете действием восстановить количество хитов, равное вашему утроенному уровню монаха. Вы должны завершить длинный отдых, прежде чем сможете использовать это умение снова.</p>
+<h4 id="_31">Спокойствие</h4>
+<p>Начиная с 11 уровня вы можете совершить специальную медитацию, окружающую вас аурой мира.  В конце длинного отдыха вы получаете эффект заклинания <em>святилища</em>, который длится до начала вашего следующего длинного отдыха (заклинание может закончиться раньше обычного). УС спасброска от заклинания равна 8 + модификатор Мудрости + бонус владения.</p>
+<h4 id="_32">Дрожащая ладонь</h4>
+<p>На 17 уровне вы получаете возможность создавать смертельные колебания в чужом теле.  Если вы попадёте по существу безоружным ударом, вы можете потратить 3 очка ци, чтобы создать неуловимые колебания в его теле, которые длятся в течение количества суток, равного вашему уровню монаха.  Колебания безвредны, пока вы не остановите их действием.  Для того чтобы остановить их, цель должна находится на одном плане существования с вами.  При этом существо должно совершить спасбросок Телосложения. в случае провала его хиты опускаются до 0. В случае успеха цель получает 10к10 некротического урона.</p>
+<p>Вы можете держать одновременно только одно существо под действием Дрожащей ладони.  Вы можете решить закончить колебания без вреда, не тратя действие.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="fighter.html" class="btn btn-neutral float-left" title="Воин"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="paladin.html" class="btn btn-neutral float-right" title="Паладин">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Rules provided by Wizards of the Coast under the <a href="/license">OGL 1.0a</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="fighter.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="paladin.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

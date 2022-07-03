@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Урон и лечение - 5th Edition SRD</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u0423\u0440\u043e\u043d \u0438 \u043b\u0435\u0447\u0435\u043d\u0438\u0435";
+        var mkdocs_page_input_path = "combat\\damage_and_healing.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> 5th Edition SRD
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">О ресурсе</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Приключения</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/between_adventures.html">Между Приключениями</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/movement.html">Перемещение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/planes_of_existence.html">Планы существования</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/resting.html">Отдых</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/the_environmen.html">Окружающая среда</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/time.html">Время</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Снаряжение</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/adventuring_gear.html">Снаряжение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/armor.html">Доспехи</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/coins.html">Монеты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/equipment_packs.html">Наборы снаряжения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/mounts_and_vehicles.html">Верховые животные и транспортные средства</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/selling_treasure.html">Продажа Сокровищ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/tools.html">Инструменты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/trade_goods.html">Товары</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/weapons.html">Оружие</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Персонаж</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Основы</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../character/alignment.html">Мировоззрение</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/backgrounds.html">Предыстории</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/fantasy-historical_pantheons.html">Фэнтезийно-исторические пантеоны</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/languages.html">Языки</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Классы</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/barbarian.html">Варвар</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/bard.html">Бард</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/cleric.html">Клерик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/druid.html">Друид</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/fighter.html">Воин</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/monk.html">Монах</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/paladin.html">Паладин</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/ranger.html">Следопыт</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/rogue.html">Плут</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/sorcerer.html">Чародей</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/warlock.html">Колдун</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/wizard.html">Волшебник</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Расы</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/index.html">О расах</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/dragonborn.html">Драконорожденный</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/dwarf.html">Дварф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/elf.html">Эльф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/gnome.html">Гном</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/half-elf.html">Полуэльф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/half-orc.html">Полуорк</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/halfling.html">Халфлинг</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/human.html">Человек</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/tiefling.html">Тифлинг</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Сражение</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="actions_in_combat.html">Действия в бою</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="cover.html">Укрытие</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="damage_and_healing.html">Урон и лечение</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">Хиты</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">Бросок урона</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">Критические попадания</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">Виды урона</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">Сопротивление урону и уязвимость</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">Лечение</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0">Опускание хитов до 0</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_8">Мгновенная смерть</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_9">Потеря сознания</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_10">Спасброски от смерти</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_11">Стабилизация существа</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_12">Чудовища и смерть</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_13">Нокаутирование существа</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_14">Временные хиты</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="making_an_attack.html">Совершение атаки</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="mounted_combat.html">Сражение верхом</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="movement_and_position.html">Перемещения и позиция</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="order_of_combat.html">Порядок Сражения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="underwater_combat.html">Сражение под водой</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Правила для Игрока</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/advantage_and_disadvantage.html">Преимущество и помеха</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/conditions.html">Состояния</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/expenses.html">Расходы</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/feats.html">Черты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/inspiration.html">Вдохновение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/leveling_up.html">Повышение уровня</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/multiclassing.html">Мультикласс</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/proficiency_bonus.html">Бонус владения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Характеристики</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/ability_checks.html">Проверка Характеристик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/ability_scores.html">Использование характеристик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/saving_throws.html">Спасброски</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/charisma.html">Харизма</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/constitution.html">Телосложение</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/dexterity.html">Ловкость</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/intelligence.html">Интеллект</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/strength.html">Сила</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/wisdom.html">Мудрость</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Правила для Мастера</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/diseases.html">Болезни</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/legendary_creatures.html">Легендарные существа</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/madness.html">Безумие</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/magic_items.html">Волшебные предметы</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/monsters.html">Чудовища</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/nonplayer_characters.html">Неигровые Персонажи</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/objects.html">Объекты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/poisons.html">Яды</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/sentient_magical_items.html">Разумные магические предметы</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">5th Edition SRD</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Сражение &raquo;</li><li>Урон и лечение</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">Урон и лечение</h1>
+<p>Раны и угроза смерти постоянно сопровождают тех, кто исследуют фентезийные игровые миры. Выпад меча, меткая стрела, пламя от заклинания <em>огненный шар</em> — всё это может причинить урон и даже убить самых стойких существ.</p>
+<h2 id="_2">Хиты</h2>
+<p>Хиты отражают комбинацию физической и умственной стойкости, стремление к существованию и удачу. Существ с большим числом хитов трудно убить. Те, у кого хитов мало — менее жизнеспособны.</p>
+<p>Текущие хиты существа (обычно называются просто хитами) могут быть любым числом от 0 до максимума его хитов. Это число часто меняется, когда существо получает урон и лечится.</p>
+<p>Каждый раз, когда существо получает урон, этот урон вычитается из его хитов. Потеря хитов никак не сказывается на возможностях существа, пока хиты не опускаются до 0.</p>
+<h2 id="_3">Бросок урона</h2>
+<p>У оружия, заклинаний и боевых умений чудовищ указан причиняемый ими урон. Вы бросаете указанную кость или кости, добавляете модификаторы и причиняете цели получившийся урон. Бонусы к урону предоставляет магическое оружие, особые умения и прочие факторы. Со штрафом можно нанести 0 урона, но никогда отрицательный урон.</p>
+<p>При атаке с <strong>оружием</strong> вы добавляете к урону модификатор характеристики — той же самой характеристики, что использовалась для броска атаки. В <strong>заклинании</strong> написано, какие кости бросать для определения урона и какие модификаторы применяются.</p>
+<p>Если заклинание или эффект причиняет урон сразу <strong>нескольким целям,</strong> бросок урона совершается один на всех. Например, когда волшебник бросает <em>огненный шар</em> или клирик бросает <em>небесный огонь</em>, урон заклинания накатывается один раз для всех существ, попавших в взрыв.</p>
+<h3 id="_4">Критические попадания</h3>
+<p>Если вы совершаете критическое попадание, вы бросаете кости урона по цели два раза. Бросьте кости урона два раза и сложите сумму. Затем добавьте все уместные модификаторы. Для ускорения можете бросить все кости одновременно.</p>
+<p>Например, если вы совершили критическое попадание кинжалом, бросьте для урона 2к4, а не 1к4, затем добавьте модификатор характеристики. Если в атаку входят другие кости урона, например, от умения плута Скрытая атака, вы бросаете по два раза и эти кости.</p>
+<h3 id="_5">Виды урона</h3>
+<p>Разные атаки, заклинания и прочие эффекты причиняют разные виды урона. Сами по себе разные виды урона не подчиняются особым правилам, но от них зависят другие элементы игры, такие как сопротивление урону.</p>
+<p>Виды урона идут с примерами, помогающими Мастеру определить вид урона для нового эффекта.</p>
+<p><strong>Кислота.</strong> Едкое дыхание чёрного дракона и растворяющая слизь чёрного пудинга причиняют урон кислотой.</p>
+<p><strong>Дробящий.</strong> Тяжёлые силовые атаки — молотом, падением, сдавливанием и т. п. — причиняют дробящий урон.</p>
+<p><strong>Холод.</strong> Лютый холод от копья ледяного дьявола и морозное дыхание белого дракона причиняют урон холодом.</p>
+<p><strong>Огонь.</strong> Красный дракон, выдыхающий пламя, и многие заклинания, создающие жар, причиняют урон огнём.</p>
+<p><strong>Силовой.</strong> Сила — это чистая магия, сфокусированная в разрушительную силу. Чаще всего силовой урон причиняют заклинания, такие как <em>волшебная стрела</em> и <em>духовное оружие</em>.</p>
+<p><strong>Молния.</strong> Заклинание <em>молния</em> и дыхание синего дракона причиняют урон электричеством.</p>
+<p><strong>Некротический.</strong> Некротическая энергия, излучаемая некоторой нежитью и такими заклинаниями как <em>леденящее прикосновение</em>, иссушают плоть и даже душу.</p>
+<p><strong>Колющий.</strong> Колющие и пронзающие атаки, включая удары копьём и укусы чудовищ, причиняют колющий урон.</p>
+<p><strong>Яд.</strong> Ядовитые укусы и токсичное дыхание зелёного дракона причиняют урон ядом.</p>
+<p><strong>Психический.</strong> Атаки силой разума, такие как у пожирателей разума, причиняют урон психической энергией.</p>
+<p><strong>Лучистый.</strong> Урон, причиняемый заклинанием <em>небесный огонь</em> клирика и карающим оружием ангела, опаляют плоть как огонь и переполняют дух силой.</p>
+<p><strong>Рубящий.</strong> Мечи, топоры и когти чудовищ причиняют рубящий урон.</p>
+<p><strong>Гром.</strong> Оглушительные звуковые волны, такие как от заклинания <em>волна грома</em>, причиняют урон громом.</p>
+<h2 id="_6">Сопротивление урону и уязвимость</h2>
+<p>Некоторым существам и предметам чрезвычайно трудно или наоборот, легко причинить вред определёнными видами урона.</p>
+<p>Если существо или предмет обладает <strong>сопротивлением</strong> типу повреждения, то урон этого типа уменьшается вдвое. Если существо или объект имеет <strong>уязвимость</strong> к типу повреждения, то урон этого типа удваивается против него.</p>
+<p>Сопротивление и уязвимость применяются к урону после всех остальных модификаторов. Например, по существу с сопротивлением к дробящему урону попадает атака, причиняющая дробящий урон 25. Это существо также находится в магической ауре, уменьшающей весь урон на 5. Вначале из урона 25 вычитается 5 а результат делится пополам, так что существо получает урон 10.</p>
+<p>Многократные сопротивления или уязвимости к одному и тому же виду урона не складываются. Например, если у существа есть сопротивление к урону огнём и сопротивление к немагическому урону, то урон от немагического огня уменьшается в два, а не в четыре раза.</p>
+<h2 id="_7">Лечение</h2>
+<p>Если урон не вызвал смерть, он не постоянен. И даже смерть можно обратить мощной магией.  Хиты существа восстанавливаются отдыхом, а магия, такая как заклинание <em>лечение ран</em> или <em>зелье лечения</em> устраняют урон мгновенно.</p>
+<p>Если существо получает какое-либо лечение, восстановленные хиты добавляются к его текущим хитам. Хиты существа не могут превышать его максимум хитов, поэтому лишние хиты теряются. Например, друид восстанавливает рейнджеру 8 8 хитов. Если у рейнджера сейчас 14 хитов, а максимум хитов 20, рейнджер восстанавливает 6 хитов, а не 8.</p>
+<p>Умершее существо не может восстанавливать хиты, пока такая магия как <em>возрождение</em> не вернёт его к жизни.</p>
+<h2 id="0">Опускание хитов до 0</h2>
+<p>Если ваши хиты опустились до 0, вы либо тут же умираете, либо теряете сознание, это описано далее.</p>
+<h3 id="_8">Мгновенная смерть</h3>
+<p>Огромный урон может убить вас мгновенно. Если урон опускает ваши хиты до 0, и ещё остаются излишки, вы умираете, если излишки равны максимуму ваших хитов или превышают его.</p>
+<p>Например, у клерика с максимумом хитов 12 сейчас 6 хитов. Если она получает от атаки 18 урона , хиты опускаются до 0, но остаётся ещё 12 урона. Так как этот урон равен максимуму хитов, клерик умирает.</p>
+<h3 id="_9">Потеря сознания</h3>
+<p>Если урон опускает ваши хиты до 0, но не убивает вас, вы теряете сознание. Вы приходите в сознание, если восстанавливаете хиты.</p>
+<h3 id="_10">Спасброски от смерти</h3>
+<p>Если вы начинаете ход с 0 хитов, вы должны совершить особый спасбросок, называемый спасброском от смерти, чтобы определить, приближаетесь ли вы к смерти или цепляетесь за жизнь. В отличие от других спасбросков, этот не привязан ни к какой характеристике. Теперь вы находитесь в руках судьбы, и помочь вам могут только заклинания и умения, улучшающие шансы на совершение успешных спасбросков.</p>
+<p>Бросьте к20. Если результат будет «10» или выше, вы преуспели. В противном случае спасбросок провален. Сами по себе успехи и неудачи не оказывают никакого эффекта. В случае трёх успехов вы становитесь стабилизированным (смотрите ниже). В случае трёх провалов вы умираете. Успехи и провалы не должны быть последовательными; отслеживайте количество и тех и других, пока не накопите три одинаковых результата. И те и другие сбрасываются до нуля, когда вы восстанавливаете любое количество хитов или становитесь стабилизированным.</p>
+<p><strong>Выпадение «1» или «20».</strong> Если вы совершаете спасбросок от смерти и выпадает «1», это считается двумя провалами. Если выпадет «20», вы восстанавливаете 1 хит.</p>
+<p><strong>Урон при 0 хитов.</strong> Если вы получаете урон, когда у вас уже 0 хитов, вы получаете проваленный спасбросок от смерти. Если это урон от критического попадания, вы получаете два провала. Если урон равен или превышает ваш максимум точки попадания, вы страдаете мгновенной смертью.</p>
+<h3 id="_11">Стабилизация существа</h3>
+<p>Самый надёжный способ помочь существу с 0 хитов это его лечение. Если лечение недоступно, существо можно хотя бы стабилизировать, чтобы оно не умерло от проваленного спасброска от смерти.</p>
+<p>Вы можете действием оказать первую помощь находящемуся без сознания существу и попытаться стабилизировать его, для чего требуется совершить проверку Мудрости (Медицина) с УС 10.</p>
+<p><strong>Стабилизированное</strong> существо не совершает спасброски от смерти, несмотря на то, что хиты равны 0, но и в сознание не приходит. Получив урон, существо перестаёт быть стабилизированным и снова начинает совершать спасброски от смерти. Стабилизированное существо, не получившее лечения, восстанавливает 1 хит после 1к4 часов.</p>
+<h3 id="_12">Чудовища и смерть</h3>
+<p>Большинство чудовищ под управлением Мастера сразу умирают, когда их хиты опускаются до 0, не теряя сознание и не совершая спасбросков от смерти.</p>
+<p>Могущественные злодеи и особые неигровые персонажи могут стать исключением; Мастер может позволить им потерять сознание и использовать правила, предназначенные для персонажей игроков.</p>
+<h2 id="_13">Нокаутирование существа</h2>
+<p>Иногда нападающий хочет обезвредить врага, а не убивать его. Если атакующий опускает хиты существа до 0 атакой ближнего боя, он может заявить, что нокаутирует его. Атакующий может сделать этот выбор в момент нанесения урона.  В этом случае цель теряет сознание, но сразу становится стабилизированной.</p>
+<h2 id="_14">Временные хиты</h2>
+<p>Некоторые заклинания и особые умения дают существам временные хиты. Временные хиты — это  не настоящие хиты; это заслон от урона, буфер, защищающий от ран.</p>
+<p>Если у вас есть временные хиты и вы получаете урон, временные хиты снимаются первыми, а излишки урона переносятся на обычные хиты. Например, если у вас есть 5 временных хитов и вы получаете урон 7, вы теряете все временные хиты и получаете урон 2.</p>
+<p>Из-за того, что временные хиты это не настоящие хиты, их количество может превышать максимум хитов. Таким образом, персонаж может иметь полные хиты и получать при этом временные хиты.</p>
+<p>Лечение не восстанавливает временные хиты, и они не складываются вместе. Если у вас есть временные хиты, и вы получаете ещё некоторое количество их, вы сами решаете, какие использовать: старые или новые. Например, если заклинание дарует вам 12 временных хитов, когда у вас уже есть 10, у вас может быть или 10 или 12 временных хитов, но не 22.</p>
+<p>Если у вас 0 хитов, получение временных хитов не приводит вас в сознание и не стабилизирует вас. Они всё ещё могут поглощать урон, причиняемый вам, но спасти вас может только настоящее лечение.</p>
+<p>Если умение, даровавшее временные хиты, не указывает их длительность, они существуют, пока не кончатся или пока вы не закончите длинный отдых.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="cover.html" class="btn btn-neutral float-left" title="Укрытие"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="making_an_attack.html" class="btn btn-neutral float-right" title="Совершение атаки">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Rules provided by Wizards of the Coast under the <a href="/license">OGL 1.0a</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="cover.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="making_an_attack.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

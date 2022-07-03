@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Совершение атаки - 5th Edition SRD</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u0421\u043e\u0432\u0435\u0440\u0448\u0435\u043d\u0438\u0435 \u0430\u0442\u0430\u043a\u0438";
+        var mkdocs_page_input_path = "combat\\making_an_attack.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> 5th Edition SRD
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">О ресурсе</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Приключения</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/between_adventures.html">Между Приключениями</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/movement.html">Перемещение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/planes_of_existence.html">Планы существования</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/resting.html">Отдых</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/the_environmen.html">Окружающая среда</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/time.html">Время</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Снаряжение</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/adventuring_gear.html">Снаряжение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/armor.html">Доспехи</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/coins.html">Монеты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/equipment_packs.html">Наборы снаряжения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/mounts_and_vehicles.html">Верховые животные и транспортные средства</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/selling_treasure.html">Продажа Сокровищ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/tools.html">Инструменты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/trade_goods.html">Товары</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/weapons.html">Оружие</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Персонаж</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Основы</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../character/alignment.html">Мировоззрение</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/backgrounds.html">Предыстории</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/fantasy-historical_pantheons.html">Фэнтезийно-исторические пантеоны</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/languages.html">Языки</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Классы</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/barbarian.html">Варвар</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/bard.html">Бард</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/cleric.html">Клерик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/druid.html">Друид</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/fighter.html">Воин</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/monk.html">Монах</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/paladin.html">Паладин</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/ranger.html">Следопыт</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/rogue.html">Плут</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/sorcerer.html">Чародей</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/warlock.html">Колдун</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/wizard.html">Волшебник</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Расы</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/index.html">О расах</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/dragonborn.html">Драконорожденный</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/dwarf.html">Дварф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/elf.html">Эльф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/gnome.html">Гном</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/half-elf.html">Полуэльф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/half-orc.html">Полуорк</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/halfling.html">Халфлинг</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/human.html">Человек</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/tiefling.html">Тифлинг</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Сражение</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="actions_in_combat.html">Действия в бою</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="cover.html">Укрытие</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="damage_and_healing.html">Урон и лечение</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="making_an_attack.html">Совершение атаки</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">Броски атаки</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">Модификаторы броска</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-20">Выпадение «1» или «20»</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">Невидимые атакующие и цели</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">Дальнобойные Атаки</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_6">Дистанция</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_7">Дальнобойные атаки в ближнем бою</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_8">Атаки в ближнем бою</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_9">Провоцированные атаки</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_10">Сражение двумя оружиями</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_11">Состязания в бою</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_12">Захват</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_13">Толкание существа</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="mounted_combat.html">Сражение верхом</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="movement_and_position.html">Перемещения и позиция</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="order_of_combat.html">Порядок Сражения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="underwater_combat.html">Сражение под водой</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Правила для Игрока</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/advantage_and_disadvantage.html">Преимущество и помеха</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/conditions.html">Состояния</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/expenses.html">Расходы</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/feats.html">Черты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/inspiration.html">Вдохновение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/leveling_up.html">Повышение уровня</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/multiclassing.html">Мультикласс</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/proficiency_bonus.html">Бонус владения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Характеристики</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/ability_checks.html">Проверка Характеристик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/ability_scores.html">Использование характеристик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/saving_throws.html">Спасброски</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/charisma.html">Харизма</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/constitution.html">Телосложение</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/dexterity.html">Ловкость</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/intelligence.html">Интеллект</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/strength.html">Сила</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/wisdom.html">Мудрость</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Правила для Мастера</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/diseases.html">Болезни</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/legendary_creatures.html">Легендарные существа</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/madness.html">Безумие</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/magic_items.html">Волшебные предметы</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/monsters.html">Чудовища</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/nonplayer_characters.html">Неигровые Персонажи</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/objects.html">Объекты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/poisons.html">Яды</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/sentient_magical_items.html">Разумные магические предметы</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">5th Edition SRD</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Сражение &raquo;</li><li>Совершение атаки</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">Совершение атаки</h1>
+<p>Независимо от того, наносите ли вы удар оружием ближнего боя, стреляете из оружия на расстоянии или делаете бросок атаки как часть заклинания, атака имеет простую структуру.</p>
+<ol>
+<li><strong>Выберите цель.</strong> Выберите цель в пределах досягаемости атаки: существо, предмет или место.  </li>
+<li><strong>Определите модификаторы.</strong> Мастер определяет, есть ли у цели укрытие, и есть ли у вас преимущество или помеха на броски атаки по ней. Кроме того, заклинания, особые умения и прочие эффекты могут накладывать бонусы и штрафы к вашему броску атаки.  </li>
+<li><strong>Определите последствия атаки</strong> Вы совершаете бросок атаки. При попадании вы совершаете бросок урона, если только атака не подчиняется другим правилам. Некоторые атаки создают особые эффекты в добавление к урону или вместо него.</li>
+</ol>
+<p>Если возникнет вопрос, является ли то, что вы делаете, атакой, ответ будет простым: если вы совершаете бросок атаки, вы совершаете атаку.</p>
+<h2 id="_2">Броски атаки</h2>
+<p>Если вы совершаете атаку, бросок атаки определяет, попала атака или промахнулась. Для совершения броска атаки бросьте к20 и добавьте уместные модификаторы. Если сумма результата броска и модификаторов не меньше Уровня Защиты (УЗ) цели, атака попадает. УЗ персонажа определяется при создании персонажа, а УЗ чудовищ указан в их блоке статистики.</p>
+<h3 id="_3">Модификаторы броска</h3>
+<p>Когда персонаж совершает бросок атаки, из модификаторов чаще всего используются модификатор характеристики и бонус владения. Если бросок атаки совершает чудовище, оно использует модификатор, указанный в блоке статистики.</p>
+<p><strong>Модификатор характеристики.</strong> Для атак рукопашным оружием используется модификатор Силы, а для атак дальнобойным оружием используется модификатор Ловкости. Оружие со свойствами «метательное» или «фехтовальное» не подчиняются этому правилу.</p>
+<p>Некоторые заклинания тоже требуют совершения броска атаки. Характеристика, модификатор которой используется при этом, называется заклинательной характеристикой.</p>
+<p><strong>Бонус владения.</strong> Вы добавляете бонус владения к броскам атаки, когда совершаете атаку оружием, которым владеете, а также когда атакуете заклинанием.</p>
+<h3 id="1-20">Выпадение «1» или «20»</h3>
+<p>Судьба может улыбнуться вам, а может отвернуться от вас; иногда новобранцы совершают удачные атаки, а ветераны могут промахиваться.</p>
+<p>Если при броске к20 для броска атаки выпало «20», атака попадает вне зависимости от всех модификаторов и УЗ цели. Это называется критическим ударом, который объясняется далее в этой главе.</p>
+<p>Если при броске к20 для броска атаки выпало «1», атака промахивается вне зависимости от всех модификаторов и УЗ цели.</p>
+<h2 id="_4">Невидимые атакующие и цели</h2>
+<p>Участники сражения часто пытаются избежать внимания врагов, прячась, накладывая заклинания и скрываясь в темноте.</p>
+<p>Если вы атакуете цель, которую не видите, бросок атаки совершается с помехой. Это справедливо и в случае, если вы не знаете местонахождение цели, и в случае, если вы слышите цель, но не видите её. Если цели не было в том месте, которое вы атаковали, вы автоматически промахиваетесь, но Мастер обычно просто говорит, что атака промахнулась, не сообщая, что цель была вообще в другом месте.</p>
+<p>Если существо вас не видит, вы совершаете по нему броски атаки с преимуществом. Если вы скрылись (вас не видно и не слышно), то при совершении атаки вы выдаёте своё местоположение, когда атака попадает или промахивается.</p>
+<h2 id="_5">Дальнобойные Атаки</h2>
+<p>Если вы совершаете дальнобойную атаку, вы стреляете из лука или арбалета, кидаете ручной топор или другой снаряд во врага с расстояния. Чудовища могут метать шипы из хвоста. Многие заклинания тоже включают в себя совершение дальнобойной атаки.</p>
+<h3 id="_6">Дистанция</h3>
+<p>Дальнобойные атаки можно совершать только по целям, находящимся в пределах определённой дистанции.</p>
+<p>Если у дальнобойной атаки, например, заклинанием, указана только одна дистанция, вы не можете атаковать цели, находящиеся за пределами этой дистанции.</p>
+<p>У некоторых дальнобойных атак, например, у совершаемых из лука, указаны две дистанции. Меньшее число — это нормальная дистанция, а большее — максимальная дистанция. Бросок атаки совершается с помехой, если цель за пределами нормальной дистанции, и вы не можете атаковать цель, находящуюся за пределами максимальной дистанции.</p>
+<h3 id="_7">Дальнобойные атаки в ближнем бою</h3>
+<p>Дальнобойной атакой трудно прицелиться, если непосредственно перед вами стоит враг. Если вы совершаете дальнобойную атаку оружием, заклинанием или каким-то другим средством, бросок атаки совершается с помехой, если вы находитесь в пределах 5 футов от враждебного не недееспособного существа.</p>
+<h2 id="_8">Атаки в ближнем бою</h2>
+<p>Используемые в близком бою атаки позволяют атаковать врага, находящегося в пределах вашей досягаемости. Обычно атака ближнего боя совершается зажатым в руке оружием, таким как меч, боевой молот или топор. Чудовища совершают атаку ближнего боя, когда они наносят удар своими когтями, рогами, зубами, щупальцами или другой частью тела. Некоторые заклинания тоже включают в себя совершение атаки в ближнем бою.</p>
+<p>Большинство существ имеют 5-футовую <strong>досягаемость</strong> и, таким образом, могут атаковать цели в пределах 5 футов от них, совершая атаку в ближнем бою. Некоторые существа (обычно с размером больше Среднего) обладают атаками ближнего боя с досягаемостью больше 5 футов, что указано в их описании.</p>
+<p>Вместо того чтобы использовать оружие для атаки в ближнем бою, вы можете использовать <strong>невооруженный удар</strong>: удар кулаком, удар ногой, удар головой или подобный сильный удар (ни один из которых не считается оружием). При попадании безоружный удар причиняет дробящий урон 1 + ваш модификатор Силы. Вы считаетесь владеющим безоружными атаками.</p>
+<h3 id="_9">Провоцированные атаки</h3>
+<p>В бою постоянно следят за шансами ударить врага, который убегает или проходит мимо. Такой удар называется провоцированной атакой.</p>
+<p>Вы можете совершить провоцированную атаку, если враждебное существо, которое вы видите, покидает вашу досягаемость. Для этого вы реакцией совершаете одну атаку ближнего боя по спровоцировавшему существу. Атака происходит прямо перед тем, как существо покидает вашу досягаемость.</p>
+<p>Вы можете избежать провоцированной атаки, совершив действие Отход. Вы также не провоцируете атаки, если телепортируетесь, или кто-то (что-то) перемещает вас, не тратя ваше перемещение, действие или реакцию. Например, вы не провоцируете атаку, если взрыв выбросил вас из пределов досягаемости врага или гравитация заставила упасть мимо врага, стоящего на возвышении.</p>
+<h3 id="_10">Сражение двумя оружиями</h3>
+<p>Когда вы выполняете атакующее действие и атакуете легким оружием ближнего боя, которое вы держите в одной руке, вы можете использовать бонусное действие для атаки другим легким оружием ближнего боя, которое вы держите в другой руке. Вы не добавляете модификатор характеристики к урону от бонусной атаки, если он не отрицательный.</p>
+<p>Если у любого из оружий есть свойство «метательное», вы можете не совершать им атаку ближнего боя, а метнуть его.</p>
+<h2 id="_11">Состязания в бою</h2>
+<p>В сражениях часто приходится противопоставлять свою доблесть отваге врага. Это отыгрывается в виде состязаний. В этом разделе описаны самые распространённые состязания, требующие в бою совершения действий: захват и толкание существ.  Мастер может использовать механику этих действий для моделирования импровизированных действий.</p>
+<h3 id="_12">Захват</h3>
+<p>Если вы хотите схватить существо или побороться с ним, вы можете использовать действие Атака для совершения особой атаки ближнего боя. Если вы можете совершать многочисленные атаки действием Атака, эта атака заменяет одну из них.</p>
+<p>Цель вашего захвата должна быть не более чем на одну категорию больше вас, и она должна находиться в пределах вашей досягаемости. Используя как минимум одну свободную руку, вы пытаетесь схватить цель, совершая проверку захвата: проверку Силы (Атлетика), противопоставленную проверке Силы (Атлетика) или Ловкости (Акробатика) цели (цель сама выбирает, какую характеристику использовать). Если вы преуспеете, цель становится захваченной. В описании состояния сказано, что его оканчивает, и вы в любой момент можете отпустить цель (действие не требуется).</p>
+<p><strong>Высвобождение из захвата.</strong> Захваченное существо может пытаться высвободиться действием. Для этого оно действием совершает проверку Силы (Атлетика) или Ловкость (Акробатика), противопоставленную вашей проверке Силы (Атлетика).</p>
+<p><strong>Перемещение захваченного существа.</strong> Если вы перемещаетесь, вы можете тащить или нести захваченное существо вместе с собой, но ваша скорость уменьшается вдвое, если только существо не меньше вас как минимум на две категории.</p>
+<h3 id="_13">Толкание существа</h3>
+<p>Вы можете при помощи действия Атака совершить особую атаку ближнего боя, чтобы или сбить его с ног, или оттолкнуть от себя. Если вы можете совершать многочисленные атаки действием Атака, эта атака заменяет одну из них.</p>
+<p>Цель вашего толкания должна быть не более чем на одну категорию больше вас, и она должна находиться в пределах вашей досягаемости. Вы совершаете проверку Силы (Атлетика), противопоставленную проверке Силы (Атлетика) или Ловкости (Акробатика) цели (цель сама выбирает, какую характеристику использовать). Если вы преуспеете, вы либо сбиваете цель с ног, либо толкаете её на 5 футов от себя.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="damage_and_healing.html" class="btn btn-neutral float-left" title="Урон и лечение"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="mounted_combat.html" class="btn btn-neutral float-right" title="Сражение верхом">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Rules provided by Wizards of the Coast under the <a href="/license">OGL 1.0a</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="damage_and_healing.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="mounted_combat.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

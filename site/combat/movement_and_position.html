@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Перемещения и позиция - 5th Edition SRD</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u041f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u0438\u044f \u0438 \u043f\u043e\u0437\u0438\u0446\u0438\u044f";
+        var mkdocs_page_input_path = "combat\\movement_and_position.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> 5th Edition SRD
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">О ресурсе</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Приключения</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/between_adventures.html">Между Приключениями</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/movement.html">Перемещение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/planes_of_existence.html">Планы существования</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/resting.html">Отдых</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/the_environmen.html">Окружающая среда</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/time.html">Время</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Снаряжение</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/adventuring_gear.html">Снаряжение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/armor.html">Доспехи</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/coins.html">Монеты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/equipment_packs.html">Наборы снаряжения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/mounts_and_vehicles.html">Верховые животные и транспортные средства</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/selling_treasure.html">Продажа Сокровищ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/tools.html">Инструменты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/trade_goods.html">Товары</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adventuring/equipment/weapons.html">Оружие</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Персонаж</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Основы</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../character/alignment.html">Мировоззрение</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/backgrounds.html">Предыстории</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/fantasy-historical_pantheons.html">Фэнтезийно-исторические пантеоны</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/languages.html">Языки</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Классы</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/barbarian.html">Варвар</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/bard.html">Бард</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/cleric.html">Клерик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/druid.html">Друид</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/fighter.html">Воин</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/monk.html">Монах</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/paladin.html">Паладин</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/ranger.html">Следопыт</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/rogue.html">Плут</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/sorcerer.html">Чародей</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/warlock.html">Колдун</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/classes/wizard.html">Волшебник</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Расы</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/index.html">О расах</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/dragonborn.html">Драконорожденный</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/dwarf.html">Дварф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/elf.html">Эльф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/gnome.html">Гном</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/half-elf.html">Полуэльф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/half-orc.html">Полуорк</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/halfling.html">Халфлинг</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/human.html">Человек</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../character/races/tiefling.html">Тифлинг</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Сражение</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="actions_in_combat.html">Действия в бою</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="cover.html">Укрытие</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="damage_and_healing.html">Урон и лечение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="making_an_attack.html">Совершение атаки</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="mounted_combat.html">Сражение верхом</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="movement_and_position.html">Перемещения и позиция</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">Прерывание перемещения</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">Перемещение между атаками</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">Использование разных скоростей</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">Труднопроходимая местность</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">Сбит с ног</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">Взаимодействие с предметами вокруг вас</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_8">Перемещение и другие существа</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_9">Перемещение полётом</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_10">Размер Существа</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_11">Пространство</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_12">Протискивание в меньшее пространство</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="order_of_combat.html">Порядок Сражения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="underwater_combat.html">Сражение под водой</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Правила для Игрока</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/advantage_and_disadvantage.html">Преимущество и помеха</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/conditions.html">Состояния</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/expenses.html">Расходы</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/feats.html">Черты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/inspiration.html">Вдохновение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/leveling_up.html">Повышение уровня</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/multiclassing.html">Мультикласс</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rules/proficiency_bonus.html">Бонус владения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Характеристики</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/ability_checks.html">Проверка Характеристик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/ability_scores.html">Использование характеристик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/saving_throws.html">Спасброски</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/charisma.html">Харизма</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/constitution.html">Телосложение</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/dexterity.html">Ловкость</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/intelligence.html">Интеллект</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/strength.html">Сила</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rules/abilities/wisdom.html">Мудрость</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Правила для Мастера</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/diseases.html">Болезни</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/legendary_creatures.html">Легендарные существа</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/madness.html">Безумие</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/magic_items.html">Волшебные предметы</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/monsters.html">Чудовища</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/nonplayer_characters.html">Неигровые Персонажи</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/objects.html">Объекты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/poisons.html">Яды</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gamemaster_rules/sentient_magical_items.html">Разумные магические предметы</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">5th Edition SRD</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Сражение &raquo;</li><li>Перемещения и позиция</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">Перемещения и позиция</h1>
+<p>В бою персонажи и чудовища постоянно двигаются, используя перемещение и позиционирование для получения превосходства.</p>
+<p>Вы можете в свой ход переместиться на расстояние, не превышающее вашу скорость, используя приведённые здесь правила. Вы можете использовать столько или так мало своей скорости, как вам нравится на вашем ходу, следуя приведенным ниже правилам.</p>
+<p>Ваше перемещение может включать прыжки, лазание и плавание. Эти разные режимы перемещения можно объединять с ходьбой, либо всё перемещение может состоять из них. . Как бы вы ни перемещались, вы вычитаете расстояние всех частей перемещения из скорости, пока не закончите перемещаться.</p>
+<h2 id="_2">Прерывание перемещения</h2>
+<p>Вы можете прерывать перемещение в свой ход, совершая что-то между двумя перемещениями. Например, если у вас скорость 30 футов, вы можете переместиться на 10 футов, совершить действие, а затем переместиться на 20 футов.</p>
+<h3 id="_3">Перемещение между атаками</h3>
+<p>Если вы совершаете действие, включающее более одной атаки оружием, вы можете дополнительно прерывать перемещение этими атаками. Например, воин, способный совершать две атаки за счёт умения Дополнительная атака, и имеющий скорость 25 футов, может переместиться на 10 футов, совершить атаку, переместиться на 15 футов, и атаковать ещё раз.</p>
+<h3 id="_4">Использование разных скоростей</h3>
+<p>Если у вас есть несколько скоростей, например, скорость ходьбы и скорость полёта, вы можете переключаться между ними во время перемещения. При каждом переключении вычитайте уже пройдённое расстояние из новой скорости. Разница покажет, на сколько ещё вы можете переместиться. Если результат равен 0 или меньше, вы не можете использовать эту новую скорость во время текущего перемещения.</p>
+<p>Например, если у вас есть скорость 30 и скорость полёта 60 за счёт заклинания <em>полёт</em>, вы можете пролететь 20 футов, потом пройти 10 футов, затем вновь подняться в воздух и пролететь ещё 30 футов.  </p>
+<h2 id="_5">Труднопроходимая местность</h2>
+<p>Сражения редко происходят в пустых комнатах и ровных полях. Усыпанные валунами пещеры, заросли шиповника, коварные лестницы—обстановка типичного боя содержит труднопроходимую местность.</p>
+<p>Каждый фут перемещения по труднопроходимой местности стоит 1 дополнительный фут. Это правило действует даже если на одно и то же место действуют сразу несколько эффектов, делающих его труднопроходимым.</p>
+<p>Низкая мебель, щебень, подлесок, крутые лестницы, снег и мелкие болота-примеры труднопроходимой местности. Пространство другого существа, как враждебного, так и нет, также считается труднопроходимой местностью.</p>
+<h2 id="_6">Сбит с ног</h2>
+<p>Участники сражения часто оказываются лежащими, либо потому, что их сбили с ног, либо потому что они сами легли. В любом случае, они лежат ничком. Вы можете <strong>упасть ничком</strong>, не тратя скорость. <strong>Вставание</strong> требует больше усилий, для него требуется потратить половину скорости. Например, если ваша скорость 30 футов, для вставания придётся потратить 15 футов перемещения. Вы не можете встать, если у вас недостаточно движения или если ваша скорость равна 0.</p>
+<p>Для перемещения в положении лёжа нужно или <strong>ползти</strong> или использовать магию, такую как телепортация. Каждый фут перемещения во время ползания стоит 1 дополнительный фут. Таким образом, ползание на 1 фут по труднопроходимой местности стоит 3 фута перемещения.</p>
+<h2 id="_7">Взаимодействие с предметами вокруг вас</h2>
+<p>Вот несколько примеров того, что вы можете совершать параллельно с перемещением и совершением действий:</p>
+<ul>
+<li>вытащи или вложи меч в ножны.</li>
+<li>открыть или закрыть дверь</li>
+<li>достать зелье из рюкзака.</li>
+<li>поднять упавший топор.</li>
+<li>взять безделушку со стола</li>
+<li>снять кольцо с пальца</li>
+<li>набить рот едой.</li>
+<li>воткнуть знамя в землю.</li>
+<li>выудить несколько монет из поясного кошеля</li>
+<li>выпей целый кувшин эля.</li>
+<li>провернуть рычаг или переключатель</li>
+<li>вытащить факел из крепления</li>
+<li>взять книгу с полки, до которой можешь дотянуться.</li>
+<li>потушить небольшое пламя</li>
+<li>надеть маску.</li>
+<li>накинуть на голову капюшон плаща</li>
+<li>приложить ухо к двери</li>
+<li>пнуть маленький камешек.</li>
+<li>повернуть ключ в замке</li>
+<li>коснутся пола 10-футовым шестом</li>
+<li>передать предмет другому персонажу</li>
+</ul>
+<h2 id="_8">Перемещение и другие существа</h2>
+<p>Вы можете проходить сквозь пространство невраждебных существ. Сквозь пространство враждебного существа можно пройти только если его размер как минимум на две категории больше или меньше вашего. Помните, что пространство других существ является для вас труднопроходимой местностью.</p>
+<p>Независимо от того, является ли существо другом или врагом, вы не можете добровольно закончить свой ход в его пространстве.</p>
+<p>Если вы во время перемещения покидаете досягаемость враждебного существа, вы, как обычно, провоцируете атаку.</p>
+<h2 id="_9">Перемещение полётом</h2>
+<p>Летающие существа наслаждаются отсутствием большинства препятствий, но они постоянно находятся под угрозой падения. Если летающее существо сбито с ног, его скорость уменьшается до 0, или оно по какой-то другой причине теряет способность перемещаться, оно падает, если только не может парить или не летает за счёт магии, такой как заклинание <em>полёт</em>.</p>
+<h2 id="_10">Размер Существа</h2>
+<p>Разные существа занимают разное пространство. Таблица категорий размеров показывает,  сколько места существо указанного размера занимает в битве. Иногда предметы используют эти же категории размеров.</p>
+<p><strong>Категории размеров </strong></p>
+<table>
+<thead>
+<tr>
+<th>Размер</th>
+<th>Пространство</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Крошечный</td>
+<td>2½ на 2½ фута</td>
+</tr>
+<tr>
+<td>Маленький</td>
+<td>5 на 5 футов</td>
+</tr>
+<tr>
+<td>Средний</td>
+<td>5 на 5 футов</td>
+</tr>
+<tr>
+<td>Большой</td>
+<td>10 на 10 футов</td>
+</tr>
+<tr>
+<td>Огромный</td>
+<td>15 на 15 футов</td>
+</tr>
+<tr>
+<td>Гигантский</td>
+<td>20 на 20 футов или больше</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_11">Пространство</h3>
+<p>Пространство существа — это площадь, которую оно эффективно контролирует в бою, а не выражение его физических размеров. Например, большинство существ Среднего размера вовсе не 5 футов в ширину, но именно такое пространство в ширину они контролируют. Если хобгоблин Среднего размера стоит в дверном проёме шириной 5 футов, другие существа не могут проходить через него, пока он не разрешит им.</p>
+<p>Пространство существа также отражает площадь, необходимую для эффективного сражения. Именно поэтому есть предел количества существ, которые могут окружать другое существо в бою. Если бойцы Среднего размера, только восемь из них смогут окружить 5-футовое пространство своего противника.</p>
+<p>Из-за того, что существам большего размера требуется больше пространства, ещё меньшее их количество может принимать участие в окружении. Если пять существ Большого размера столпятся вокруг одного Среднего, больше ни для кого места не останется. И наоборот, одно Громадное существо может быть окружено двадцатью существами Среднего размера.</p>
+<h3 id="_12">Протискивание в меньшее пространство</h3>
+<p>Существо может протиснуться в пространство, достаточное для существа на одну категорию меньше его. Таким образом, Большое существо может протиснуться в проход шириной 5 футов. Протискиваясь, существо должно тратить 1 дополнительный фут за каждый фут перемещения, и совершает с помехой броски атаки и спасброски Ловкости. Броски атаки по существам, находящимся в тесном пространстве, совершаются с преимуществом.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="mounted_combat.html" class="btn btn-neutral float-left" title="Сражение верхом"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="order_of_combat.html" class="btn btn-neutral float-right" title="Порядок Сражения">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Rules provided by Wizards of the Coast under the <a href="/license">OGL 1.0a</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="mounted_combat.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="order_of_combat.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

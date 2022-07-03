@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Волшебник - 5th Edition SRD</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u0412\u043e\u043b\u0448\u0435\u0431\u043d\u0438\u043a";
+        var mkdocs_page_input_path = "character\\classes\\wizard.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../index.html" class="icon icon-home"> 5th Edition SRD
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../index.html">О ресурсе</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Приключения</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/between_adventures.html">Между Приключениями</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/movement.html">Перемещение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/planes_of_existence.html">Планы существования</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/resting.html">Отдых</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/the_environmen.html">Окружающая среда</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/time.html">Время</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Снаряжение</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/adventuring_gear.html">Снаряжение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/armor.html">Доспехи</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/coins.html">Монеты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/equipment_packs.html">Наборы снаряжения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/mounts_and_vehicles.html">Верховые животные и транспортные средства</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/selling_treasure.html">Продажа Сокровищ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/tools.html">Инструменты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/trade_goods.html">Товары</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adventuring/equipment/weapons.html">Оружие</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Персонаж</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">Основы</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../alignment.html">Мировоззрение</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../backgrounds.html">Предыстории</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../fantasy-historical_pantheons.html">Фэнтезийно-исторические пантеоны</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../languages.html">Языки</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Классы</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="barbarian.html">Варвар</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="bard.html">Бард</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="cleric.html">Клерик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="druid.html">Друид</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="fighter.html">Воин</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="monk.html">Монах</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="paladin.html">Паладин</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="ranger.html">Следопыт</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="rogue.html">Плут</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="sorcerer.html">Чародей</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="warlock.html">Колдун</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="wizard.html">Волшебник</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#_2">Классовые Свойства</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_3">Хиты</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_4">Владение инструментами и навыками</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_5">Снаряжение</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_6">Сотворение заклинаний</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_13">Магическое восстановление</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_14">Магическая традиция</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_15">Увеличение характеристик*</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_16">Мастерство заклинателя</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_17">Фирменное заклинание</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_18">Магические традиции</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_19">Школа эвокации</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Расы</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../races/index.html">О расах</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/dragonborn.html">Драконорожденный</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/dwarf.html">Дварф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/elf.html">Эльф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/gnome.html">Гном</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/half-elf.html">Полуэльф</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/half-orc.html">Полуорк</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/halfling.html">Халфлинг</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/human.html">Человек</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../races/tiefling.html">Тифлинг</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Сражение</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/actions_in_combat.html">Действия в бою</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/cover.html">Укрытие</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/damage_and_healing.html">Урон и лечение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/making_an_attack.html">Совершение атаки</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/mounted_combat.html">Сражение верхом</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/movement_and_position.html">Перемещения и позиция</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/order_of_combat.html">Порядок Сражения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/underwater_combat.html">Сражение под водой</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Правила для Игрока</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/advantage_and_disadvantage.html">Преимущество и помеха</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/conditions.html">Состояния</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/expenses.html">Расходы</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/feats.html">Черты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/inspiration.html">Вдохновение</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/leveling_up.html">Повышение уровня</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/multiclassing.html">Мультикласс</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rules/proficiency_bonus.html">Бонус владения</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Характеристики</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/ability_checks.html">Проверка Характеристик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/ability_scores.html">Использование характеристик</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/saving_throws.html">Спасброски</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/charisma.html">Харизма</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/constitution.html">Телосложение</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/dexterity.html">Ловкость</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/intelligence.html">Интеллект</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/strength.html">Сила</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rules/abilities/wisdom.html">Мудрость</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Правила для Мастера</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/diseases.html">Болезни</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/legendary_creatures.html">Легендарные существа</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/madness.html">Безумие</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/magic_items.html">Волшебные предметы</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/monsters.html">Чудовища</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/nonplayer_characters.html">Неигровые Персонажи</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/objects.html">Объекты</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/poisons.html">Яды</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../gamemaster_rules/sentient_magical_items.html">Разумные магические предметы</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">5th Edition SRD</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Персонаж &raquo;</li>
+          <li>Классы &raquo;</li><li>Волшебник</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">Волшебник</h1>
+<h2 id="_2">Классовые Свойства</h2>
+<p>Волшебники обладают следующими классовыми свойствами.</p>
+<h3 id="_3">Хиты</h3>
+<p><strong>Кость хитов:</strong> 1к6 за каждый уровень волшебника<br />
+<strong>Хиты на 1 уровне:</strong> 6 + ваш модификатор Телосложения<br />
+<strong>Хиты на следующих уровнях:</strong> 1к6 (или 4) + модификатор Телосложения за каждый уровень волшебника после первого  </p>
+<h3 id="_4">Владение инструментами и навыками</h3>
+<p><strong>Владение доспехами:</strong> нет<br />
+<strong>Владение оружием:</strong> Боевые посохи, дротики, кинжалы, лёгкие арбалеты, пращи<br />
+<strong>Владение инструментами:</strong> нет<br />
+<strong>Спасброски:</strong> Интеллект, Мудрость<br />
+<strong>Навыки:</strong> Выберите два из Магия, История, Проницательность, Расследование, Медицина и Религия  </p>
+<h3 id="_5">Снаряжение</h3>
+<p>Вы начинаете со следующим снаряжением в дополнение к снаряжению, полученному за вашу предысторию: </p>
+<ul>
+<li>(а) боевой посох или (б) кинжал  </li>
+<li>(а) мешочек с компонентами или (б) заклинательный фокус  </li>
+<li>(а) набор учёного или (б) набор путешественника  </li>
+<li>Книга заклинаний  </li>
+</ul>
+<p><strong> Волшебник </strong></p>
+<table>
+<thead>
+<tr>
+<th>Уровень</th>
+<th>Бонус владения</th>
+<th>Особенности</th>
+<th>Известные заговоры</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>+2</td>
+<td>Сотворение заклинаний, Магическое восстановление</td>
+<td>3</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>+2</td>
+<td>Магическая традиция</td>
+<td>3</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>+2</td>
+<td>-</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>+2</td>
+<td>Увеличение характеристик</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>+3</td>
+<td>-</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>+3</td>
+<td>Особенность Магической Традиции</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>+3</td>
+<td>-</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8</td>
+<td>+3</td>
+<td>Увеличение характеристик</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9</td>
+<td>+4</td>
+<td>-</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10</td>
+<td>+4</td>
+<td>Особенность Магической Традиции</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11</td>
+<td>+4</td>
+<td>-</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12</td>
+<td>+4</td>
+<td>Увеличение характеристик</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13</td>
+<td>+5</td>
+<td>-</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14</td>
+<td>+5</td>
+<td>Особенность Магической Традиции</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>15</td>
+<td>+5</td>
+<td>-</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>-</td>
+</tr>
+<tr>
+<td>16</td>
+<td>+5</td>
+<td>Увеличение характеристик</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>-</td>
+</tr>
+<tr>
+<td>17</td>
+<td>+6</td>
+<td>-</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>18</td>
+<td>+6</td>
+<td>Мастерство заклинателя</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>19</td>
+<td>+6</td>
+<td>Увеличение характеристик</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>20</td>
+<td>+6</td>
+<td>Фирменные заклинания</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">Сотворение заклинаний</h3>
+<hr />
+<p>Являясь учеником адептом тайной магии, вы обладаете книгой, содержащей заклинания, показывающие первые проблески вашей истинной силы. </p>
+<h4 id="_7">Заговоры</h4>
+<p>На 1 уровне вы знаете три заговора на ваш выбор из списка заклинаний волшебника.  Вы узнаёте дополнительные заговоры волшебника на более высоких уровнях, как показано в столбце «известные заговоры».</p>
+<h4 id="_8">Книга заклинаний</h4>
+<p>На 1 уровне у вас есть книга заклинаний, содержащая шесть заклинаний волшебника 1 уровня по вашему выбору.  Ваша книга заклинаний — это хранилище заклинаний волшебника, которые вы знаете, за исключением ваших заговоров, которые зафиксированы в вашем уме.</p>
+<h4 id="_9">Подготовка и сотворение заклинаний</h4>
+<p>Таблица «Волшебник» показывает, какое количество ячеек для сотворения заклинаний у вас есть на первом и более высоких уровнях.  Для использования заклинания вы должны потратить ячейку соответствующего, либо превышающего уровня. Вы восстанавливаете все потраченные ячейки заклинаний после завершения  длинного отдыха.</p>
+<p>Вы подготавливаете список заклинаний волшебника, доступных для сотворения.  При этом вы выбираете число заклинаний волшебника из своей книги заклинаний, равное модификатору Интеллекта + уровень волшебника (минимум одно заклинание).  Уровень заклинаний не должен превышать уровень самой высокой имеющейся у вас ячейки заклинаний.</p>
+<p>Например, если вы волшебник 3уровня, у вас есть четыре ячейки заклинаний 1 уровня  две ячейки заклинаний 2 уровня. При Интеллекте 16 ваш список подготовленных заклинаний может включать в себя шесть заклинаний 1 или 2 уровня, в любой комбинации, выбранных из вашей книги заклинаний.  Если вы подготовили <em>Волшебная стрелу</em> заклинание 1 уровня, вы можете сотворить ее, используя ячейку 1 уровня или 2 уровня. Сотворение заклинания не удаляет его из списка подготовленных заклинаний.</p>
+<p>Вы можете изменить список подготовленных заклинаний после завершения длинного отдыха. Подготовка нового списка заклинаний волшебника требует времени, проведённого в изучении книги заклинаний и запоминания слов и жестов, которые вы должны совершить, чтобы сотворить заклинание: не менее 1 минуты за уровень заклинания для каждого заклинания в вашем списке.</p>
+<h4 id="_10">Заклинательная характеристика</h4>
+<p>При создании заклинаний волшебник использует Интеллект, так как вы узнаёте свои заклинания специальными исследованиями и запоминанием.  Вы используете Интеллект в случаях, когда заклинание ссылается на заклинательную характеристику.  Кроме того, вы используете модификатор Интеллекта при определении УС спасбросков от ваших заклинаний волшебника, и при броске атаки заклинаниями.</p>
+<blockquote>
+<p><strong>УС спасбросков заклинаний</strong> = 8 + Ваш бонус владения + ваш модификатор интеллекта<br />
+<strong>Модификатор атаки заклинанием</strong> = Ваш бонус владения + ваш модификатор интеллекта</p>
+</blockquote>
+<h4 id="_11">Ритуальное сотворение</h4>
+<p>Вы можете сотворить заклинание волшебника как ритуал, если у этого заклинания есть ключевое слово «ритуал», и оно есть в вашей книге заклинаний.  Вам не нужно иметь это заклинание подготовленным.</p>
+<h4 id="_12">Заклинательный фокус</h4>
+<p>Вы можете использовать тайный магический фокус в качестве фокуса заклинания для ваших заклинаний волшебника.</p>
+<h4 id="1">Изучение заклинаний 1 уровня и выше</h4>
+<p>Каждый раз, когда вы получаете уровень волшебника , вы можете добавить два заклинания волшебника по вашему выбору в свою книгу заклинаний бесплатно. Каждое из этих заклинаний должно иметь уровень, для которого у вас есть ячейки заклинаний, как показано в таблице Волшебник. В ваших приключениях вы можете найти другие заклинания, которые вы можете добавить в свою книгу заклинаний (см. боковую панель “Ваша книга заклинаний”).</p>
+<h3 id="_13">Магическое восстановление</h3>
+<hr />
+<p>Вы научились восстанавливать часть своей магической энергии, изучая свою книгу заклинаний. Один раз в день, когда вы завершаете короткий отдых, вы можете выбрать израсходованные ячейки заклинаний для восстановления. Ячейки заклинаний могут иметь комбинированный суммарный уровень, равный или меньше половины вашего уровня волшебника (округленный вверх), и ни одна из ячеек не может быть 6 уровня или выше.</p>
+<p>Например, если вы волшебник 4-го уровня, вы можете восстановить до двух уровней ячеек заклинаний. Вы можете восстановить либо ячейку заклинаний 2 уровня, либо две ячейки заклинаний 1 уровня.</p>
+<h3 id="_14">Магическая традиция</h3>
+<hr />
+<p>Когда вы достигнете 2-го уровня, вы выбираете магическую традицию, формируя свою практику магии через одну из восьми школ: Отречение, колдовство, гадание, чары, вызывание, иллюзия, Некромантия или трансмутация-все это подробно описано в конце описания класса.</p>
+<p>Этот выбор даёт дополнительные умения на 2, 6, 10 и 14 уровнях.</p>
+<h3 id="_15">Увеличение характеристик*</h3>
+<p>При достижении 4, 8, 12, 16 и 19 уровней вы можете повысить значение одной из ваших характеристик на 2 или двух характеристик на 1.  Как обычно, значение характеристики при этом не должно превысить 20.</p>
+<h3 id="_16">Мастерство заклинателя</h3>
+<hr />
+<p>На 18 уровне вы достигаете такого мастерства в отношении некоторых заклинаний, что можете творить их неограниченное количество раз.  Выберите одно заклинание волшебника 1 уровня и одно заклинание волшебника 2 уровня, которые есть в вашей книге заклинаний. Вы можете использовать эти заклинания без увеличения их уровня, не тратя ячеек заклинаний, при условии, что вы их подготовили.  Если вы хотите увеличить уровень этих заклинаний, вы должны потратить ячейку заклинаний как обычно.</p>
+<p>Потратив 8 часов на обучение, вы можете изменить одно или оба этих заклинания по своему усмотрению на заклинания тех же уровней.</p>
+<h3 id="_17">Фирменное заклинание</h3>
+<hr />
+<p>Когда вы достигаете 20 уровня, вы получаете власть над двумя мощными заклинаниями и можете творить их без усилий.  Выберите два заклинания волшебника 3 уровня из своей книги заклинаний в качестве фирменных заклинаний.  Для вас эти заклинания всегда считаются подготовленными, они не учитываются в количестве подготовленных заклинаний, и вы можете сотворить каждое из этих заклинаний 3 уровня, не тратя ячейку заклинаний. Когда вы так поступаете, вы не можете сотворить их повторно таким же образом, пока не завершите короткий или длинный отдых.</p>
+<p>Если вы хотите увеличить уровень этих заклинаний, вы должны потратить ячейку заклинаний как обычно.</p>
+<h2 id="_18">Магические традиции</h2>
+<p>Изучение волшебства старо настолько, что простирает корни к самым ранним открытиям магии смертных.  Магия опирается на различные традиции, посвящённые её комплексному изучению.</p>
+<p>Наиболее распространённые магические традиции в мультивселенной вращаются вокруг школ магии Волшебники на протяжении веков каталогизировали тысячи заклинаний, группируя их по восьми так называемым школам. В некоторых местах эти традиции в буквальном смысле являются школами; один волшебник может пройти обучение в школе Иллюзии, а другой будет обучаться в городе со школой Очарования.  В других учреждениях школы больше похожи на факультеты, соперничающие за студентов и финансирование. Даже волшебники-одиночки, которые учат в своих башнях, используют разделение магии по школам в учебном процессе, так как заклинания каждой школы требуют различного рода мастерства и методов.</p>
+<h3 id="_19">Школа эвокации</h3>
+<hr />
+<p>Вы сосредоточили свои исследования на магии, которая создаёт могущественные стихийные эффекты, такие как ледяной холод, жгучее пламя, раскатистый гром, трещащие молнии и едкая кислота.  Некоторые боевые маги находят своё призвание в армии, идя на службу в артиллерию и уничтожая вражеские армии издалека.  Другие используют свои впечатляющие возможности, чтобы защитить слабых. Остальные же ищут свою собственную выгоду на поприще бандита, искателя приключений или начинающего тирана.</p>
+<h4 id="_20">Знаток эвокации</h4>
+<p>Начиная с выбора этой школы на 2-м уровне, золото и время, которое вы должны потратить, чтобы скопировать заклинание вызова в свою книгу заклинаний, уменьшаются вдвое.</p>
+<h4 id="_21">Лепка заклинаний</h4>
+<p>Начиная со 2 уровня, когда вы накладываете разрушительное заклинание, то можете создать относительно безопасные участки внутри зоны поражения, которые оно не затрагивает . При сотворении заклинания школы Воплощения, воздействующего на других существ, которых вы видите, вы можете выбрать количество существ, равное 1 + уровень заклинания.  Выбранные существа автоматически преуспевают в спасбросках от этого заклинания и не получают урона, если по описанию должны получить половину урона от заклинания при успешном спасении.</p>
+<h4 id="_22">Мощный заговор</h4>
+<p>С 6 уровня ваши причиняющие урон заговоры воздействуют даже на тех существ, которые избегают основного эффекта.  Выбранные существа автоматически преуспевают в спасбросках от этого заклинания и не получают урона, если по описанию должны получить половину урона от заклинания при успешном спасении.</p>
+<h4 id="_23">Усиленная эвокация</h4>
+<p>Начиная с 10 уровня, при броске урона от заклинания школы Воплощения, сотворённого вами, вы добавляете к одному броску урона свой модификатор Интеллекта.  </p>
+<h4 id="_24">Переполнение энергией</h4>
+<p>Начиная с 14 уровня вы можете увеличить силу своих простейших заклинаний.  Когда вы накладываете причиняющее урон заклинание волшебника 5 уровня или ниже, вы можете причинить им максимальный урон. </p>
+<p>Без вреда для себя вы можете использовать это умение один раз.  Если вы повторно используете это умение до окончания длинного отдыха, то получаете урон некротической энергией 2к12 за каждый заклинания сразу после его сотворения.  Каждый следующий раз, при использовании данного умения до окончания длинного отдыха урон некротической энергией увеличивается на 1к12.  Этот урон игнорирует сопротивление и иммунитет.</p>
+<blockquote>
+<h5 id="_25">Ваша книга заклинаний</h5>
+<p>Заклинания, которые вы добавляете в свою книгу заклинаний, когда вы получаете уровни, отражают тайные исследования, которые вы проводите самостоятельно, а также ваши интеллектуальные прорывы, которые вы имели озарения о природе мультивселенной. Вы также можете найти другие заклинания во время приключений.  Вы можете обнаружить заклинание, записанное на свитке в сундуке злого волшебника, или, например, в пыльном фолианте в древней библиотеке.</p>
+<p><strong>Копирование заклинания в книгу.</strong>  Если вы находите заклинание волшебника 1 или более высокого уровня, вы можете добавить его в свою книгу заклинаний, если оно имеет такой уровень, заклинания который вы можете подготавливать, и у вас имеется свободное время для его расшифровки и копирования.</p>
+<p>Копирование заклинания в вашу книгу включает воспроизведение основной формы заклинания, а также расшифровку уникальной системы обозначений, используемой волшебником, который записал его.  Вы должны подобрать нужные жесты и звуки, после чего записываете его в свою книгу заклинаний, используя собственные обозначения.</p>
+<p>За каждый уровень заклинания процесс занимает 2 часа и стоит 50 золотых монет.  Стоимость представляет собой материальные компоненты, которые вы расходуете на эксперименты с заклинанием, чтобы им овладеть, а также высококачественные чернила для записи текста.  После того как вы потратили время и деньги, вы можете подготавливать это заклинание, как и свои прочие заклинания.</p>
+<p><strong>Замена книги.</strong> Вы можете копировать заклинание из своей книги заклинаний в другую, например, если хотите сделать запасную копию.  Это делается так же, как и простое копирование заклинаний, но быстрее и проще, так как вы понимаете свои собственные обозначения и уже знаете, как творить это заклинание.  Вам необходимо потратить только по 10 золотых монет и 1 часу для каждого уровня копируемого заклинания.</p>
+<p>Если вы потеряли свою книгу заклинаний, вы можете использовать ту же процедуру для записи заклинаний, которые у вас подготовлены, в новую книгу заклинаний.  Для заполнения оставшейся части книги заклинаний потребует найти новые заклинания, чтобы вернуть всё как прежде.  По этой причине многие волшебники держат запасные книги заклинаний в безопасном месте.</p>
+<p><strong>Внешний вид книги.</strong> Ваша книга заклинаний является уникальным сборником заклинаний, со своими декоративными завитушками и ремаркам.  Это может быть обычная, обтянутая кожей книга, которую вы получили в подарок от наставника, или оплетённый золотом том, который вы нашли в древней библиотеке, или даже разрозненная коллекция записей, собранная вместе после потери предыдущей книги заклинаний в результате несчастного случая.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="warlock.html" class="btn btn-neutral float-left" title="Колдун"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../races/index.html" class="btn btn-neutral float-right" title="О расах">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Rules provided by Wizards of the Coast under the <a href="/license">OGL 1.0a</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="warlock.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../races/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
