@@ -1,0 +1,123 @@
+page
+	title = Card With Drop-Down Categories
+	description = To use this template, simply click the "edit" button, make some changes to the card properties (add your own randomness), and then click save.
+  
+cards
+	card1 ^[region == "Arctic"]
+		title = Arctic Armor
+		subtitle = Medium construct, unaligned
+		content
+			property-line ;;; Armor Class ;;; {10-30} (natural armor)
+			property-line ;;; Hit Points ;;; 33 (6d8 + 6)
+			property-line ;;; Speed ;;; {10-30}ft.
+      // add more content for Arctic card...
+  card2 ^[region == "Coastal"]
+    title = Costal Armor
+    subtitle = Medium construct, unaligned
+    content
+      property-line ;;; Armor Class ;;; {10-30} (natural armor)
+      property-line ;;; Hit Points ;;; 33 (6d8 + 6)
+      property-line ;;; Speed ;;; {10-30}ft.
+      // etc...
+  card3 ^[region == "Desert"]
+    title = Desert Armor
+    subtitle = Medium construct, unaligned
+    content
+      property-line ;;; Armor Class ;;; {10-30} (natural armor)
+      property-line ;;; Hit Points ;;; 33 (6d8 + 6)
+      property-line ;;; Speed ;;; {10-30}ft.
+      //...
+  card4 ^[region == "Forest"]
+    title = Forest Armor
+    subtitle = Medium construct, unaligned
+    content
+      property-line ;;; Armor Class ;;; {10-30} (natural armor)
+      property-line ;;; Hit Points ;;; 33 (6d8 + 6)
+      property-line ;;; Speed ;;; {10-30}ft.
+      //...
+  card5 ^[region == "Grasslands"]
+    title = Grasslands Armor
+    subtitle = Medium construct, unaligned
+    content
+      property-line ;;; Armor Class ;;; {10-30} (natural armor)
+      property-line ;;; Hit Points ;;; 33 (6d8 + 6)
+      property-line ;;; Speed ;;; {10-30}ft.
+      //...
+  card6 ^[region == "Hills"]
+    title = Hills Armor
+    subtitle = Medium construct, unaligned
+    content
+      property-line ;;; Armor Class ;;; {10-30} (natural armor)
+      property-line ;;; Hit Points ;;; 33 (6d8 + 6)
+      property-line ;;; Speed ;;; {10-30}ft.
+      //...
+  card7 ^[region == "Mountains"]
+    title = Mountains Armor
+    subtitle = Medium construct, unaligned
+    content
+      property-line ;;; Armor Class ;;; {10-30} (natural armor)
+      property-line ;;; Hit Points ;;; 33 (6d8 + 6)
+      property-line ;;; Speed ;;; {10-30}ft.
+      //...
+  card8 ^[region == "Swamp"]
+    title = Swamp Armor
+    subtitle = Medium construct, unaligned
+    content
+      property-line ;;; Armor Class ;;; {10-30} (natural armor)
+      property-line ;;; Hit Points ;;; 33 (6d8 + 6)
+      property-line ;;; Speed ;;; {10-30}ft.
+      //...
+  card9 ^[region == "Underdark"]
+    title = Underdark Armor
+    subtitle = Medium construct, unaligned
+    content
+      property-line ;;; Armor Class ;;; {10-30} (natural armor)
+      property-line ;;; Hit Points ;;; 33 (6d8 + 6)
+      property-line ;;; Speed ;;; {10-30}ft.
+      //...
+
+
+// You can also add card2, card3, etc. (name them however you like), and give them different
+// chances (e.g. card1^4, card2^7, ...) of occurring. This would be useful if you have different
+// "categories" of cards that you want to generate within the same generator.
+
+
+// Template design credit:
+// https://valloric.github.io/statblock5e/
+// https://codepen.io/retractedhack/pen/gPLpWe
+createCardHtml(c) => 
+	let html = ``;
+	
+	let items = c.content.selectAll.map(c => c.evaluateItem).map(l => ({
+		type: l.split(";;;")[0].trim(),
+		params: l.split(";;;").slice(1).map(p => p.trim()),
+	}));
+
+	for(let i = 0; i < items.length; i++) {
+		let type = items[i].type;
+		let params = items[i].params;
+		if(type === "rule") {
+			html += `<svg height="5" width="100%" class="tapered-rule"><polyline points="0,0 270,2.5 0,5"></polyline></svg>`;
+		}
+		if(type === "property-line") {
+			let firstLastClass = !items[i-1] || items[i-1].type !== "property-line" ? "first" : "";
+			if(!firstLastClass && items[i+1] && items[i+1].type !== "property-line") firstLastClass = "last";
+		  html += `<div class="property-line ${firstLastClass}"><h4>${params[0]}</h4> <p>${params[1]}</p></div>`;
+		}
+		if(type === "property-block") {
+		  html += `<div class="property-block"><h4>${params[0]}</h4> <p>${params[1]}</p></div>`;
+		}
+		if(type === "stats") {
+			let statMap = params.reduce((a,v) => (a[v.split(":")[0]]=Number(v.split(":")[1]), a), {});
+			html += `<div class="abilities">`;
+			for(let [name, value] of Object.entries(statMap)) {
+				let mod;
+				html += `<div class="ability-intelligence"><h4>${name.toUpperCase()}</h4><p>${value} (${mod = Math.floor((value-10)/2), mod > 0 ? "+"+mod : mod})</p></div>`;
+			}
+			html += "</div>";
+		}
+		if(type === "header") {
+			html += `<h3>${params[0]}</h3>`;
+		}
+	}
+	return html;
