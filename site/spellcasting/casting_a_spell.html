@@ -1,640 +1,1912 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+    
+    
+      
+        <title>**Сотворение заклинания** - 5th Edition SRD</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4a0965b7.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
         
         
-        
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Casting a Spell - 5th Edition SRD</title>
-    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/base.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <script src="../js/jquery-1.10.2.min.js" defer></script>
-    <script src="../js/bootstrap-3.3.7.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
-
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="../index.html">5th Edition SRD</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../index.html" class="nav-link">О ресурсе</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Приключения <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../adventuring/between_adventures.html" class="dropdown-item">Между Приключениями</a>
-</li>
-                                    
-<li>
-    <a href="../adventuring/movement.html" class="dropdown-item">Перемещение</a>
-</li>
-                                    
-<li>
-    <a href="../adventuring/planes_of_existence.html" class="dropdown-item">Планы существования</a>
-</li>
-                                    
-<li>
-    <a href="../adventuring/resting.html" class="dropdown-item">Отдых</a>
-</li>
-                                    
-<li>
-    <a href="../adventuring/the_environmen.html" class="dropdown-item">Окружающая среда</a>
-</li>
-                                    
-<li>
-    <a href="../adventuring/time.html" class="dropdown-item">Время</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Снаряжение <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../adventuring/equipment/adventuring_gear.html" class="dropdown-item">Снаряжение</a>
-</li>
-                                    
-<li>
-    <a href="../adventuring/equipment/armor.html" class="dropdown-item">Доспехи</a>
-</li>
-                                    
-<li>
-    <a href="../adventuring/equipment/coins.html" class="dropdown-item">Монеты</a>
-</li>
-                                    
-<li>
-    <a href="../adventuring/equipment/equipment_packs.html" class="dropdown-item">Наборы снаряжения</a>
-</li>
-                                    
-<li>
-    <a href="../adventuring/equipment/mounts_and_vehicles.html" class="dropdown-item">Верховые животные и транспортные средства</a>
-</li>
-                                    
-<li>
-    <a href="../adventuring/equipment/selling_treasure.html" class="dropdown-item">Продажа Сокровищ</a>
-</li>
-                                    
-<li>
-    <a href="../adventuring/equipment/tools.html" class="dropdown-item">Инструменты</a>
-</li>
-                                    
-<li>
-    <a href="../adventuring/equipment/trade_goods.html" class="dropdown-item">Товары</a>
-</li>
-                                    
-<li>
-    <a href="../adventuring/equipment/weapons.html" class="dropdown-item">Оружие</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Персонаж <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Основы</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../character/alignment.html" class="dropdown-item">Мировоззрение</a>
-</li>
-            
-<li>
-    <a href="../character/backgrounds.html" class="dropdown-item">Предыстории</a>
-</li>
-            
-<li>
-    <a href="../character/fantasy-historical_pantheons.html" class="dropdown-item">Фэнтезийно-исторические пантеоны</a>
-</li>
-            
-<li>
-    <a href="../character/languages.html" class="dropdown-item">Языки</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Классы</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../character/classes/barbarian.html" class="dropdown-item">Варвар</a>
-</li>
-            
-<li>
-    <a href="../character/classes/bard.html" class="dropdown-item">Бард</a>
-</li>
-            
-<li>
-    <a href="../character/classes/cleric.html" class="dropdown-item">Клерик</a>
-</li>
-            
-<li>
-    <a href="../character/classes/druid.html" class="dropdown-item">Друид</a>
-</li>
-            
-<li>
-    <a href="../character/classes/fighter.html" class="dropdown-item">Воин</a>
-</li>
-            
-<li>
-    <a href="../character/classes/monk.html" class="dropdown-item">Монах</a>
-</li>
-            
-<li>
-    <a href="../character/classes/paladin.html" class="dropdown-item">Паладин</a>
-</li>
-            
-<li>
-    <a href="../character/classes/ranger.html" class="dropdown-item">Следопыт</a>
-</li>
-            
-<li>
-    <a href="../character/classes/rogue.html" class="dropdown-item">Плут</a>
-</li>
-            
-<li>
-    <a href="../character/classes/sorcerer.html" class="dropdown-item">Чародей</a>
-</li>
-            
-<li>
-    <a href="../character/classes/warlock.html" class="dropdown-item">Колдун</a>
-</li>
-            
-<li>
-    <a href="../character/classes/wizard.html" class="dropdown-item">Волшебник</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Расы</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../character/races/index.html" class="dropdown-item">О расах</a>
-</li>
-            
-<li>
-    <a href="../character/races/dragonborn.html" class="dropdown-item">Драконорожденный</a>
-</li>
-            
-<li>
-    <a href="../character/races/dwarf.html" class="dropdown-item">Дварф</a>
-</li>
-            
-<li>
-    <a href="../character/races/elf.html" class="dropdown-item">Эльф</a>
-</li>
-            
-<li>
-    <a href="../character/races/gnome.html" class="dropdown-item">Гном</a>
-</li>
-            
-<li>
-    <a href="../character/races/half-elf.html" class="dropdown-item">Полуэльф</a>
-</li>
-            
-<li>
-    <a href="../character/races/half-orc.html" class="dropdown-item">Полуорк</a>
-</li>
-            
-<li>
-    <a href="../character/races/halfling.html" class="dropdown-item">Халфлинг</a>
-</li>
-            
-<li>
-    <a href="../character/races/human.html" class="dropdown-item">Человек</a>
-</li>
-            
-<li>
-    <a href="../character/races/tiefling.html" class="dropdown-item">Тифлинг</a>
-</li>
-    </ul>
-  </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Сражение <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../combat/actions_in_combat.html" class="dropdown-item">Действия в бою</a>
-</li>
-                                    
-<li>
-    <a href="../combat/cover.html" class="dropdown-item">Укрытие</a>
-</li>
-                                    
-<li>
-    <a href="../combat/damage_and_healing.html" class="dropdown-item">Урон и лечение</a>
-</li>
-                                    
-<li>
-    <a href="../combat/making_an_attack.html" class="dropdown-item">Совершение атаки</a>
-</li>
-                                    
-<li>
-    <a href="../combat/mounted_combat.html" class="dropdown-item">Сражение верхом</a>
-</li>
-                                    
-<li>
-    <a href="../combat/movement_and_position.html" class="dropdown-item">Перемещения и позиция</a>
-</li>
-                                    
-<li>
-    <a href="../combat/order_of_combat.html" class="dropdown-item">Порядок Сражения</a>
-</li>
-                                    
-<li>
-    <a href="../combat/underwater_combat.html" class="dropdown-item">Сражение под водой</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Правила для Игрока <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../rules/advantage_and_disadvantage.html" class="dropdown-item">Преимущество и помеха</a>
-</li>
-                                    
-<li>
-    <a href="../rules/conditions.html" class="dropdown-item">Состояния</a>
-</li>
-                                    
-<li>
-    <a href="../rules/expenses.html" class="dropdown-item">Расходы</a>
-</li>
-                                    
-<li>
-    <a href="../rules/feats.html" class="dropdown-item">Черты</a>
-</li>
-                                    
-<li>
-    <a href="../rules/inspiration.html" class="dropdown-item">Вдохновение</a>
-</li>
-                                    
-<li>
-    <a href="../rules/leveling_up.html" class="dropdown-item">Повышение уровня</a>
-</li>
-                                    
-<li>
-    <a href="../rules/multiclassing.html" class="dropdown-item">Мультикласс</a>
-</li>
-                                    
-<li>
-    <a href="../rules/proficiency_bonus.html" class="dropdown-item">Бонус владения</a>
-</li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Характеристики</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../rules/abilities/ability_checks.html" class="dropdown-item">Проверка Характеристик</a>
-</li>
-            
-<li>
-    <a href="../rules/abilities/ability_scores.html" class="dropdown-item">Использование характеристик</a>
-</li>
-            
-<li>
-    <a href="../rules/abilities/saving_throws.html" class="dropdown-item">Спасброски</a>
-</li>
-            
-<li>
-    <a href="../rules/abilities/charisma.html" class="dropdown-item">Харизма</a>
-</li>
-            
-<li>
-    <a href="../rules/abilities/constitution.html" class="dropdown-item">Телосложение</a>
-</li>
-            
-<li>
-    <a href="../rules/abilities/dexterity.html" class="dropdown-item">Ловкость</a>
-</li>
-            
-<li>
-    <a href="../rules/abilities/intelligence.html" class="dropdown-item">Интеллект</a>
-</li>
-            
-<li>
-    <a href="../rules/abilities/strength.html" class="dropdown-item">Сила</a>
-</li>
-            
-<li>
-    <a href="../rules/abilities/wisdom.html" class="dropdown-item">Мудрость</a>
-</li>
-    </ul>
-  </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Правила для Мастера <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../gamemaster_rules/diseases.html" class="dropdown-item">Болезни</a>
-</li>
-                                    
-<li>
-    <a href="../gamemaster_rules/legendary_creatures.html" class="dropdown-item">Легендарные существа</a>
-</li>
-                                    
-<li>
-    <a href="../gamemaster_rules/madness.html" class="dropdown-item">Безумие</a>
-</li>
-                                    
-<li>
-    <a href="../gamemaster_rules/magic_items.html" class="dropdown-item">Волшебные предметы</a>
-</li>
-                                    
-<li>
-    <a href="../gamemaster_rules/monsters.html" class="dropdown-item">Чудовища</a>
-</li>
-                                    
-<li>
-    <a href="../gamemaster_rules/nonplayer_characters.html" class="dropdown-item">Неигровые Персонажи</a>
-</li>
-                                    
-<li>
-    <a href="../gamemaster_rules/objects.html" class="dropdown-item">Объекты</a>
-</li>
-                                    
-<li>
-    <a href="../gamemaster_rules/poisons.html" class="dropdown-item">Яды</a>
-</li>
-                                    
-<li>
-    <a href="../gamemaster_rules/sentient_magical_items.html" class="dropdown-item">Разумные магические предметы</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../index.html" title="5th Edition SRD" class="md-header__button md-logo" aria-label="5th Edition SRD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            5th Edition SRD
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
-            <li class="nav-item" data-level="1"><a href="#casting-a-spell" class="nav-link">Casting a Spell</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#casting-time" class="nav-link">Casting Time</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#range" class="nav-link">Range</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#components" class="nav-link">Components</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#duration" class="nav-link">Duration</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#targets" class="nav-link">Targets</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#areas-of-effect" class="nav-link">Areas of Effect</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#saving-throws" class="nav-link">Saving Throws</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#attack-rolls" class="nav-link">Attack Rolls</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#combining-magical-effects" class="nav-link">Combining Magical Effects</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
-
-<h1 id="casting-a-spell">Casting a Spell</h1>
-<p>When a character casts any spell, the same basic rules are followed, regardless of the character's class or the spell's effects.</p>
-<p>Each spell description begins with a block of information, including the spell's name, level, school of magic, casting time, range, components, and duration. The rest of a spell entry describes the spell's effect. </p>
-<h2 id="casting-time">Casting Time</h2>
-<p>Most spells require a single action to cast, but some spells require a bonus action, a reaction, or much more time to cast. </p>
-<h3 id="bonus-action">Bonus Action</h3>
-<p>A spell cast with a bonus action is especially swift. You must use a bonus action on your turn to cast the spell, provided that you haven't already taken a bonus action this turn. You can't cast another spell during the same turn, except for a cantrip with a casting time of 1 action. </p>
-<h3 id="reactions">Reactions</h3>
-<p>Some spells can be cast as reactions. These spells take a fraction of a second to bring about and are cast in response to some event. If a spell can be cast as a reaction, the spell description tells you exactly when you can do so. </p>
-<h3 id="longer-casting-times">Longer Casting Times</h3>
-<p>Certain spells (including spells cast as rituals) require more time to cast: minutes or even hours. When you cast a spell with a casting time longer than a single action or reaction, you must spend your action each turn casting the spell, and you must maintain your concentration while you do so. If your concentration is broken, the spell fails, but you don't expend a spell slot. If you want to try casting the spell again, you must start over. </p>
-<h2 id="range">Range</h2>
-<p>The target of a spell must be within the spell's range. For a spell like <strong><em>magic missile</em></strong>, the target is a creature. For a spell like <strong><em>fireball</em></strong>, the target is the point in space where the ball of fire erupts.</p>
-<p>Most spells have ranges expressed in feet. Some spells can target only a creature (including you) that you touch. Other spells, such as the <strong><em>shield</em></strong> spell, affect only you. These spells have a range of self.</p>
-<p>Spells that create cones or lines of effect that originate from you also have a range of self, indicating that the origin point of the spell's effect must be you.</p>
-<p>Once a spell is cast, its effects aren't limited by its range, unless the spell's description says otherwise. </p>
-<h2 id="components">Components</h2>
-<p>A spell's components are the physical requirements you must meet in order to cast it. Each spell's description indicates whether it requires verbal (V), somatic (S), or material (M) components. If you can't provide one or more of a spell's components, you are unable to cast the spell. </p>
-<h3 id="verbal-v">Verbal (V)</h3>
-<p>Most spells require the chanting of mystic words. The words themselves aren't the source of the spell's power; rather, the particular combination of sounds, with specific pitch and resonance, sets the threads of magic in motion. Thus, a character who is gagged or in an area of silence, such as one created by the <strong><em>silence</em></strong> spell, can't cast a spell with a verbal component.</p>
-<h3 id="somatic-s">Somatic (S)</h3>
-<p>Spellcasting gestures might include a forceful gesticulation or an intricate set of gestures. If a spell requires a somatic component, the caster must have free use of at least one hand to perform these gestures. </p>
-<h3 id="material-m">Material (M)</h3>
-<p>Casting some spells requires particular objects, specified in parentheses in the component entry. A character can use a <strong>component pouch</strong> or a <strong>spellcasting focus</strong> (found in “Equipment”) in place of the components specified for a spell. But if a cost is indicated for a component, a character must have that specific component before he or she can cast the spell.</p>
-<p>If a spell states that a material component is consumed by the spell, the caster must provide this component for each casting of the spell. A spellcaster must have a hand free to access a spell's material components--or to hold a spellcasting focus--but it can be the same hand that he or she uses to perform somatic components. </p>
-<h2 id="duration">Duration</h2>
-<p>A spell's duration is the length of time the spell persists. A duration can be expressed in rounds, minutes, hours, or even years. Some spells specify that their effects last until the spells are dispelled or destroyed. </p>
-<h3 id="instantaneous">Instantaneous</h3>
-<p>Many spells are instantaneous. The spell harms, heals, creates, or alters a creature or an object in a way that can't be dispelled, because its magic exists only for an instant. </p>
-<h3 id="concentration">Concentration</h3>
-<p>Some spells require you to maintain concentration in order to keep their magic active. If you lose concentration, such a spell ends.</p>
-<p>If a spell must be maintained with concentration, that fact appears in its Duration entry, and the spell specifies how long you can concentrate on it. You can end concentration at any time (no action required).</p>
-<p>Normal activity, such as moving and attacking, doesn't interfere with concentration. The following factors can break concentration:</p>
-<ul>
-<li>
-<p><strong>Casting another spell that requires concentration.</strong> You lose concentration on a spell if you cast another spell that requires concentration. You can't concentrate on two spells at once.</p>
-</li>
-<li>
-<p><strong>Taking damage.</strong> Whenever you take damage while you are concentrating on a spell, you must make a Constitution saving throw to maintain your concentration. The DC equals 10 or half the damage you take, whichever number is higher. If you take damage from multiple sources, such as an arrow and a dragon's breath, you make a separate saving throw for each source of damage.</p>
-</li>
-<li>
-<p><strong>Being incapacitated or killed.</strong> You lose concentration on a spell if you are incapacitated or if you die.</p>
-</li>
-</ul>
-<p>The GM might also decide that certain environmental phenomena, such as a wave crashing over you while you're on a storm-tossed ship, require you to succeed on a DC 10 Constitution saving throw to maintain concentration on a spell. </p>
-<h2 id="targets">Targets</h2>
-<p>A typical spell requires you to pick one or more targets to be affected by the spell's magic. A spell's description tells you whether the spell targets creatures, objects, or a point of origin for an area of effect (described below).</p>
-<p>Unless a spell has a perceptible effect, a creature might not know it was targeted by a spell at all. An effect like crackling lightning is obvious, but a more subtle effect, such as an attempt to read a creature's thoughts, typically goes unnoticed, unless a spell says otherwise. </p>
-<h3 id="a-clear-path-to-the-target">A Clear Path to the Target</h3>
-<p>To target something, you must have a clear path to it, so it can't be behind total cover. If you place an area of effect at a point that you can't see and an obstruction, such as a wall, is between you and that point, the point of origin comes into being on the near side of that obstruction. </p>
-<h3 id="targeting-yourself">Targeting Yourself</h3>
-<p>If a spell targets a creature of your choice, you can choose yourself, unless the creature must be hostile or specifically a creature other than you. If you are in the area of effect of a spell you cast, you can target yourself. Areas of Effect Spells such as burning hands and cone of cold cover an area, allowing them to affect multiple creatures at once.</p>
-<h2 id="areas-of-effect">Areas of Effect</h2>
-<p>Spells such as <strong><em>burning hands</em></strong> and <strong><em>cone of cold</em></strong> cover an area, allowing them to affect multiple creatures at once.</p>
-<p>A spell's description specifies its area of effect, which typically has one of five different shapes: cone, cube, cylinder, line, or sphere. Every area of effect has a <strong>point of origin</strong>, a location from which the spell's energy erupts. The rules for each shape specify how you position its point of origin. Typically, a point of origin is a point in space, but some spells have an area whose origin is a creature or an object.</p>
-<p>A spell's effect expands in straight lines from the point of origin. If no unblocked straight line extends from the point of origin to a location within the area of effect, that location isn't included in the spell's area. To block one of these imaginary lines, an obstruction must provide total cover. </p>
-<h3 id="cone">Cone</h3>
-<p>A cone extends in a direction you choose from its point of origin. A cone's width at a given point along its length is equal to that point's distance from the point of origin. A cone's area of effect specifies its maximum length.</p>
-<p>A cone's point of origin is not included in the cone's area of effect, unless you decide otherwise. </p>
-<h3 id="cube">Cube</h3>
-<p>You select a cube's point of origin, which lies anywhere on a face of the cubic effect. The cube's size is expressed as the length of each side.</p>
-<p>A cube's point of origin is not included in the cube's area of effect, unless you decide otherwise. </p>
-<h3 id="cylinder">Cylinder</h3>
-<p>A cylinder's point of origin is the center of a circle of a particular radius, as given in the spell description. The circle must either be on the ground or at the height of the spell effect. The energy in a cylinder expands in straight lines from the point of origin to the perimeter of the circle, forming the base of the cylinder. The spell's effect then shoots up from the base or down from the top, to a distance equal to the height of the cylinder.</p>
-<p>A cylinder's point of origin is included in the cylinder's area of effect. </p>
-<h3 id="line">Line</h3>
-<p>A line extends from its point of origin in a straight path up to its length and covers an area defined by its width.</p>
-<p>A line's point of origin is not included in the line's area of effect, unless you decide otherwise. </p>
-<h3 id="sphere">Sphere</h3>
-<p>You select a sphere's point of origin, and the sphere extends outward from that point. The sphere's size is expressed as a radius in feet that extends from the point.</p>
-<p>A sphere's point of origin is included in the sphere's area of effect. </p>
-<h2 id="saving-throws">Saving Throws</h2>
-<p>Many spells specify that a target can make a saving throw to avoid some or all of a spell's effects. The spell specifies the ability that the target uses for the save and what happens on a success or failure.</p>
-<p>The DC to resist one of your spells equals 8 + your spellcasting ability modifier + your proficiency bonus + any special modifiers. </p>
-<h2 id="attack-rolls">Attack Rolls</h2>
-<p>Some spells require the caster to make an attack roll to determine whether the spell effect hits the intended target. Your attack bonus with a spell attack equals your spellcasting ability modifier + your proficiency bonus.</p>
-<p>Most spells that require attack rolls involve ranged attacks. Remember that you have disadvantage on a ranged attack roll if you are within 5 feet of a hostile creature that can see you and that isn't incapacitated. </p>
-<blockquote>
-<h4 id="the-schools-of-magic">The Schools of Magic</h4>
-<p>Academies of magic group spells into eight categories called schools of magic. Scholars, particularly wizards, apply these categories to all spells, believing that all magic functions in essentially the same way, whether it derives from rigorous study or is bestowed by a deity.</p>
-<p>The schools of magic help describe spells; they have no rules of their own, although some rules refer to the schools.</p>
-<p><strong>Abjuration</strong> spells are protective in nature, though some of them have aggressive uses. They create magical barriers, negate harmful effects, harm trespassers, or banish creatures to other planes of existence.</p>
-<p><strong>Conjuration</strong> spells involve the transportation of objects and creatures from one location to another. Some spells summon creatures or objects to the caster's side, whereas others allow the caster to teleport to another location. Some conjurations create objects or effects out of nothing.</p>
-<p><strong>Divination</strong> spells reveal information, whether in the form of secrets long forgotten, glimpses of the future, the locations of hidden things, the truth behind illusions, or visions of distant people or places.</p>
-<p><strong>Enchantment</strong> spells affect the minds of others, influencing or controlling their behavior. Such spells can make enemies see the caster as a friend, force creatures to take a course of action, or even control another creature like a puppet.</p>
-<p><strong>Evocation</strong> spells manipulate magical energy to produce a desired effect. Some call up blasts of fire or lightning. Others channel positive energy to heal wounds.</p>
-<p><strong>Illusion</strong> spells deceive the senses or minds of others. They cause people to see things that are not there, to miss things that are there, to hear phantom noises, or to remember things that never happened. Some illusions create phantom images that any creature can see, but the most insidious illusions plant an image directly in the mind of a creature.</p>
-<p><strong>Necromancy</strong> spells manipulate the energies of life and death. Such spells can grant an extra reserve of life force, drain the life energy from another creature, create the undead, or even bring the dead back to life.</p>
-<p>Creating the undead through the use of necromancy spells such as animate dead is not a good act, and only evil casters use such spells frequently.</p>
-<p><strong>Transmutation</strong> spells change the properties of a creature, object, or environment. They might turn an enemy into a harmless creature, bolster the strength of an ally, make an object move at the caster's command, or enhance a creature's innate healing abilities to rapidly recover from injury. </p>
-</blockquote>
-<h2 id="combining-magical-effects">Combining Magical Effects</h2>
-<p>The effects of different spells add together while the durations of those spells overlap. The effects of the same spell cast multiple times don't combine, however. Instead, the most potent effect--such as the highest bonus--from those castings applies while their durations overlap.</p>
-<p>For example, if two clerics cast bless on the same target, that character gains the spell's benefit only once; he or she doesn't get to roll two bonus dice.</p></div>
-            </div>
+              **Сотворение заклинания**
+            
+          </span>
         </div>
-
-        <footer class="col-md-12">
-            <hr>
-                <p>Rules provided by Wizards of the Coast under the <a href="/license">OGL 1.0a</a>.</p>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = "..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+      </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Очистить" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list"></ol>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
 
-    </body>
+
+  <li class="md-tabs__item">
+    <a href="../index.html" class="md-tabs__link">
+      О ресурсе
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../adventuring/between_adventures.html" class="md-tabs__link">
+        Приключения
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../adventuring/equipment/adventuring_gear.html" class="md-tabs__link">
+        Снаряжение
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../character/alignment.html" class="md-tabs__link">
+        Персонаж
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../combat/actions_in_combat.html" class="md-tabs__link">
+        Сражение
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../rules/advantage_and_disadvantage.html" class="md-tabs__link">
+        Правила для Игрока
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gamemaster_rules/diseases.html" class="md-tabs__link">
+        Правила для Мастера
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="5th Edition SRD" class="md-nav__button md-logo" aria-label="5th Edition SRD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    5th Edition SRD
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        О ресурсе
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Приключения
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Приключения" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Приключения
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/between_adventures.html" class="md-nav__link">
+        Между Приключениями
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/movement.html" class="md-nav__link">
+        Перемещение
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/planes_of_existence.html" class="md-nav__link">
+        Планы существования
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/resting.html" class="md-nav__link">
+        Отдых
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/the_environmen.html" class="md-nav__link">
+        Окружающая среда
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/time.html" class="md-nav__link">
+        Время
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Снаряжение
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Снаряжение" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Снаряжение
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/equipment/adventuring_gear.html" class="md-nav__link">
+        Снаряжение
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/equipment/armor.html" class="md-nav__link">
+        Доспехи
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/equipment/coins.html" class="md-nav__link">
+        Монеты
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/equipment/equipment_packs.html" class="md-nav__link">
+        Наборы снаряжения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/equipment/mounts_and_vehicles.html" class="md-nav__link">
+        Верховые животные и транспортные средства
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/equipment/selling_treasure.html" class="md-nav__link">
+        Продажа Сокровищ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/equipment/tools.html" class="md-nav__link">
+        Инструменты
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/equipment/trade_goods.html" class="md-nav__link">
+        Товары
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventuring/equipment/weapons.html" class="md-nav__link">
+        Оружие
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Персонаж
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Персонаж" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Персонаж
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Основы
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Основы" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Основы
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/alignment.html" class="md-nav__link">
+        Мировоззрение
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/backgrounds.html" class="md-nav__link">
+        Предыстории
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/fantasy-historical_pantheons.html" class="md-nav__link">
+        Фэнтезийно-исторические пантеоны
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/languages.html" class="md-nav__link">
+        Языки
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Классы
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Классы" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Классы
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/classes/barbarian.html" class="md-nav__link">
+        Варвар
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/classes/bard.html" class="md-nav__link">
+        Бард
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/classes/cleric.html" class="md-nav__link">
+        Клерик
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/classes/druid.html" class="md-nav__link">
+        Друид
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/classes/fighter.html" class="md-nav__link">
+        Боец
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/classes/monk.html" class="md-nav__link">
+        Монах
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/classes/paladin.html" class="md-nav__link">
+        Паладин
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/classes/ranger.html" class="md-nav__link">
+        Рейнджер
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/classes/rogue.html" class="md-nav__link">
+        Плут
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/classes/sorcerer.html" class="md-nav__link">
+        Чародей
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/classes/warlock.html" class="md-nav__link">
+        Колдун
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/classes/wizard.html" class="md-nav__link">
+        Волшебник
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Расы
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Расы" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Расы
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/races/index.html" class="md-nav__link">
+        О расах
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/races/dragonborn.html" class="md-nav__link">
+        Драконорожденный
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/races/dwarf.html" class="md-nav__link">
+        Дварф
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/races/elf.html" class="md-nav__link">
+        Эльф
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/races/gnome.html" class="md-nav__link">
+        Гном
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/races/half-elf.html" class="md-nav__link">
+        Полуэльф
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/races/half-orc.html" class="md-nav__link">
+        Полуорк
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/races/halfling.html" class="md-nav__link">
+        Халфлинг
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/races/human.html" class="md-nav__link">
+        Человек
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character/races/tiefling.html" class="md-nav__link">
+        Тифлинг
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Сражение
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Сражение" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Сражение
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combat/actions_in_combat.html" class="md-nav__link">
+        Действия в бою
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combat/cover.html" class="md-nav__link">
+        Укрытие
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combat/damage_and_healing.html" class="md-nav__link">
+        Урон и лечение
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combat/making_an_attack.html" class="md-nav__link">
+        Совершение атаки
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combat/mounted_combat.html" class="md-nav__link">
+        Сражение верхом
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combat/movement_and_position.html" class="md-nav__link">
+        Перемещения и позиция
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combat/order_of_combat.html" class="md-nav__link">
+        Порядок Сражения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combat/underwater_combat.html" class="md-nav__link">
+        Сражение под водой
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Правила для Игрока
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Правила для Игрока" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Правила для Игрока
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/advantage_and_disadvantage.html" class="md-nav__link">
+        Преимущество и помеха
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/conditions.html" class="md-nav__link">
+        Состояния
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/expenses.html" class="md-nav__link">
+        Расходы
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/feats.html" class="md-nav__link">
+        Черты
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/inspiration.html" class="md-nav__link">
+        Вдохновение
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/leveling_up.html" class="md-nav__link">
+        Повышение уровня
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/multiclassing.html" class="md-nav__link">
+        Мультикласс
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/proficiency_bonus.html" class="md-nav__link">
+        Бонус владения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_9">
+          Характеристики
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Характеристики" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_9">
+          <span class="md-nav__icon md-icon"></span>
+          Характеристики
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/abilities/ability_checks.html" class="md-nav__link">
+        Проверка Характеристик
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/abilities/ability_scores.html" class="md-nav__link">
+        Использование характеристик
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/abilities/saving_throws.html" class="md-nav__link">
+        Спасброски
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/abilities/charisma.html" class="md-nav__link">
+        Харизма
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/abilities/constitution.html" class="md-nav__link">
+        Телосложение
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/abilities/dexterity.html" class="md-nav__link">
+        Ловкость
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/abilities/intelligence.html" class="md-nav__link">
+        Интеллект
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/abilities/strength.html" class="md-nav__link">
+        Сила
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/abilities/wisdom.html" class="md-nav__link">
+        Мудрость
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Правила для Мастера
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Правила для Мастера" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Правила для Мастера
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gamemaster_rules/diseases.html" class="md-nav__link">
+        Болезни
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gamemaster_rules/legendary_creatures.html" class="md-nav__link">
+        Легендарные существа
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gamemaster_rules/madness.html" class="md-nav__link">
+        Безумие
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gamemaster_rules/magic_items.html" class="md-nav__link">
+        Волшебные предметы
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gamemaster_rules/monsters.html" class="md-nav__link">
+        Чудовища
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gamemaster_rules/nonplayer_characters.html" class="md-nav__link">
+        Неигровые Персонажи
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gamemaster_rules/objects.html" class="md-nav__link">
+        Объекты
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gamemaster_rules/poisons.html" class="md-nav__link">
+        Яды
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gamemaster_rules/sentient_magical_items.html" class="md-nav__link">
+        Разумные магические предметы
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="_1"><strong>Сотворение заклинания</strong></h1>
+<p>Когда персонаж сотворяет заклинание, используются единые правила, каким бы ни был его класс или эффект заклинания.</p>
+<p>Описание каждого заклинания начинается с блока информации, включающего название заклинания, его круг, школу магии, время сотворения, дистанцию, компоненты и длительность. Дальше описываются эффекты заклинания.</p>
+<h2 id="_2"><strong>Время сотворения</strong></h2>
+<p>Большинство заклинаний сотворяются действием, но некоторые сотворяются бонусным действием, реакцией, или же требуют долгого времени.</p>
+<h3 id="_3"><em>Бонусное Действие</em></h3>
+<p>Заклинание, сотворенное бонусным действием, особенно быстро. Для сотворения такого заклинания вы должны в свой ход использовать бонусное действие, при условии, что в этом ходу ещё не совершали бонусных действий.  Вы не можете сотворить другое заклинание во время того же хода, за исключением заговора со временем сотворение одно действие.</p>
+<h3 id="_4"><em>Реакции</em></h3>
+<p>Некоторые заклинания сотворяются реакцией. Эти заклинания активируются за считанные доли секунды, и сотворяются в ответ на определённые  события.  Если заклинание может быть совторено в качестве реакции, в описании будет сказано, когда именно вы можете это сделать.</p>
+<h3 id="_5"><em>Длительное время сотворения</em></h3>
+<p>Некоторые заклинания (в том числе заклинания, сотворенное в качестве ритуалов) требуют больше времени на сотворение: нескольких минут или нескольких часов.  Когда вы используете заклинание со временем сотворения больше одного действия или реакции, вы должны каждый свой ход тратить действие на сотворение этого заклинания, и поддерживать при этом концентрацию (смотрите ниже «Концентрация»).  Если концентрация нарушена, заклинание проваливается, но ячейка заклинания не тратится.  Если захотите снова сотворить это заклинание, придётся начать всё с начала.</p>
+<h2 id="_6"><code></code><strong>Дистанция</strong></h2>
+<p>Цель заклинания должна находиться в пределах дистанции заклинания.  Для заклинания, подобного <em>волшебной стреле</em>, целью является существо. Для заклинания вроде <em>огненного шара</em> целью является точка в пространстве, где вспыхивает огненный шар.</p>
+<p>Большинство заклинаний имеют дистанцию, определенную в футах. Некоторые заклинания нацеливаются только на одно существо, которого вы коснётесь (включая вас).  Другие заклинания, такие как заклинание <em>щит</em>, влияют только на вас. У таких заклинаний указана дистанция «На себя».</p>
+<p>Заклинания, создающие конусы или линии эффекта, исходящие от вас, тоже обладают дистанцией «На себя», что означает, что исходной клеткой эффекта должны быть вы (смотрите ниже «Области воздействия»).</p>
+<p>После того как заклинание сотворено, его эффекты не ограничиваются его дистанцией, если только в его описании не сказано обратное.</p>
+<h2 id="_7"><code></code><strong>Компоненты</strong></h2>
+<p>Компоненты заклинания это требования, которые нужно выполнить, чтобы его активировать.  В описании заклинания сказано, использует ли оно вербальный (В), соматический (С) или материальный (М) компоненты. Если вы не можете предоставить хотя бы один из компонентов заклинания, вы не можете его сотворить.</p>
+<h3 id="_8"><em>Вербальный (В)</em></h3>
+<p>Большинство заклинаний требует произношения мистических слов. Сами по себе слова не являются источником силы заклинания; просто комбинация звуков с особой тональностью вызывает резонанс в прядях магии, приводя их в движение.  Таким образом, персонаж, который находится с кляпом во рту или в области тишины, например, созданной заклинанием <em>тишины</em>, не может сотворить заклинание с вербальным компонентом.</p>
+<h3 id="_9"><em>Соматический (С)</em></h3>
+<p>Заклинательные жесты могут включать в себя сильную жестикуляцию или сложный набор жестов. Если у заклинания есть соматический компонент, у заклинателя должна быть свободной хотя бы одна рука для исполнения этих жестов.</p>
+<h3 id="_10"><code></code><em>Материальный (М)</em></h3>
+<p>Накладывание некоторых заклинаний требует наличия особых предметов, указанных в скобках в описании заклинания. Персонаж может использовать <strong>Мешочек с компонентами</strong> или <strong>заклинательный фокус</strong> (найденный в разделе "Снаряжение") вместо компонентов, указанных для заклинания. Но если стоимость указана для компонента, персонаж должен иметь этот конкретный компонент, прежде чем он или она сможет произнести заклинание.</p>
+<p>Если в заклинании сказано, что материальные компоненты расходуются, заклинатель должен предоставить компоненты для каждого использования этого заклинания.</p>
+<p>У заклинателя должна быть одна свободная рука для доступа к материальным компонентам, но это может быть та же самая рука, что используется для выполнения соматического компонента.</p>
+<h2 id="_11"><strong>Длительность</strong></h2>
+<p>Длительность заклинания это время, в течение которого это заклинание будет активно.  Длительность может измеряться в раундах, минутах, часах и даже годах.  Некоторые заклинания указывают, что их эффект длится до тех пор, пока не будет рассеян или уничтожен.</p>
+<h3 id="_12"><em>Мгновенный</em></h3>
+<p>Многие заклинания мгновенны. Заклинание наносит вред, исцеляет, создает или изменяет существо или объект таким образом, что его нельзя рассеять, потому что его магия существует только на мгновение.</p>
+<h3 id="_13"><em>Концентрация</em></h3>
+<p>Некоторые заклинания требуют от вас сохранения концентрации для поддерживания магии в активном состоянии. Если вы потеряете концентрацию, такое заклинание оканчивается.</p>
+<p>Если заклинание должно поддерживаться концентрацией, это указывается в разделе Длительность, и там же указывается, сколько можно концентрироваться на нём.  Вы можете окончить концентрацию в любое время (действие не требуется).</p>
+<p>Нормальная деятельность, такая как перемещение и сражение, не прерывают концентрацию.  Её могут прервать следующие события:</p>
+<ul>
+<li><strong>Сотворение другого заклинания, требующего концентрацию.</strong>  Вы теряете концентрацию на заклинании, если сотворяете другое заклинание, требующее концентрации. Нельзя концентрироваться на двух заклинаниях одновременно.</li>
+<li><strong>Получение урона.</strong> Каждый раз, когда вы получаете урон во время концентрации на заклинании, вы должны совершить спасбросок Телосложения для продолжения концентрации.  КС равен 10 или половине урона, который вы получаете, в зависимости от того, какое число выше. Если вы получаете урон из нескольких источников, например, от стрелы и дыхания дракона, вы совершаете отдельные спасброски для каждого источника урона.</li>
+<li><strong>Быть недееспособным или убитым.</strong> Вы теряете концентрацию на заклинании, если становитесь недееспособным или умираете.</li>
+</ul>
+<p>ГМ также может решить, что некоторые явления окружающей среды, такие как волна, Разбивающаяся над вами, когда вы находитесь на корабле во время шторма, требуют, чтобы вы преуспели в спасательном броске  с КС 10, чтобы сохранить концентрацию на заклинании.</p>
+<h2 id="_14"><strong>Цели</strong></h2>
+<p>Обычно заклинание требует, чтобы вы выбрали одну или несколько целей, которые и попадут под действие магии заклинания.  В описании заклинания сказано, на что оно нацеливается — на существ, предметы, или точку в пространстве (описано ниже).</p>
+<p>Если у цели нет воспринимаемого эффекта, существо может вообще не узнать, что было целью заклинания.  Эффект, подобный потрескиванию молнии, очевиден, но тайные эффекты, такие как попытки прочесть мысли, обычно проходят незамеченными, если в описании заклинания не сказано обратное.</p>
+<h3 id="_15"><code></code><em>Свободный путь до цели</em></h3>
+<p>Чтобы на что-то нацелиться, у вас должен быть свободный путь, поэтому у цели не должно быть полного укрытия.</p>
+<p>Если вы создаёте область воздействия в точке, которую не видно из-за препятствия, и между вами и этой точкой есть сплошная преграда, такая как стена, исходная точка возникнет с ближайшей к вам стороны этой преграды.</p>
+<h3 id="_16"><em>Нацеливание На Себя</em></h3>
+<p>Если заклинание нацеливается на любое существо, вы можете выбрать себя, кроме тех случаев, когда существо должно быть враждебным, или когда указано, что это должно быть существо, отличное от вас.  Если вы находитесь в области эффекта наложенного вами же заклинания, вы можете сделать целью себя.</p>
+<h2 id="_17"><code></code><strong>Области воздействия</strong></h2>
+<p>Заклинания, такие как <em>горящие руки</em> и <em>конус холода</em>, покрывают область, позволяя им воздействовать сразу на несколько существ.</p>
+<p>Описание заклинания определяет область воздействия, которая обычно принимает одну из пяти разных форм: конус, куб, линия, сфера или цилиндр.  Каждая область действия имеет <strong>точку происхождения</strong>, место, из которого извергается энергия заклинания. Правила для каждой фигуры определяют, как вы размещаете ее точку начала координат. Обычно исходная точка это точка в пространстве, но области некоторых заклинаний исходят из существ или предметов.</p>
+<p>Эффект заклинания распространяется по прямым линиям из исходной точки.  Если до какого-то места в области воздействия нет свободных линий от исходной точки, это место не включается в область воздействия. Для блокирования таких воображаемых линий препятствие должно предоставлять полное укрытие.</p>
+<h3 id="_18"><em>Конус</em></h3>
+<p>Конус простирается в выбранном вами направлении из исходной точки.  Ширина конуса на том или ином расстоянии от исходной точки равна расстоянию от этого места до исходной точки.  Область воздействия конуса указывает его максимальную длину.</p>
+<p>Исходная точка конуса не включается в область воздействия заклинания, если вы не решите иначе.</p>
+<h3 id="_19"><em>Куб</em></h3>
+<p>Вы выбираете исходную точку куба, лежащую на любой из граней кубического эффекта.  Для куба указывается длина его ребра.</p>
+<p>Исходная точка куба не включается в область воздействия заклинания, если вы не решите иначе.</p>
+<h3 id="_20"><em>Цилиндр</em></h3>
+<p>Исходная точка цилиндра является центром круга определённого радиуса, указанного в описании заклинания.  Круг должен быть либо на земле, либо на высоте эффекта заклинания. Энергия расширяется по прямым линиям из исходной точки до периметра круга, формируя основание.  После этого эффект заклинания «выстреливает» вверх или вниз, на расстояние, равное высоте цилиндра.</p>
+<p>Исходная точка цилиндра включается в область воздействия заклинания.</p>
+<h3 id="_21"><em>Линия</em></h3>
+<p>Линия простирается из исходной точки по прямому пути на расстояние, равное своей длине и покрывает площадь, определяемую её шириной.</p>
+<p>Исходная точка линии не включается в область воздействия заклинания, если вы не решите иначе.</p>
+<h3 id="_22"><em>Сфера</em></h3>
+<p>Вы выбираете исходную точку сферы, и она исходит из неё. Размер сферы определяется радиусом, а центром будет исходная точка. </p>
+<p>Исходная точка сферы включается в область воздействия заклинания.</p>
+<h2 id="_23"><strong>Спасброски</strong></h2>
+<p>Во многих заклинаниях указано, что цель может совершить спасбросок для избавления от части эффектов заклинания В описании заклинания сказано, какая характеристика при этом используется, и что происходит при успешном или провальном спасброске.</p>
+<p>КС противостояния одному из ваших заклинаний равен 8 + ваш модификатор заклинательной характеристики + Ваш бонус владения + любые специальные модификаторы.</p>
+<h2 id="_24"><strong>Броски Атаки Заклинаниями</strong></h2>
+<p>Некоторые заклинания требуют, чтобы заклинатель совершил бросок атаки, дабы определить, попал ли эффект заклинания по выбранной цели.  Ваш бонус атаки атакой заклинанием равен модификатору вашей заклинательной характеристики + ваш бонус владения.</p>
+<p>Большинство заклинаний, требующих броска атаки, совершают дальнобойные атаки.  Помните, что вы совершаете броски дальнобойных атак с помехой, если в пределах 5 футов есть враждебное дееспособное существо, видящее вас и если оно не недееспособно. </p>
+<blockquote>
+<p>Школы магии</p>
+<p>Академии магии группируют заклинания в восемь категорий, называемых школами магии. Учёные, в частности волшебники, применяют эти категории абсолютно ко всем заклинаниям, считая, что магия действует одинаково, вне зависимости от того, что является её источником — прилежное изучение или щедрое божество.</p>
+<p>Школы магии помогают описывать заклинания; сами по себе они не несут правил, но некоторые правила применяются только к тем или иным школам.</p>
+<p>Заклинания <strong>Ограждения</strong> носят защитный характер, хотя некоторые из них имеют агрессивное применение. Они создают магические барьеры, отрицают вредные эффекты, вредят нарушителям или изгоняют существ на другие планы существования.</p>
+<p>Заклинания <strong>Призывания</strong> включают в себя транспортировку объектов и существ из одного места в другое. Некоторые заклинания призывают существ или объекты на сторону заклинателя, в то время как другие позволяют заклинателю телепортироваться в другое место. Некоторые заклинания создают объекты или эффекты из ничего.</p>
+<p>Заклинания <strong>предсказания</strong> раскрывают информацию, будь то в виде давно забытых тайн, проблесков будущего, расположения скрытых вещей, истины за иллюзиями или видений далеких людей или мест.</p>
+<p>Заклинания <strong>зачарования</strong> воздействуют на сознание других людей, влияя или контролируя их поведение. Такие заклинания могут заставить врагов видеть заклинателя как друга, заставить существ принять курс действий или даже управлять другим существом, как марионеткой.</p>
+<p>Заклинания <strong>воплощения</strong> манипулируют магической энергией, чтобы произвести желаемый эффект. Некоторые вызывают взрывы огня или молнии. Другие направляют позитивную энергию на исцеление ран.</p>
+<p>Заклинания <strong>иллюзии</strong> обманывают чувства или умы других людей. Они заставляют людей видеть то, чего нет, упускать то, что есть, слышать призрачные звуки или вспоминать то, чего никогда не было. Некоторые иллюзии &gt;создают фантомные образы, которые может видеть любое существо, но самые коварные иллюзии насаждают образ непосредственно в сознании существа.</p>
+<p>Заклинания <strong>некромантии</strong> манипулируют энергиями жизни и смерти. Такие заклинания могут дать дополнительный запас жизненной силы, выкачать жизненную энергию из другого существа, создать нежить или даже вернуть &gt;мертвых к жизни.</p>
+<p>Создание нежити с помощью заклинаний некромантии, таких как <em>Поднятие мертвых,</em> не является хорошим актом, и только злые заклинатели часто используют такие заклинания.</p>
+<p>Заклинания <strong>трансмутации</strong> изменяют свойства существа, объекта или окружающей среды. Они могут превратить врага в безвредное существо, усилить силу союзника, заставить объект двигаться по команде заклинателя или усилить врожденные способности существа к исцелению, чтобы быстро оправиться от травмы</p>
+</blockquote>
+<h2 id="_25"><strong>Объединение магических эффектов</strong></h2>
+<p>Эффекты разных заклинаний складываются, пока их длительность перекрывается.  Однако, эффекты одного и того же заклинания, сотворенного несколько раз, не складываются.  Вместо этого применяется только самый сильный из эффектов (например, дающий больший бонус), пока длительность двух эффектов перекрывает друг друга.</p>
+<p>Например, если два клерика сотворяют <em>благословение</em> на одну и ту же цель, этот персонаж получает преимущество заклинания только один раз; он или она не может бросить две бонусные кости.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            К началу
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Rules provided by Wizards of the Coast under the <a href="/license">OGL 1.0a</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://vk.com/cyborgsandmages" target="_blank" rel="noopener" title="vk.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M31.49 63.49C0 94.982 0 145.672 0 247.04v17.92c0 101.369 0 152.059 31.49 183.549C62.982 480 113.672 480 215.04 480h17.92c101.369 0 152.059 0 183.549-31.491C448 417.019 448 366.329 448 264.96v-17.92c0-101.369 0-152.059-31.491-183.55C385.019 32 334.329 32 232.96 32h-17.92C113.671 32 62.981 32 31.49 63.49ZM75.6 168.268h51.147c1.68 85.493 39.386 121.706 69.253 129.173V168.267h48.16V242c29.493-3.173 60.48-36.773 70.933-73.733h48.16a142.258 142.258 0 0 1-65.52 92.96 147.348 147.348 0 0 1 76.72 93.52H321.44a92.154 92.154 0 0 0-77.28-66.64v66.64h-5.787c-102.106 0-160.346-70-162.773-186.48Z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/Cyborgs-and-Mages-101450734568540" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/cyborgsandmages" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://t.me/cyborgs_and_mages" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/xRCsKBQ" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://cyborgsandmages.com" target="_blank" rel="noopener" title="cyborgsandmages.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m61.7 169.4 101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "toc.integrate", "navigation.tabs", "navigation.expand"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
 </html>

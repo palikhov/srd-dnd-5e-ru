@@ -4,6 +4,7 @@ copyright: Rules provided by Wizards of the Coast under the <a href="/license">O
 
 theme:
   name: bootstrap
+  name: material
   
   language: ru 
     
@@ -28,7 +29,12 @@ markdown_extensions:
   - meta
   - pymdownx.highlight
   - pymdownx.superfences
-  
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
 extra:
   social:
     - icon: fontawesome/brands/vk
@@ -42,7 +48,8 @@ extra:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/xRCsKBQ
     - icon: fontawesome/brands/wordpress
-      link: https://cyborgsandmages.wordpress.com
+      link: https://cyborgsandmages.com
+
 
 nav:
     - О ресурсе: 'index.md'
@@ -74,10 +81,10 @@ nav:
             - Бард: 'character/classes/bard.md'
             - Клерик: 'character/classes/cleric.md'
             - Друид: 'character/classes/druid.md'
-            - Воин: 'character/classes/fighter.md'
+            - Боец: 'character/classes/fighter.md'
             - Монах: 'character/classes/monk.md'
             - Паладин: 'character/classes/paladin.md'
-            - Следопыт: 'character/classes/ranger.md'
+            - Рейнджер: 'character/classes/ranger.md'
             - Плут: 'character/classes/rogue.md'
             - Чародей: 'character/classes/sorcerer.md'
             - Колдун: 'character/classes/warlock.md'
