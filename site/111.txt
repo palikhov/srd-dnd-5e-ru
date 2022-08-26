@@ -1,0 +1,1429 @@
+page
+	title = NPC Stat Block 5e Generator
+	description = To use, simply click the "roll" button. //HH
+
+cards
+	card1
+		title = [firstname] [lastname]
+		subtitle = Local [r = race.selectOne,"[r]"] [occupation.titleCase]
+		content
+			property-line ;;; Armor Class ;;; {4-14}
+			property-line ;;; Hit Points ;;; {1-6}d{6|8|10|12} + [c= stats.con.selectOne,"[Math.floor((c-10)/2)]"]
+			property-line ;;; Speed ;;; {10|15|20|25|30|35}ft.
+			rule
+			stats ;;; str:[s= stats.str ] ;;; dex:[d= stats.dex] ;;; con:[c] ;;; int:[i=stats.int] ;;; wis:[w=stats.wis] ;;; cha:[h=stats.cha]
+			rule
+			property-line ;;; Damage Immunities ;;; [if(damages==1) {[damage.selectUnique(1,3).joinItems(", ")]} else{"None"}]
+			property-line ;;; Condition Immunities ;;;  [if(conditions==1) {[condition.selectUnique(1,3).joinItems(", ")]} else{"None"}]
+			property-line ;;; Senses ;;; [if(senses==1) {[sense.selectUnique(1,3).joinItems(", ")]} else{"None"}]
+			property-line ;;; Languages ;;; Common, [languages.selectUnique(num).consumableList.joinItems(", ")], and [languages.selectOne.consumableList]
+			//property-line ;;; Challenge ;;; 1 (200 XP)
+			rule
+			property-block ;;;  ;;; [g=gender.selectOne,"[g.structure.sentenceCase]"] [g]. [looks.sentenceCase]. [if(r=="Dragonborn"){"[scale.sentenceCase] with [undertones] undertones."}else{"[skin.sentenceCase] with [undertones] undertones."}]
+			property-block ;;;  ;;;  [g.full.sentenceCase] [eyestyle] eyes are [eyecolor] in color.
+			property-block ;;;  ;;; [if(r=="Dragonborn") {"There is no hair on their head"} else if(hair.haircolor=="Bald"){"There is no hair on their head"} else {"[hair.haircolor] colored hair is [hair.style]."}] 
+			property-block ;;;  ;;; [g.structure.sentenceCase] [if(g=="female"){"[sexualityone.selectOne]"} else if(g=="male"){"[sexualitytwo.selectOne]"} else if(g=="a transgender female"){"[sexualityone.selectOne]"} else if(g=="a transgender male"){"[sexualitytwo.selectOne]"} else {"[sexuality.selectOne]"}]  and [relationships]. 
+			property-block ;;;  ;;; [g.full.sentenceCase] personality is [personality.selectUnique(numP).consumableList.joinItems(", ")], and [personality]. 
+			//property-block ;;;  ;;; [if(result==1) {[disability.selectOne]} else{""}]
+			property-block ;;;  ;;; [disability.selectOne]
+
+race
+  Dragonborn
+  Dwarf
+  Elf
+  Gnome
+  Goliath
+  Half-elf
+  Human
+  Orc
+  Tiefling
+gender
+  agender^0.2
+		body = they
+		structure = they are
+		full = their
+		verb= they have
+		verb2= use
+  female^2
+		body = she
+		structure = she is
+		full = her
+		verb = she has
+		verb2= uses
+  genderfluid^0.2
+		body = they
+		structure = they are
+		full = their
+		verb= they have
+		verb2=  use
+  male^2
+		body = he
+		structure = he is
+		full = his
+		verb = he has
+		verb2= he uses
+  non-binary^0.2
+		body = they
+		structure = they are
+		full = their
+		verb= they have
+		verb2= they use
+  a transgender female^0.2
+		body = she
+		structure = she is
+		full = her
+		verb = she has
+		verb2= she uses
+  a transgender male^0.2
+		body = he
+		structure = he is
+		full = his
+		verb = he has
+		verb2= he uses
+  a transgender non-binary^0.2
+		body = they
+		structure = they are
+		full = their
+		verb= they have
+		verb2= they use
+  androgynous^0.2
+		body = they
+		structure = they are
+		full = their
+		verb= they have
+		verb2= they use
+looks
+  attractive
+  beautiful
+  chubby
+  curvy
+  fit
+  wiry
+  gorgeous
+  handsome
+  muscular
+  plain
+  presentable
+  shapely
+  skinny
+  stocky
+  tall
+  slender
+  unkempt
+skin
+	skin the color of acorns
+	skin of alabaster
+  skin the color of ash brown
+  beige skin
+  skin the color of bones
+  skin of burnet
+  skin the color of cattails
+  skin the color of charcoal
+  skin the color of chiffon
+  skin the color of clay
+  skin the color of cotton
+  skin the color of cream
+  skin the color of driftwood
+  skin of ebony
+  skin the color of egg shells
+  skin the color of a fawn
+  skin the color of frost
+  skin the color of gypsum
+  inky black skin 
+  skin like ivory
+  jet black skin
+  khaki colored skin
+  skin like obsidian
+  skin like onyx
+  skin like parchment
+  skin the color of pearl
+  skin like porcelain
+  skin the color of powder
+  raven black skin
+  sable skin
+  skin the color of sand
+  seashell like skin
+  sepia skin
+  snowy skin
+  skin the color of soot
+  spice colored skin
+  skin the color of suede
+  tan skin
+  skin the color of taupe 
+  tawny skin
+  terracotta skin
+  umber colored skin
+  walnut brown skin
+  skin like whey
+  willowish brown skin
+  wrought iron black skin
+scale
+	scales the color of acorns
+	scales of alabaster
+	scales the color of ash brown
+	beige scales
+	scales the color of bones
+	scales of burnet
+	scales the color of cattails
+	scales the color of charcoal
+	scales the color of chiffon
+	scales the color of clay
+	scales the color of cotton
+	scales the color of cream
+	scales the color of driftwood
+	scales of ebony
+	scales the color of egg shells
+	scales the color of a fawn
+	scales the color of frost
+	scales the color of gypsum
+	inky black scales
+	scales like ivory
+	jet black scales
+	khaki colored scales
+	scales like obsidian
+	scales like onyx
+	scales like parchment
+	scales the color of pearl
+	scales like porcelain
+	scales the color of powder
+	raven black scales
+	sable scales
+	scales the color of sand
+	seashell like scales
+	sepia scales
+	snowy scales
+	scales the color of soot
+	spice colored scales
+	scales the color of suede
+	tan scales
+	scales the color of taupe
+	tawny scales
+	terracotta scales
+	umber colored scales
+	walnut brown scales
+	scales like whey
+	willowish brown scales
+	wrought iron black scales
+undertones
+	blue
+  blue-red
+  bronze
+  copper
+  coral
+  golden
+  magenta
+  olive
+  orange
+  orange-red
+  pink
+  red
+  rose
+  sapphire
+  silver
+  yellow
+eyestyle
+  almond-shaped 
+  beady 
+  bloodshot 
+  bulging
+  cat-like 
+  clear 
+  deep-set
+  elongated
+  filmy
+  obscured by cataracts
+  oval-shaped 
+  owlish
+  rheumy
+  ruddy
+  round
+  shark-like
+  slanted 
+  slitted 
+  sloe-eyed 
+  sunken
+  tired
+  watery
+  wide
+eyecolor
+	amber
+  coal black
+  ebony
+  jet black
+  midnight black
+  midnight blue
+  obsidian
+  pitch black
+  aquamarine
+  artic blue
+  china blue
+  crystal blue
+  cornflower blue
+  denim blue
+  electric blue
+  indigo
+  sapphire
+  steel blue
+  brandy
+  cognac
+  champagne
+  chestnut
+  golden brown
+  russet brown
+  tawny brown
+  topaz
+  whiskey brown
+  charcoal gray
+  ash gray
+  blue gray
+  graphite
+  gunmetal gray
+  cloud gray
+  silver
+  slate
+  stormy gray
+  bottle green
+  chartreuse
+  emerald green
+  forest green
+  grass green
+  sea green
+  hazel
+  amethyst
+  hyacinth
+  ultramarine
+hair
+	haircolor
+		Acorn
+		Alabaster
+		Amaranthine
+		Amber
+		Apricot
+		Argent
+		Ash
+		Ash brown
+		Aubergine
+		Auburn
+		Azuline
+		Azure
+		Bald
+		Banana
+		Beige
+		Bone
+		Bronze
+		Brown
+		Brunette
+		Bumblebee
+		Burnet
+		Butter
+		Buttermilk
+		Butterscotch
+		Canary-yellow
+		Caramel
+		Cardinal
+		Carnelian
+		Carrot
+		Celadon
+		Cerulean
+		Charcoal
+		Chartreuse
+		Chestnut
+		Chiffon
+		Cider
+		Cinnabar
+		Citrine
+		Clay
+		Copper
+		Corn
+		Cotton
+		Cream
+		Crimson
+		Cyan
+		Daffodil
+		Dandelion
+		Dim gray
+		Dirty blond
+		Driftwood
+		Ebony
+		Egg shell
+		Fawn
+		Fire
+		Flaxen
+		Frost
+		Ginger
+		Gold
+		Golden oak
+		Goldenrod
+		Gypsum
+		Honey blond
+		Hyacinthine
+		Indigo
+		Ink
+		Ivory
+		Jet black
+		Khaki
+		Latte
+		Lemon
+		Magenta
+		Mahogany
+		Maramalade
+		Maroon
+		Mauve
+		Merigold
+		Midnight blue
+		Mustard
+		Oat
+		Obsidian
+		Ochre
+		Onyx
+		Or
+		Parchment
+		Pearl
+		Periwinkle
+		Pinewood
+		Platinum
+		Porcelain
+		Powder
+		Primrose
+		Raven
+		Red
+		Russet
+		Rust
+		Rutile
+		Sable
+		Saffron
+		Sage
+		Salt
+		Salt and pepper
+		Sand
+		Sapphire
+		Seashell
+		Sepia
+		Silvery
+		Slate
+		Smoky quartz
+		Snow
+		Soot
+		Spice
+		Squash
+		Strawberry blond
+		Suede
+		Sulphureous
+		Tan
+		Tangerine
+		Taupe
+		Tawny
+		Teal
+		Terracotta
+		Tiger
+		Topaz
+		Turquoise
+		Ultramarine
+		Umber
+		Vermilion
+		Violet
+		Viridian
+		Walnut
+		Wheat
+		Whey
+		Wine
+		Wrought iron
+		Yellow
+		Zinnobar
+	style
+		in a ear-length bob
+		in a chin-length bob
+		in a long braid
+		in a long french braid
+		in a tight dutch braid
+		in a tight bun
+		in a messy bun
+		in short corkscrew curls
+		in medium corkscrew curls
+		in long curls
+		in short curls
+		in medium curls
+		straight, and down around their shoulders
+		straight, and chin-length
+		in long dreadlocks
+		in short dreadlocks
+		in a short faux-hawk
+		in cropped fingerwaves
+		in a tight french twist
+		gelled and short
+		in a layered cut
+		in a tall mohawk
+		in a mullet
+		in a pageboy cut
+		in low pigtails
+		in a pixie cut
+		in long plaits
+		in short plaits
+		in a pompadour
+		in a low ponytail
+		in a tall ponytail
+		in long ringlets
+		in medium length ringlets
+		in short ringlets
+		in short spikes
+		in long spiral curls
+		in short spiral curls
+		in a teased style
+		in texturized waves
+		in twists
+		in an upswept hairdo
+		in subtle waves
+sexualityone
+	aromantic
+	asexual
+	bisexual
+	heterosexual
+	lesbian
+	pansexual
+	demiromantic
+	demisexual
+sexualitytwo
+	aromantic
+	asexual
+	bisexual
+	heterosexual
+	gay
+	pansexual
+	demiromantic
+	demisexual
+sexuality
+	aromantic
+	asexual
+	bisexual
+	heterosexual
+	gay
+	lesbian
+	pansexual
+	demiromantic
+	demisexual
+relationships
+  betrothed
+  engaged
+  married
+  monogamous
+  polyamourous
+  single
+  taken
+num = {1-6}
+languages
+  Aarakocra
+  Abyssal
+  Celestial
+  Deep Speech
+  Draconic
+  Druidic
+  Dwarvish
+  Elvish
+  Giant
+  Gith
+  Gnomish
+  Goblin
+  Halfling
+  Infernal
+  Orc
+  Primodial
+  Sylvan
+  Thieves' Cant
+  Undercommon
+  Uneros Sign Language
+damages
+	[{1-10}]
+conditions
+	[{1-10}]
+senses
+	[{1-10}]
+result
+	[{1-10}]
+disability
+  vision
+    [g.structure.sentenceCase] colourblind
+    [g.structure.sentenceCase] far-sighted
+    [g.structure.sentenceCase] near-sighted
+    [g.verb.sentenceCase] synesthesia
+    [g.structure.sentenceCase] blind and [g.verb2] an assisting familiar, a [familiar]
+    [g.structure.sentenceCase] blind and [g.verb2] something like a looking glass
+    [g.verb.sentenceCase] lost an eye
+    [g.verb.sentenceCase] lost an eye and [g.verb2] a false one
+    [g.verb.sentenceCase] lost an eye and wear an eye patch
+    [g.verb.sentenceCase] lost an eye and [g.verb2] something like a looking glass
+    [g.body.sentenceCase] [if(g.body=="they"){"wear"}else{"wears"}]glasses
+  limb // to be updated to include limb descriptors
+    [g.verb.sentenceCase] lost both arms
+    [g.verb.sentenceCase] lost both legs
+    [g.verb.sentenceCase] lost [g.full] {right|left} arm and {right|left} leg    
+    [g.verb.sentenceCase] lost both arms and [g.verb2] an assisting familiar, a [familiar]
+    [g.verb.sentenceCase] lost both legs and [g.verb2] an assisting familiar, a [familiar]
+    [g.verb.sentenceCase] lost [g.full] {right|left} arm and {right|left} leg  and [g.verb2] an assisting familiar, a [familiar]
+    [g.verb.sentenceCase] lost [g.full] {right|left} arm
+    [g.verb.sentenceCase] lost [g.full] {right|left} leg
+    [g.verb.sentenceCase] lost both arms and [g.verb2] a prosthetic limb
+    [g.verb.sentenceCase] lost both legs and [g.verb2] a prosthetic limb
+    [g.verb.sentenceCase] lost [g.full] {right|left} arm and {right|left}leg  and [g.verb2] prosthetic limbs
+  spinal
+    [g.verb.sentenceCase] lost use of their upper and lower body and [g.verb2] an assisting familiar, a [familiar]
+    [g.verb.sentenceCase] lost use of their upper and lower body
+    [g.verb.sentenceCase] lost use of their lower body and [g.verb2] an assisting familiar, a [familiar]
+    [g.verb.sentenceCase] lost use of their lower body
+  mobility
+    [g.body.sentenceCase] [if(g.body=="they"){"walk"}else{"walks"}] with a cane
+    [g.body.sentenceCase] [if(g.body=="they"){"walk"}else{"walks"}] with a walker
+    [g.body.sentenceCase] [g.verb2] an aid, but can walk periodically
+    [g.body.sentenceCase] [g.verb2] an animated chair or other object to help them get around
+    [g.body.sentenceCase] [g.verb2] an assisting familiar, a [familiar], to help them get around
+  deaf
+    [g.structure.sentenceCase] hard of hearing, and [g.verb2] a hearing aid
+    [g.structure.sentenceCase] hard of hearing, and [g.verb2] an assisting familiar, a [familiar].
+numP= {1-3}
+personality
+	adventurous
+	affectionate
+	aggressive
+	ambitious
+	angry
+	anxious
+	apologetic
+	arrogant
+	articulate
+	attentive
+	bad-mannered
+	bold
+	bossy
+	brilliant
+	calm
+	careful
+	carefree
+	careless
+	caring
+	cautious
+	charming
+	cheerful
+	clumsy
+	coarse
+	compassionate
+	compliant
+	conceited
+	conscientious
+	confident
+	considerate
+	courageous
+	cowardly
+	critical
+	cruel
+	curious
+	dangerous
+	daring
+	decisive
+	demanding
+	demure
+	dependable
+	depressive
+	determined
+	devious
+	disagreeable
+	dictatorial
+	dishonest
+	disrespectful
+	domineering
+	dull
+	dutiful
+	easy-going
+	efficient
+	energetic
+	evil
+	faithful
+	fearless
+	fearful
+	foolish
+	friendly
+	funny
+	fussy
+	fun-loving
+	gentle
+	generous
+	graceful
+	greedy
+	hardworking
+	happy
+	harsh
+	hateful
+	helpful
+	honest
+	humanitarian
+	humorous
+	humble
+	idealistic
+	imaginative
+	impatient
+	impolite
+	inconsiderate
+	independent
+	industrious
+	innocent
+	interfering
+	intelligent
+	jealous
+	judgemental
+	kindly
+	lazy
+	leader
+	likeable
+	lively
+	loving
+	lovable
+	loyal
+	manipulative
+	materialistic
+	mature
+	melancholic
+	miserable
+	mysterious
+	naive
+	nervous
+	opinionated
+	optimistic
+	overbearing
+	passive
+	patient
+	personable
+	petulant
+	polite
+	proud
+	prying
+	rational
+	realistic
+	rebellious
+	reckless
+	reflective
+	reliable
+	reserved
+	responsible
+	restless
+	rigid
+	sarcastic
+	secretive
+	selfish
+	sensible
+	sensitive
+	sensuous
+	serious
+	shy
+	sly
+	solitary
+	stable
+	stingy
+	strict
+	stubborn
+	submissive
+	thoughtful
+	thoughtless
+	timid
+	tolerant
+	trailblazing
+	trusting
+	trustworthy
+	unfriendly
+	unkind
+	unstable
+	untidy
+	wary
+	wicked
+	wise
+	witty
+occupation
+	Actor
+	Advocate
+	Alchemist
+	Animal Handler
+	Apothecary
+	Archer
+	Architect
+	Archivist
+	Aristocrat
+	Armorer
+	Artisan
+	Artist
+	Astrologer
+	Baker
+	Banker
+	Barbarian
+	Barber
+	Bard
+	Barkeep
+	Barmaid
+	Beekeeper
+	Beer Seller
+	Beggar
+	Blacksmith
+	Boatman
+	Bookbinder
+	Bookseller
+	Brewer
+	Brick Maker
+	Bricklayer
+	Brigand
+	Brothel Keeper
+	Buckle Maker
+	Builder
+	Butcher
+	Caravan Leader
+	Carpenter
+	Cartographer
+	Chandler
+	Charioteer
+	Chatelaine
+	Chef
+	Chieftain
+	Chirurgeon
+	Clergyman
+	Clerk
+	Clock Maker
+	Clothworker
+	Cobbler
+	Commander
+	Concubine
+	Cook
+	Cooper
+	Copyist
+	Costermonger
+	Counselor
+	Courtesan
+	Courtier
+	Cowherd
+	Crossbowman
+	Cutler
+	Daimyo
+	Dairymaid
+	Dancer
+	Dictator
+	Diplomat
+	Distiller
+	Diver
+	Diviner
+	Doctor
+	Domestic Servant
+	Emperor/Empress
+	Eunuch
+	Explorer
+	Farmer
+	Fighter
+	Fisherman
+	Fishmonger
+	Footman
+	Furrier
+	Galley Slave
+	Gardener
+	Geisha
+	General
+	Gladiator
+	Glovemaker
+	Goldsmith
+	Grocer
+	Groom
+	Guardsman
+	Guildmaster
+	Harness maker
+	Hatmaker
+	Hay merchant
+	Healer
+	Hearthwitch
+	Herald
+	Herbalist
+	Herder
+	Hermit
+	Highwayman
+	Historian
+	Housemaid
+	Hunter
+	Illuminator
+	Infantryman
+	Innkeeper
+	Interpreter
+	Inventor
+	Jailer
+	Jester
+	Jeweler
+	Jongleur
+	Judge
+	King
+	Kitchen drudge
+	Knight
+	Laborer
+	Lawyer
+	Lady
+	Lady in Waiting
+	Leatherworker
+	Librarian
+	Linguist
+	Locksmith
+	Longbowman
+	Longshoreman
+	Lord
+	Maidservant
+	Majordomo
+	Man at Arms
+	Mason
+	Masseur
+	Mayor
+	Mercer
+	Merchant
+	Messenger
+	Midwife
+	Miller
+	Miner
+	Minister
+	Minstrel
+	Monk
+	Mortician
+	Mourner
+	Musician
+	Necromancer
+	Noble
+	Nun
+	Nurse
+	Old-clothes seller
+	Page
+	Painter
+	Pariah
+	Pastry cook
+	Peasant
+	Perfumer
+	Philosopher
+	Physician
+	Pigkeeper
+	Pilgrim
+	Pirate
+	Plasterer
+	Potter
+	Priest/ess
+	Prince/ss
+	Privateer
+	Professor
+	Prostitute
+	Pursemaker
+	Queen
+	Ranger
+	Ratcatcher
+	Reeve
+	Ronin
+	Roofer
+	Ropemaker
+	Royal Adviser
+	Rugmaker
+	Ruler
+	Saddler
+	Sailor
+	Samurai
+	Scabbard maker
+	Scavenger
+	Scholar
+	Scrivener
+	Sculptor
+	Seamstress
+	Servant
+	Shaman
+	Shepherd
+	Ship's captain
+	Shoemaker
+	Silversmith
+	Slave
+	Slaver
+	Smith
+	Soldier
+	Sorcerer/Sorceress
+	Spice Merchant
+	Squire
+	Stablehand
+	Stevedore
+	Steward
+	Stonemason
+	Storyteller
+	Street kid
+	Street seller
+	Street sweeper
+	Student
+	Surgeon
+	Surveyor
+	Swordsman
+	Sycophant
+	Tailor
+	Tanner
+	Tavernkeeper
+	Tax collector
+	Teacher
+	Teamster
+	Thatcher
+	Thief
+	Tinker
+	Torturer
+	Town crier
+	Toymaker
+	Trapper
+	Vendor
+	Vermin catcher
+	Veterinarian
+	Viking
+	Village chief
+	Vintner
+	Warlock
+	Warrior
+	Water carrier
+	Weaver
+	Wetnurse
+	Wine seller
+	Witch
+	Wizard
+	Wood seller
+	Woodcarver
+	Woodcutter
+	Wrestler
+	Writer
+damage
+	Acid
+	Cold
+	Fire
+	Force
+	Lightning
+	Poison
+	Psychic
+	Radiant
+	Thunder
+condition
+	Blinded
+	Charmed
+	Deafened
+	Fatigued
+	Frightened
+	Grappled
+	Incapacitated
+	Invisible
+	Paralyzed
+	Petrified
+	Poisoned
+	Prone
+	Restrained
+	Stunned
+	Unconscious
+	Exhaustion
+sense
+	Blindsight
+	Darkvision
+	Tremorsense
+	Truesight
+firstname
+	Riya
+	Isabel
+	Avah
+	Darnell
+	Kennedi
+	Litzy
+	Zariah
+	Yasmin
+	Humberto
+	Noah
+	Rachael
+	Belen
+	Mariam
+	Harper
+	Kai
+	Francisco
+	Lukas
+	Janelle
+	Griffin
+	Aaliyah
+	Dayanara
+	Chaya
+	Talon
+	Georgia
+	Yaretzi
+	Jovan
+	Luna
+	Clark
+	Leyla
+	Ashlyn
+	Manuel
+	Will
+	Juliana
+	Joaquin
+	Jonathan
+	Nathen
+	Reese
+	Marisa
+	Zaid
+	Mareli
+	Isabelle
+	Angel
+	June
+	Madeleine
+	Diana
+	Baron
+	Matteo
+	Titus
+	Kaley
+	Aracely
+	Caleb
+	Camryn
+	Sonny
+	Tess
+	Brian
+	Brett
+	Ally
+	Mariela
+	Justice
+	Bryan
+	Brady
+	Tate
+	Mckenzie
+	Keshawn
+	Xzavier
+	Marquise
+	Dario
+	Tomas
+	Penelope
+	Skyla
+	Madalyn
+	Saniyah
+	Kailyn
+	Lea
+	Jaquan
+	Malachi
+	Eliza
+	Fisher
+	Lily
+	Alejandro
+	Alexandria
+	Alexander
+	Wesley
+	Martin
+	Kaylynn
+	Frida
+	Alonso
+	Brice
+	Jan
+	Nathanial
+	Iris
+	Ruth
+	Janessa
+	Stephany
+	Karla
+	Anton
+	Omari
+	Vanessa
+	Demarcus
+	Semaj
+	Enrique
+	Charla
+	Emma
+	Lynsey
+	Kam
+	Marilou
+	Coletta
+	Arden
+	Meri
+	Juliane
+	Lynna
+	Waylon
+	Cheryl
+	Andy
+	Indira
+	Alicia
+	Noreen
+	Kasandra
+	Renaldo
+	Nancee
+	Glenda
+	Dorla
+	Juli
+	Armandina
+	Rossie
+	Gayle
+	Brittani
+	Illa
+	Joyce
+	Min
+	Jesse
+	Mao
+	Lorette
+	Anja
+	Corie
+	Stevie
+	Jewel
+	Apryl
+	Lorine
+	Glenn
+	Melany
+	Samara
+	Glynda
+	Travis
+	Kylee
+	Merilyn
+	Belia
+	Parthenia
+	Bennie
+lastname
+	Mehyrst
+	Tabrycg
+	Beagate
+	Enton
+	Pepool
+	Heyfield
+	Mithorp
+	Lamor
+	Wawic
+	Paford
+	Fyhill
+	Asdale
+	Lethorp
+	Weleah
+	Opwold
+	Wooheath
+	Thealey
+	Waystone
+	Boofalls
+	Heaford
+	Khizdushaz
+	Kharazar
+	Kharakzinb
+	Undushad
+	Azazil
+	Bilgunul
+	Kharbhundum
+	Uzund
+	Giledzadd
+	Zaramunz
+	Zaragzah
+	Kibunarg
+	Tumunzar
+	Khathela
+	Zundinal
+	Nula
+	Uzun
+	Gundumunz
+	Gabarakz
+	Aralar
+	Zaragzah
+	Kibunarg
+	Tumunzar
+	Khathela
+	Zundinal
+	Nula
+	Uzun
+	Gundumunz
+	Gabarakz
+	Aralar
+	Gionyamar
+	Doregothr
+	Allolin
+	Essear
+	Belonde
+	Thiline
+	Formithlond
+	Forlorin
+	Argeren
+	Enesseand
+	Lade
+	Siriande
+	Donione
+	Lorasea
+	Hellonde
+	Orieriand
+	Vinione
+	Sirione
+	Nandorthell
+	Falonde
+	Wyegrove
+	Clapool
+	Meedon
+	Meley
+	Sewood
+	Sheyton
+	Efmoor
+	Mefield
+	Ingwold
+	Meestead
+	Healey
+	Miford
+	Woford
+	Maystone
+	Hypool
+	Wyeford
+	Hoehill
+	Rafalls
+	Myfalls
+	Hoowood
+	Boyhill
+	Diwich
+	Wybury
+	Hodon
+	Peley
+	Huydon
+	Aughdale
+	Breheath
+	Lewold
+	Wywich
+	Wiseley
+	Digman
+	Lowell
+	Severt
+	Sobus
+	Donlin
+	Huwe
+	Pizarro
+	Weis
+	Ladue
+	Thong
+	Dunkel
+	Gilsdorf
+	Turney
+	Watson
+	Langham
+	Huisman
+	Rodrique
+	Villanveva
+	Cooksey
+	Carnahan
+	Castruita
+	Griffis
+	Viers
+	Flom
+	Lefevre
+	Orman
+	Pantoja
+	Faris
+	Doutt
+	Grunden
+	Broady
+	Nease
+	Woolley
+	Heidelberg
+	Moorman
+	Harsh
+	Castrejon
+	Beckley
+	Cochrane
+	Solan
+	Cappel
+	Deforge
+	Burket
+	Puccio
+	Huguley
+	Mccurley
+	Mosher
+	Earwood
+stats
+	str = {6-18}
+	dex = {6-18}
+	con = {6-18}
+	int = {6-18}
+	wis = {6-18}
+	cha = {6-18}
+familiar
+  rat
+  weasel
+  badger
+  cat
+  crab
+  frog
+  toad
+  lizard
+  snake
+  spider
+  fish
+  seahorse
+  giant fire beetle
+  wild dog
+  almiraj
+  octopus
+  bat
+  stirge
+  raven
+  hawk
+  falcom
+  baboon
+  giant centipede
+  velociraptor
+  blood hawk
+  owl
+  flying monkey
+  tressym
+  oblex spawn
+  dipsa
+  chwinga
+  cranium rat
+  twig blight
+  crawling claw
+  wretched
+  boggle
+  awakened shrub
+  gazer
+  mimic
+  pseudodragon with [scale]
+  star spawn grue
+  derro
+  witchlight
+  sprite
+  chitine
+  quasit
+  choker
+  imp
+  pixie
+  stryx
+  vargouille
+  faerie dragon with [scale]
+  clurichaun
+  rum gremlin
+  bucca
+  bastet
+  alehouse drake with [scale]
+  boloti
+  lantern dragonette
+  emerald eye
+
+// You can also add card2, card3, etc. (name them however you like), and give them different
+// chances (e.g. card1^4, card2^7, ...) of occurring. This would be useful if you have different
+// "categories" of cards that you want to generate within the same generator.
+
+
+// Template design credit:
+// https://valloric.github.io/statblock5e/
+// https://codepen.io/retractedhack/pen/gPLpWe
+createCardHtml(c) => 
+	let html = ``;
+	
+	let items = c.content.selectAll.map(c => c.evaluateItem).map(l => ({
+		type: l.split(";;;")[0].trim(),
+		params: l.split(";;;").slice(1).map(p => p.trim()),
+	}));
+
+	for(let i = 0; i < items.length; i++) {
+		let type = items[i].type;
+		let params = items[i].params;
+		if(type === "rule") {
+			html += `<svg height="5" width="100%" class="tapered-rule"><polyline points="0,0 270,2.5 0,5"></polyline></svg>`;
+		}
+		if(type === "property-line") {
+			let firstLastClass = !items[i-1] || items[i-1].type !== "property-line" ? "first" : "";
+			if(!firstLastClass && items[i+1] && items[i+1].type !== "property-line") firstLastClass = "last";
+		  html += `<div class="property-line ${firstLastClass}"><h4>${params[0]}</h4> <p>${params[1]}</p></div>`;
+		}
+		if(type === "property-block") {
+		  html += `<div class="property-block"><h4>${params[0]}</h4> <p>${params[1]}</p></div>`;
+		}
+		if(type === "stats") {
+			let statMap = params.reduce((a,v) => (a[v.split(":")[0]]=Number(v.split(":")[1]), a), {});
+			html += `<div class="abilities">`;
+			for(let [name, value] of Object.entries(statMap)) {
+				let mod;
+				html += `<div class="ability-intelligence"><h4>${name.toUpperCase()}</h4><p>${value} (${mod = Math.floor((value-10)/2), mod > 0 ? "+"+mod : mod})</p></div>`;
+			}
+			html += "</div>";
+		}
+		if(type === "header") {
+			html += `<h3>${params[0]}</h3>`;
+		}
+	}
+	return html;

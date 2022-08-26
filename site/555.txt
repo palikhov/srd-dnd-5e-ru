@@ -1,0 +1,76 @@
+page
+	title = Stat Block 5e Generator Template
+	description = To use this template, simply click the "edit" button, make some changes to the card properties (add your own randomness), and then click save. <a href="https://perchance.org/stat-block-with-drop-down-example#edit" target="_blank">Here's an example</a> that has a drop-down menu to choose between different categories of card.
+
+cards
+	card1
+		title = Animated Armor
+		subtitle = Medium construct, unaligned
+		content
+			property-line ;;; Armor Class ;;; {10-30} (natural armor)
+			property-line ;;; Hit Points ;;; 33 (6d8 + 6)
+			property-line ;;; Speed ;;; {10-30}ft.
+			rule
+			stats ;;; str:14 ;;; dex:11 ;;; con:13 ;;; int:1 ;;; wis:3 ;;; cha:1
+			rule
+			property-line ;;; Damage Immunities ;;; poison, psychic
+			property-line ;;; Condition Immunities ;;; blinded, charmed, deafened, exhaustion, frightened, petrified, poisoned
+			property-line ;;; Senses ;;; blindsight 60ft. (blind beyond this radius), passive Perception 6
+			property-line ;;; Languages ;;; &mdash;
+			property-line ;;; Challenge ;;; 1 (200 XP)
+			rule
+			property-block ;;; Antimagic Suceptibility. ;;; The armor is incapacitated while in the area of an <i>antimagic field</i>. If targeted by <i>dispel magic</i>, the armor must succeed on a Constitution saving throw against the caster’s spell save DC or fall unconscious for 1 minute.
+			property-block ;;; False Appearance. ;;; While the armor remains motionless, it is indistinguishable from a normal suit of armor.
+			header ;;; Actions
+			property-block ;;; Multiattack. ;;; The armor makes two melee attacks.
+			property-block ;;; Slam. ;;; <i>Melee Weapon Attack:</i> +4 to hit, reach 5 ft., one target. <i>Hit:</i> 5 (1d6 + 2) bludgeoning damage.
+			header ;;; Legendary Actions
+			property-block ;;; Multiattack. ;;; The armor makes two melee attacks.
+			property-block ;;; Slam. ;;; <i>Melee Weapon Attack:</i> +4 to hit, reach 5 ft., one target. <i>Hit:</i> 5 (1d6 + 2) bludgeoning damage.
+			// Add more lines if you want, or remove lines. Just follow the format that you see above.
+
+
+// You can also add card2, card3, etc. (name them however you like), and give them different
+// chances (e.g. card1^4, card2^7, ...) of occurring. This would be useful if you have different
+// "categories" of cards that you want to generate within the same generator.
+
+
+// Template design credit:
+// https://valloric.github.io/statblock5e/
+// https://codepen.io/retractedhack/pen/gPLpWe
+createCardHtml(c) => 
+	let html = ``;
+	
+	let items = c.content.selectAll.map(c => c.evaluateItem).map(l => ({
+		type: l.split(";;;")[0].trim(),
+		params: l.split(";;;").slice(1).map(p => p.trim()),
+	}));
+
+	for(let i = 0; i < items.length; i++) {
+		let type = items[i].type;
+		let params = items[i].params;
+		if(type === "rule") {
+			html += `<svg height="5" width="100%" class="tapered-rule"><polyline points="0,0 270,2.5 0,5"></polyline></svg>`;
+		}
+		if(type === "property-line") {
+			let firstLastClass = !items[i-1] || items[i-1].type !== "property-line" ? "first" : "";
+			if(!firstLastClass && items[i+1] && items[i+1].type !== "property-line") firstLastClass = "last";
+		  html += `<div class="property-line ${firstLastClass}"><h4>${params[0]}</h4> <p>${params[1]}</p></div>`;
+		}
+		if(type === "property-block") {
+		  html += `<div class="property-block"><h4>${params[0]}</h4> <p>${params[1]}</p></div>`;
+		}
+		if(type === "stats") {
+			let statMap = params.reduce((a,v) => (a[v.split(":")[0]]=Number(v.split(":")[1]), a), {});
+			html += `<div class="abilities">`;
+			for(let [name, value] of Object.entries(statMap)) {
+				let mod;
+				html += `<div class="ability-intelligence"><h4>${name.toUpperCase()}</h4><p>${value} (${mod = Math.floor((value-10)/2), mod > 0 ? "+"+mod : mod})</p></div>`;
+			}
+			html += "</div>";
+		}
+		if(type === "header") {
+			html += `<h3>${params[0]}</h3>`;
+		}
+	}
+	return html;

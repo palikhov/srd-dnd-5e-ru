@@ -1,0 +1,2459 @@
+//TODO, need no hair to prevent style from being generated.
+output
+  title = [c = generateCharacter(), c.name]
+  subtitle = [generateDisplayRace(c.subrace,c.race,c.gender,c.alignment)]
+  subtitle2 = [c.race_description]
+  content
+  //Add a brief description of the race.
+    header ;;; DETAILS
+    property-block ;;; AGE. ;;; 
+  
+    
+    header ;;; Appearance
+    property-block ;;; [c.hair_title || "Hair."] ;;; [c.hair]
+    property-block ;;; Body. ;;; [c.body.join(" ")]
+    property-block ;;; Eyes. ;;; [capitalize(c.pronoun) + (c.pluralise_pronoun ? " have " : " has ") + c.eyes + "."]
+    
+    header ;;; Personality
+    property-block ;;; Temperament. ;;; [capitalise(c.pronoun)] [c.pluralise_pronoun ? "are" : "is"] [c.mood_calm] when calm and [c.mood_stressed] when stressed.
+    property-block ;;; IDEAL. ;;; [capitalise(c.pronoun)] [c.pluralise_pronoun ? "are" : "is"] [c.mood_calm] when calm and [c.mood_stressed] when stressed.
+    property-block ;;; PERSONALITY TRAITS. ;;; [capitalise(c.pronoun)] [c.pluralise_pronoun ? "are" : "is"] [c.mood_calm] when calm and [c.mood_stressed] when stressed.
+    property-block ;;; FLAW. ;;; [capitalise(c.pronoun)] [c.pluralise_pronoun ? "are" : "is"] [c.mood_calm] when calm and [c.mood_stressed] when stressed.
+    property-block ;;; BOND. ;;; [capitalise(c.pronoun)] [c.pluralise_pronoun ? "are" : "is"] [c.mood_calm] when calm and [c.mood_stressed] when stressed.
+    
+    header ;;; Heritage
+    property-block ;;; ["Race."] ;;; [c.race_description]
+init() =>
+  window.perchance = this
+  
+race
+  human ^ 10
+    race_name = human
+    subrace
+      arkaiun ^0.05
+        name = Arkaiun
+        description = The Arkaiun people are a stout folk with tan skin and dark hair. They dwell primarily in the southern regions of Faerûn, in Dambrath, Halruaa and the Shar. Many Arkaiuns lived under the yoke of Drow slavery after a failed military campaign against the dark elves.
+        skin
+          description
+            [npc_properties.skin.human_tone.light_brown] ^ 5
+            [npc_properties.skin.human_tone.medium] ^ 5
+            [npc_properties.skin.human_tone.pale]
+        hair
+          description
+            [this.getParent.type], [this.getParent.colour] hair
+            [c.has_hairstyle = false, "a shaved head"] ^0.1
+            [c.has_hairstyle = false, "no hair at all"] ^0.1
+          colour
+            [npc_properties.hair.colour.black]
+            [npc_properties.hair.colour.dark_brown]
+          type
+            [npc_properties.hair.type]
+					style
+						male
+							[npc_properties.hair.style.male]
+						female
+							[npc_properties.hair.style.female]
+						unisex
+							[npc_properties.hair.style.unisex]	
+        names
+          first_name
+            male
+              Aethelmed
+              Houn
+              Rhivaun
+              Umbril
+              Waervyn
+              Xaemar
+              Zeltaebar
+            female
+              Chourm
+              Glouris
+              Hayaera
+              Maeve
+              Sevaera
+              Xaemarra
+              Zraela
+          last_name
+            Calaumystar
+            Lharaendo
+            Mristar
+            Talaudrym
+            Wyndael
+      bedine ^ 0.05
+        name = Bedine
+        description = The Bedine people are a dark-skinned and dark-haired people whose diverse nomadic tribes traditionally inhabited the southern Anauroch Desert region know as The Sword. Over the generations, they have become city-dwellers, leaving behind nomadic ways and losing much of their traditional way of life.
+        skin
+          description
+            [npc_properties.skin.human_tone.light_brown]
+            [npc_properties.skin.human_tone.brown] ^5
+            [npc_properties.skin.human_tone.dark_brown]
+        names
+          first_name
+            male
+              Aali
+              Rashid
+              Tahnon
+              Tanzim
+              Whalide
+            female
+              Aisha
+              Farah
+              Nura
+              Rashida
+              Zalebyeh
+          last_name
+            Alaii
+            Bordjia
+            Clelarra
+            Desai
+            Dakawa
+            Dursalai
+            Goldor
+            Iriphawa
+            Kellordrai
+            Lalajar
+            Qahtan
+            Yethtai
+            Zazalaar
+      calishite
+        name = Calishite
+        description = Short and slight, Calishites have dusky brown skin, hair and eyes. They're found primarily in southwest Faerûn. They are the descendants of slaves of the genie empires which ruled the lands south of the Marching Mountains in antiquity, which Calishites see themselves are the rightful inheritors of. They place a strong cultural focus on the importance of family over all else, as well as observing a strict class system based on their lineage.
+        skin
+          description
+            [npc_properties.skin.human_tone.light_brown]
+        names
+          first_name
+            male
+              Aseir
+              Bardeid
+              Haseid
+              Khemed
+              Mehmen
+              Sudeiman
+              Zasheir
+            female
+              Atala
+              Ceidil
+              Hama
+              Jasmal
+              Meilil
+              Seipora
+              Yasheira
+              Zasheida
+          last_name
+            Basha
+            Dumein
+            Jassan
+            Khalid
+            Mostana
+            Pashar
+            Rein
+      chondathan
+        name = Chondathan
+        description = Chondathans are slender, tawny-skinned folk with brown hair that ranges from almost blond to almost black. Most are tall and have green or brown eyes, but these traits are hardly universal. Humans of Chondathan descent dominate the central lands of Faerûn, around the Inner Sea. Chondathans are known for placing a premium on the acquisition of wealth and influence.
+        skin
+          description
+            [npc_properties.skin.human_tone.pale]
+            [npc_properties.skin.human_tone.medium] ^10
+            [npc_properties.skin.human_tone.light_brown]
+        names
+          first_name
+            male
+              Darvin
+              Dorn
+              Evendur
+              Gorstag
+              Grim
+              Helm
+              Malark
+              Morn
+              Randal
+              Stedd
+            female
+              Arveene
+              Esvele
+              Jhessail
+              Kerri
+              Lureene
+              Miri
+              Rowan
+              Shandri
+              Tessele
+          last_name
+            Amblecrown
+            Buckman
+            Dundragon
+            Evenwood
+            Greycastle
+            Tallstag
+      chultan
+        name = Chultan
+        description = The inhabitants of the Jungles of Chult are a tall, dark-skinned people who migrated to the Chultan peninsula from a great island in the southern seas, southeast of Maztica.
+        skin
+          description
+            [npc_properties.skin.human_tone.brown]
+            [npc_properties.skin.human_tone.dark_brown] ^5
+        names
+          first_name
+            male
+              Atuar
+              Atumwa
+              Chiwa
+              Dengo
+              Emporo
+              Juma
+              Kundé
+              Kwalu
+              Losi
+              Mezoar
+              Mzolu
+              Olu
+              Osaw
+              Rindawan
+              Selu
+              Teron
+              Ugor
+              Vazul
+              Weshtek
+              Yapa
+            female
+              Azuil
+              Bati
+              Chuil
+              Déla
+              Eki
+              Fipya
+              Isi
+              Joli
+              Katéla
+              Lorit
+              Mainu
+              Naboli
+              Nyali
+              Omoyala
+              Razira
+              Sana
+              Tefnek
+              U’lolo
+              Wadizi
+              Yuta
+              Zaidi
+              Zamisi
+          last_name
+            Agolo
+            Atazi
+            Balaka
+            Bolélé
+            Dawa
+            Ekulu
+            Hakal
+            Imbogoro
+            Jaharwon
+            M’wenye
+            Natombe
+            Ngore
+            Oboko
+            O’tamu
+            Sahandi
+            Talro’a
+            Utugelu
+            Yudan
+            Zuberi
+      damaran
+        name = Damaran
+        description = Damarans are of moderate height and build, with skin hues ranging from tawny to fair. Hair is usually straight brown or black,  although  sandy  blond  is  not  unknown. This ethnic group coalesced from the scattered Nars, Rashemi, Sossrims and Chondathans who survived the fall of Narfell. After centuries of battle the horrors unleashed by the ancient magics of Narfell and Raumathar, they are a proud, stubborn folk who refuse to buckle in the face of unspeakable evils and who tend the view the world in moral absolutes.
+        skin
+          description
+            [npc_properties.skin.human_tone.pale]
+            [npc_properties.skin.human_tone.medium]
+        names
+          first_name
+            male
+              Bor
+              Fodel
+              Glar
+              Grigor
+              Igan
+              Ivor
+              Kosef
+              Mival
+              Orel
+              Pavel
+              Sergor
+            female
+              Alethra
+              Kara
+              Katernin
+              Mara
+              Natali
+              Olma
+              Tana
+              Zora
+          last_name
+            Bersk
+            Chernin
+            Dotsk
+            Kulenov
+            Marsk
+            Nemetsk
+            Shemov
+            Starag
+      durpari
+        name = Durpari
+        description = The Durpari are the relatively short, dark-skinned inhabitants ofDurpar, Estagund, Veldorn, and Var the Golden. Their kingdoms fell after the fall of Imaskar and two millenia of barbarism followed, with many Durpari slaughtered and enslaved by the Mulan of Mulhorand. New Durpari kingdoms have since risen along the shores of the Golden Water and they have remained independent, trading amongst themselves and with their neighbours.
+        skin
+          description
+            [npc_properties.skin.human_tone.brown]
+            [npc_properties.skin.human_tone.dark_brown]
+        names
+          first_name
+            male
+              Charva
+              Duma
+              Hukir
+              Jama
+              Kilimut
+              Oskut
+              Pradir
+              Rajaput
+              Sikhil
+            female
+              Apret
+              Bask
+              Erilet
+              Fanul
+              Hist
+              Mokat
+              Nismet
+              Ril
+              Tiket
+          last_name
+            Beszrizma
+            Datharathi
+            Melpurvatta
+            Nalambar
+            Saqarastar
+            Tiliputakas
+      ffolk ^ 0.05
+        name = Ffolk
+        description = The Ffolk are essentially an isolated group of Tethyrians who immigrated to the Moonshae Isles. The Ffolk have a deep respect for nature, and are primarily farmers, worshiping the goddess they call the Earthmother and keeping to old druidic ways. Ffolk shipwrights are well regarded, having proven their ability to build sturdy ships that are capable of weathering the tumultuous seas around their home.
+        skin
+          description
+            [npc_properties.skin.human_tone.pale]
+            [npc_properties.skin.human_tone.medium]
+        names
+          first_name
+            male
+              Artur
+              Bern
+              Colin
+              Manfred
+              Tristan
+              [race['human'].subrace['chondathan'].names.first_name.male]
+            female
+              Alicia
+              Gennifer
+              Meridith
+              Elaine
+              Olivia
+              [race['human'].subrace['chondathan'].names.first_name.female]
+          last_name
+            Archer
+            Gareth
+            Leed
+            Kendrick
+            Morgan
+            Waters
+            [race['human'].subrace['chondathan'].names.last_name]
+      gur ^ 0.05
+        name = Gur
+        description = Gurs are stout, dusky-skinned, and dark-haired people who are related to the Rashemi. Most of them revere Selûne the moon goddess. Their communities live a nomadic existence wandering the Western Heartlands, giving them the common name “the people of the highway.”
+        skin
+          description
+            [npc_properties.skin.human_tone.medium]
+        names
+          first_name
+            male
+              Boriv
+              Gardar
+              Madevik
+              Vlad
+            female
+              Varra
+              Ulmarra
+              Imza
+              Navarra
+              Yuldra
+          last_name
+            Chergoba
+            Drazlad
+            Tazyara
+            Vargoba
+            Stayankina
+      halruaan ^ 0.05
+        name = Halruaan
+        description = Halruaans are a wizard-rule people descended from the ancient empire of Netheril. During the fall of this empire, the arch-wizard Raumark took his followers south via flying ships to settle in the sheltered basin of Halruaa and intermingle with the native population of Tashalans there. Halruaa vanished during the Spellplague and returned after the second Sundering. They tend to have blond or dark hair and olive complexions.
+        skin
+          description
+            [npc_properties.skin.human_tone.medium]
+        names
+          first_name
+            male
+              Aldym
+              Chand
+              Meleghost
+              Presmer
+              Sandrue
+              Uregaunt
+            female
+              Aithe
+              Chalan
+              Oloma
+              Phaele
+              Sarade
+          last_name
+            Avhoste
+            Darante
+            Maurmeril
+            Stamaraster
+      illuskan
+        name = Illuskan
+        description = Commonly just called "Northerners", Illuskans are tall, fair-skinned folk. Their eyes are typically blue or steely gray. Those nearer Icewind Dale are largely fair-haired, with blond and sometimes red or light brown hair. Those who live on the mainland, south of the Spine of the World typically have raven-black hair as a marker of their Netherese heritage. Illuskan culture has given rise to powerful rune-casters, fearless sailors and legendary skalds. They are a proud people, forged by the harsh environment in which they dwell.
+        skin
+          description
+            [npc_properties.skin.human_tone.very_pale]
+            [npc_properties.skin.human_tone.pale]
+        names
+          first_name
+            male
+              Ander
+              Blath
+              Bran
+              Frath
+              Geth
+              Lander
+              Luth
+              Malcer
+              Stor
+              Taman
+              Urth
+            female
+              Amafrey
+              Betha
+              Cefrey
+              Kethra
+              Mara
+              Olga
+              Silifrey
+              Westra
+          last_name
+            Brightwood
+            Helder
+            Hornraven
+            Lackman
+            Stormwind
+            Windrivver
+      imaskari ^ 0.05
+        name = Imaskari
+        description = The Imaskari Empire once held sway from the Endless Wastes to the Golden Water and from the Alamber Sea to the frontiers of Kara-Tur. This civilisation of mages built immense portals to other worlds to gather slaves from other planes. The Imaskari Empire was dismantled by an uprising of Mulan slaves, but some Imaskari fled into exile in the Underdark, changing over time to develop pale, smooth skin and white hair now common among them.
+        skin
+          description
+            [npc_properties.skin.human_tone.very_pale]
+        names
+          first_name
+            male
+              Charva
+              Duma
+              Hukir
+              Jama
+              Pradir
+              Sikhil
+            female
+              Apret
+              Bask
+              Fanul
+              Mokat
+              Nismet
+              Ril
+          last_name
+            Datharathi
+            Melpurvatta
+            Nalambar
+            Tiliputakas
+      mulan
+        name = Mulan
+        description = The Mulan are typically tall, slim and amber-skinned with hazel or brown eyes. Their hair ranges from black to dark brown, but in the lands where Mulan are prominent it is common for all nobles and many other Mulan to shave their heads. They dominate the eastern and southeastern shores of the Inner Sea. The Mulan have a long tradition of magical empire-building and view their culture as eternal. In many of the modern cities left behind by Mulan empires of Mulhorand and Unther the ruling elites remain composed almost exclusively of Mulan.
+        skin
+          description
+            [npc_properties.skin.human_tone.light_brown]
+        names
+          first_name
+            male
+              Aoth
+              Bareris
+              Ehput-Ki
+              Kethoth
+              Mumed
+              Ramas
+              So-Kehur
+              Thazar-De
+              Urhur
+            female
+              Arizima
+              Chathi
+              Nephis
+              Nulara
+              Murithi
+              Sefris
+              Thola
+              Umara
+              Zolis
+          last_name
+            Ankhalab
+            Anskuld
+            Fezim
+            Hahpet
+            Nathandem
+            Sepret
+            Uuthrakt
+      nar ^ 0.05
+        name = Nar
+        description = More than a thousand years have passed since the priests of Narfell destroyed their civilisation through the dealings with demonic entities which allowed them to maintain their power. Today's Nars consist of twenty or more nomadic merchant tribes who have abandoned their ruined cities. They are known as some of the finest horsemen in the realm and are famed breeders of the legendary Nar heavy horse. They have tanned skin, brown or black eyes and black hair, often worn long in a tail or tied in a topknot.
+        skin
+          description
+            [npc_properties.skin.human_tone.medium]
+        names
+          first_name
+            male
+              Avan
+              Ostaram
+              Petro
+              Stor
+              Taman
+              Thalaman
+              Urth
+            female
+              Anva
+              Dasha
+              Dima
+              Olga
+              Westra
+              Zlatara
+          last_name
+            Dashkev
+            Hargroth
+            Laboda
+            Lackman
+            Stonar
+            Stormwind
+            Sulyma
+      rashemi
+        name = Rashemi
+        description = Descended from the nomadic tribes who won the Orcgate Wars and later built the empire of Raumathar, Rashemis are a short, stout and typically muscular people. They usually have dusky skin, dark eyes and thick black hair. Rashemi males are unusually hirsute and often sport bushy black beards. Rashemi display little of the cultural arrogance seen in other empire-building peoples, instead seeing themselves as members of a harsh but beautiful world ruled by spirits. They cherish their strong, abiding ties to the land. Many Rashemi travel extensively as youths in a coming-of-age ritual known as a dajemma.
+        skin
+          description
+            [npc_properties.skin.human_tone.medium]
+        names
+          first_name
+            male
+              Borivik
+              Faurgar
+              Jandar
+              Kanithar
+              Madislak
+              Ralmevik
+              Shaumar
+              Vladislak
+            female
+              Fyevarra
+              Hulmarra
+              Immith
+              Imzel
+              Navarra
+              Shevarra
+              Tammith
+              Yuldra
+          last_name
+            Chergoba
+            Dyernina
+            Iltazyara
+            Murnyethara
+            Stayanoga
+            Ulmokina
+      shaaran ^ 0.05
+        name = Shaaran
+        description = Shaarans are tan-skinned and dark-haired nomads from the grasslands southern Faerûn. Beneath elders and chieftains they are assembled into clans of skilled hunters, archers and riders. Shaaran's revere various nature deities.
+        skin
+          description
+            burnished amber
+            a reddish-brown sepia
+            a reddish ochre
+        names
+          first_name
+            male
+              Awar
+              Cohis
+              Damota
+              Gewar
+              Hapah
+              Laskaw
+              Senesaw
+              Tokhis
+            female
+              Anet
+              Bes
+              Idim
+              Lenet
+              Moqem
+              Neghet
+              Sihvet
+          last_name
+            Cor Marak
+            Laumee Harr
+            Moq Qo Harr
+            Woraw Tarak
+      shou
+        name = Shou
+        description = The Shou are the most numerous ethnic group in Kara-Tur. Their skin is bronze in hue and they have black hair and broad, flat features. The Shou worship a pantheon known as the Celestial Bureaucracy. Shou surnames are usually presented before the given name.
+        generate_name() =>
+          if(c.gender == "nonbinary") c.name = this.names.last_name.selectOne + " " + this.names.first_name.selectOne;
+          else c.name = this.names.last_name.selectOne + " " + this.names.first_name[c.gender].selectOne
+        skin
+          description
+            [npc_properties.skin.human_tone.medium]
+        names
+          first_name
+            male
+              An
+              Chen
+              Chi
+              Fai
+              Jiang
+              Jun
+              Lian
+              Long
+              Meng
+              On
+              Shan
+              Shui
+              Wen
+            female
+              Bai
+              Chao
+              Jia
+              Lei
+              Mei
+              Qiao
+              Shui
+              Tai
+          last_name
+            Chien
+            Huang
+            Kao
+            Kung
+            Lao
+            Ling
+            Mei
+            Pin
+            Shin
+            Sum
+            Tan
+            Wan
+      tethyrian
+        name = Tethyrian
+        description = Tethyrian culture is a melting pot of Calishite, Chondathan, Illuskan and Low Netherese. Tethyrians are widespread along the Sword Coast and are of medium build and height, with dusky skin that tends to grow fairer the farther north they dwell. Their hair and eye colour varies widely, but brown hair and blue eyes are the most common.
+        skin
+          description
+            [npc_properties.skin.human_tone.medium]
+        names = [race['human'].subrace['chondathan'].names]
+      tuigan ^ 0.05
+        name = Tuigan
+        description = Tuigans resemble the Shou, with a bronze or golden cast to their skin and dark hair, but they tend to have darker skin and broader features. Originally a nomadic horde from the plains between Faerûn and Kara-Tur, they once nearly conquered Faerûn under the leader Yamun Khahan before being deleted by a coalition of Faerûnian armies. They are sometimes seen on the Sword Coast and in nearby regions and tend to be well-travelled traders or adventurers.
+        skin
+          description
+            [npc_properties.skin.human_tone.medium]
+        generate_name() =>
+          if(c.gender == "male") c.name = this.names.first_name.male.selectOne;
+          if(c.gender == "female") c.name = this.names.first_name.female.selectOne;
+          if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne;
+        names
+          first_name
+            male
+              Atlan
+              Bayar
+              Chingis
+              Chinua
+              Mongke
+              Temur
+            female
+              Bolormaa
+              Bortai
+              Erdene
+              Naran
+      turami
+        name = Turami
+        description = The Turami are a tall and often muscular people who have dark mahogany skin, curly black hair and dark eyes. They are native to Turmish on the southern shore of the Inner Sea, having been historically displaced by Mulan migrating away from the Imaskari Empire.
+        skin
+          description
+            [npc_properties.skin.human_tone.dark_brown]
+        names
+          first_name
+            male
+              Anton
+              Diero
+              Marcon
+              Pieron
+              Rimardo
+              Romero
+              Salazar
+              Umbero
+            female
+              Balama
+              Dona
+              Faila
+              Jalana
+              Luisa
+              Marta
+              Quara
+              Selise
+              Vonda
+          last_name
+            Agosto
+            Astorio
+            Calabra
+            Domine
+            Falone
+            Marivaldi
+            Pisacar
+            Ramondo
+      ulutiun ^ 0.05
+        name = Ulutiun
+        description = The Ulutiuns inhabit the polar northern reaches of Faerûn but are migrants from the northern reaches of Kara-Tur. Ulutiuns are short with dark hair and golden-skin. They live in tribes of hunter-gatherers, venerating nature spirits and led by shamans.
+        skin
+          description
+            [npc_properties.skin.human_tone.light_brown]
+        generate_name() =>
+          if(c.gender == "male") c.name = this.names.first_name.male.selectOne;
+          if(c.gender == "female") c.name = this.names.first_name.female.selectOne;
+          if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne;
+        names
+          first_name
+            male
+              Amak
+              Chu
+              Imnek
+              Kanut
+              Siku
+            female
+              Akna
+              Chena
+              Kaya
+              Sedna
+              Ublereak
+    skin = [npc_properties.skin]
+    eyes
+      description
+      colours
+  dwarf
+    race_name = dwarf
+    subrace
+      gray
+        name = gray
+        generate_hair() =>
+          c.has_hairstyle = false
+          c.hair = capitalise(c.pronoun) +
+          (c.pluralise_pronoun ? " have got " : " has got ") + 
+          "a bald head, like all gray dwarves."
+        generate_skin() =>
+          c.body.push(capitalise(c.possessive_pronoun) + " skin is " + "an ashen gray.")
+        beard
+          has_beard = [true]
+          female_has_beard = [true]
+          description
+            a {short|long} unkempt beard
+        skin
+          description
+            an ashen gray
+      hill ^ 10
+        name = hill
+        exists
+      mountain ^ 10
+        name = mountain
+        exists
+    hair
+      description
+        {black|gray|brown|red} hair which is worn [this.getParent.style.selectOne]
+      style
+				unisex
+					[npc_properties.hair.style.unisex]
+				male
+					[npc_properties.hair.style.male]
+				female
+					in a traditional braided crown
+    beard
+      description
+        a {braided|long|knotted|intricate} beard
+      has_beard = [true]
+      female_has_beard = [true]
+    skin
+      description = [npc_properties.skin.description]
+    names
+      first_name
+        male
+          Adrik
+          Alberich
+          Baern
+          Barendd
+          Brottor
+          Bruenor
+          Dain
+          Darrak
+          Delg
+          Eberk
+          Einkil
+          Fargrim
+          Flint
+          Gardain
+          Harbek
+          Kildrak
+          Morgran
+          Orsik
+          Oskar
+          Rangrim
+          Rurik
+          Taklinn
+          Thoradin
+          Thorin
+          Tordek
+          Traubon
+          Travok
+          Ulfgar
+          Veit
+          Vondal
+        female
+          Amber
+          Artin
+          Audhild
+          Bardryn
+          Dagnal
+          Diesa
+          Eldeth
+          Falkrunn
+          Finellen
+          Gunnloda
+          Gurdis
+          Helja
+          Hlin
+          Kathra
+          Kristryd
+          Ilde
+          Liftrasa
+          Mardred
+          Riswynn
+          Sannl
+          Torbera
+          Torgga
+          Vistra
+      last_name
+        Balderk
+        Battlehammer
+        Brawnanvil
+        Dankil
+        Fireforge
+        Frostbeard
+        Gorunn
+        Holderhek
+        Ironfist
+        Loderr
+        Lutgehr
+        Rumnaheim
+        Strakeln
+        Torunn
+        Ungart    
+  elf
+    race_name = elf
+    subrace
+      dark
+      eladrin
+      high
+      sea
+      shadar-kai
+      wood
+    names
+      first_name
+        male
+          Adran
+          Aelar
+          Aramil
+          Arannis
+          Aust
+          Beiro
+          Berrian
+          Carric
+          Enialis
+          Erdan
+          Erevan
+          Galinndan
+          Hadarai
+          Heian
+          Himo
+          Immeral
+          Ivellios
+          Laucian
+          Mindartis
+          Paelias
+          Peren
+          Quarion
+          Riardon
+          Rolen
+          Soveliss
+          Thamior
+          Tharivol
+          Theren
+          Varis
+        female
+          Adrie
+          Althaea
+          Anastrianna
+          Andraste
+          Antinua
+          Bethrynna
+          Birel
+          Caelynn
+          Drusilia
+          Enna
+          Felosial
+          Ielenia
+          Jelenneth
+          Keyleth
+          Leshanna
+          Lia
+          Meriele
+          Mialee
+          Naivara
+          Quelenna
+          Quillathe
+          Sariel
+          Shanairra
+          Shava
+          Silaqui
+          Theirastra
+          Thia
+          Vadania
+          Valanthe
+          Xanaphia
+      last_name
+        Amakiir (Gemflower)
+        Amastacia (Starflower)
+        Galanodel (Moonwhisper)
+        Holimion (Diamonddew)
+        Ilphelkiir (Gemblossom)
+        Liadon (Silverfrond)
+        Meliamne (Oakenheel)
+        Naïlo (Nightbreeze)
+        Siannodel (Moonbrook)
+        Xiloscient (Goldpetal)
+    skin = [npc_properties.skin]
+  gnome
+    race_name = gnome
+    subrace
+      deep
+      forest
+      rock
+    names
+      first_name
+        male
+          Alston
+          Alvyn
+          Boddynock
+          Brocc
+          Burgell
+          Dimble
+          Eldon
+          Erky
+          Fonkin
+          Frug
+          Gerbo
+          Gimble
+          Glim
+          Jebeddo
+          Kellen
+          Namfoodle
+          Orryn
+          Roondar
+          Seebo
+          Sindri
+          Warryn
+          Wrenn
+          Zook
+        female
+          Bimpnottin
+          Breena
+          Caramip
+          Carlin
+          Donella
+          Duvamil
+          Ella
+          Ellyjobell
+          Ellywick
+          Lilli
+          Loopmottin
+          Lorilla
+          Mardnab
+          Nissa
+          Nyx
+          Oda
+          Orla
+          Roywyn
+          Shamil
+          Tana
+          Waywocket
+          Zanna
+      last_name
+        Beren
+        Daergel
+        Folkor
+        Garrick
+        Nackle
+        Murnig
+        Ningel
+        Raulnor
+        Scheppen
+        Timbers
+        Turen
+    skin = [npc_properties.skin]
+  half-elf
+    race_name = half-elf
+    names = [race['human'].subrace['chondathan'].names]
+    skin = [npc_properties.skin]
+  halfling
+    race_name = halfling
+    subrace
+      ghostwise
+      lightfoot
+      stout
+    names
+      first_name
+        male
+          Alton
+          Ander
+          Cade
+          Corrin
+          Eldon
+          Errich
+          Finnan
+          Garret
+          Lindal
+          Lyle
+          Merric
+          Milo
+          Osborn
+          Perrin
+          Reed
+          Roscoe
+          Wellby
+        female
+          Andry
+          Bree
+          Callie
+          Cora
+          Euphemia
+          Jillian
+          Kithri
+          Lavinia
+          Lidda
+          Merla
+          Nedda
+          Paela
+          Portia
+          Seraphina
+          Shaena
+          Trym
+          Vani
+          Verna
+      last_name
+        Brushgather
+        Goodbarrel
+        Greenbottle
+        High-hill
+        Hilltopple
+        Leagallow
+        Tealeaf
+        Thorngage
+        Tosscobble
+        Underbough
+    skin = [npc_properties.skin]
+  dragonborn
+    race_name = dragonborn
+    generate_hair() =>
+      c.hair = capitalise(c.pronoun) +
+      (c.pluralise_pronoun ? " have got " : " has got ") + 
+      this.hair.description.selectOne;
+      c.hair_title = "Head Decoration."
+    skin
+      description
+        coated in small, fine brass scales
+        coated in small, fine bronze scales
+        coated in small, fine scarlet scales
+        coated in small, fine rust-coloured scales
+        coated in small, fine golden scales
+        coated in small, fine copper-green scales
+    hair
+      description
+        a dense bone plate across the brow with two small horns emerging from it
+        a line of three horns down the center of their head, curving backwards
+        a series of bony protuberances running up the jaw to the back of the neck
+    subrace
+      black
+        name = black
+        skin
+          description
+            [race.dragonborn.skin.description]^10
+            coated with glossy, black scales
+            coated with worn, dull black scales
+      blue
+        name = blue
+        skin
+          description
+            [race.dragonborn.skin.description]^10
+            emitting an electric hum and coated with iridescent azure scales
+            coated in bright blue scales
+            is coated with glossy scales which are deep indigo
+      brass
+        name = brass
+        skin
+          description
+            [race.dragonborn.skin.description]^10
+            coated with scales which are a dull, mottled brown
+            coated in scales which shine with a warm, burnished luster
+      bronze
+        name = bronze
+        skin
+          description
+            [race.dragonborn.skin.description]^10
+            coated in scales which are yellow, tinged with green
+            coated with scales with a dark, rich bronze tone to them
+      copper
+        name = copper
+        skin
+          description
+            [race.dragonborn.skin.description]^10
+            coated in scales which are ruddy brown with a metallic tint
+            coated in scales which are copper with a green tint
+      gold
+        name = gold
+        skin
+          description
+            [race.dragonborn.skin.description]^10
+            coated in scales which are dark yellow with metallic flecks
+            coated in scales of brilliant metallic gold
+      green
+        name = green
+        skin
+          description
+            [race.dragonborn.skin.description]^10
+            coated in scales which appear black but show a dark green in the right light
+            coated in forest-green scales
+            coated in emerald scales
+            coated in olive-green scales
+      red
+        name = red
+        skin
+          description
+            [race.dragonborn.skin.description]^10
+            coated in scales which are a bright, glossy scarlet
+            coated in scales which are a dull, deep red
+            coated in crimson scales of unusual density
+      silver
+        name = silver
+        skin
+          description
+            [race.dragonborn.skin.description]^10
+            a dull gray, coated in small, fine, shimmering silver scales
+      white
+        name = white
+        skin
+          description
+            [race.dragonborn.skin.description]^10
+            pure white, coated in scales which could be mistaken for ice crystals
+            coated in scales which present as mottled patches of pale blue and light gray
+    names
+      first_name
+        male
+          Arjhan
+          Balasar
+          Bharash
+          Donaar
+          Ghesh
+          Heskan
+          Kriv
+          Medrash
+          Mehen
+          Nadarr
+          Pandjed
+          Patrin
+          Rhogar
+          Shamash
+          Shedinn
+          Tarhun
+          Torinn
+        female
+          Akra
+          Biri
+          Daar
+          Farideh
+          Harann
+          Havilar
+          Jheri
+          Kava
+          Korinn
+          Mishann
+          Nala
+          Perra
+          Raiann
+          Sora
+          Surina
+          Thava
+          Uadjit
+      last_name
+        Clethtinthiallor
+        Daardendrian
+        Delmirev
+        Drachedandion
+        Fenkenkabradon
+        Kepeshkmolik
+        Kerrhylon
+        Kimbatuul
+        Linxakasendalor
+        Myastan
+        Nemmonis
+        Norixius
+        Ophinshtalajiir
+        Prexijandilin
+        Shestendeliath
+        Turnuroth
+        Verthisathurgiesh
+        Yarjerit
+  half-orc
+    race_name = half-orc
+    generate_name() =>
+      if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne
+        else c.name = this.names.first_name[c.gender].selectOne
+    names
+      first_name
+        male
+          Dench
+          Feng
+          Gell
+          Henk
+          Holg
+          Imsh
+          Keth
+          Krusk
+          Mhurren
+          Ront
+          Shump
+          Thokk
+        female
+          Baggi
+          Emen
+          Engong
+          Kansif
+          Myev
+          Neega
+          Ovak
+          Ownka
+          Shautha
+          Sutha
+          Vola
+          Volen
+          Yevelda  
+    skin
+      description
+        [this.getParent.tone]
+      tone
+        [npc_properties.skin.monster_tone.green_yellow]
+        [npc_properties.skin.monster_tone.grey_blue]
+  tiefling
+    race_name = tiefling
+    generate_name() =>
+      if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne
+      else c.name = joinLists(this.names.first_name[c.gender],this.names.first_name.virtue).selectOne
+    skin
+      description
+        red
+        skin = [npc_properties.skin.description]^10
+    names
+      first_name
+        male
+          Akmenos
+          Amnon
+          Barakas
+          Damakos
+          Ekemon
+          Iados
+          Kairon
+          Leucis
+          Melech
+          Mordai
+          Morthos
+          Pelaios
+          Skamos
+          Therai
+        female
+          Akta
+          Anakis
+          Bryseis
+          Criella
+          Damaia
+          Ea
+          Kallista
+          Lerissa
+          Makaria
+          Nemeia
+          Orianna
+          Phelaia
+          Rieta
+        virtue
+          Art
+          Carrion
+          Chant
+          Creed
+          Despair
+          Excellence
+          Fear
+          Glory
+          Hope
+          Ideal
+          Music
+          Nowhere
+          Open
+          Poetry
+          Quest
+          Random
+          Reverence
+          Sorrow
+          Temerity
+          Torment
+          Weary
+    subrace
+      Baalzebul
+      Dispater
+      Feral
+      Fierna
+      Glasya
+      Levistus
+      Mammon
+      Mephistopheles
+      Variant Feral
+      Variant
+      Zariel
+  aarakocra
+    race_name = aarakockra
+    generate_name() =>
+      if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne
+        else c.name = this.names.first_name[c.gender].selectOne
+    hair
+      description
+        [c.has_hairstyle = false, "feathers (placeholder)"]
+    skin
+      description
+        feathers (placeholder)
+    names
+      first_name
+        male
+          Aera
+          Aial
+          Aur
+          Deekek
+          Errk
+          Heehk
+          Ikki
+          Kleeck
+          Oorr
+          Ouss
+          Quaf
+          Quierk
+          Salleek
+          Urreek
+          Zeed
+        female
+          Aera
+          Aial
+          Aur
+          Deekek
+          Errk
+          Heehk
+          Ikki
+          Kleeck
+          Oorr
+          Ouss
+          Quaf
+          Quierk
+          Salleek
+          Urreek
+          Zeed
+  genasi
+    race_name = genasi
+    skin
+      description
+        genasi skin (placeholder)
+    names = [race.elf.names]
+    subrace
+      air
+        name = air
+        hair
+          description
+            wavy air genasi hair (placeholder)
+      earth
+        name = earth
+        hair
+          description
+            solid earth genasi hair (placeholder)
+      fire
+        name = fire
+        hair
+          description
+            flaming hair (placeholder)
+      water
+        name = water
+        hair
+          description
+            wavy water genasi hair (placeholder)
+  goliath
+    race_name = goliath
+    names
+      first_name
+        male
+          Aukan
+          Eglath
+          Gae-Al
+          Gauthak
+          Ilikan
+          Keothi
+          Kuori
+          Lo-Kag
+          Manneo
+          Maveith
+          Nalla
+          Orilo
+          Paavu
+          Pethani
+          Thalai
+          Thotham
+          Uthal
+          Vaunea
+          Vimak
+        female
+          Aukan
+          Eglath
+          Gae-Al
+          Gauthak
+          Ilikan
+          Keothi
+          Kuori
+          Lo-Kag
+          Manneo
+          Maveith
+          Nalla
+          Orilo
+          Paavu
+          Pethani
+          Thalai
+          Thotham
+          Uthal
+          Vaunea
+          Vimak
+      last_name
+        Anakalathai
+        Elanithino
+        Gathakanathi
+        Kalagiano
+        Katho-Olavi
+        Kolae-Gileana
+        Ogolakanu
+        Thuliaga
+        Thunukalathi
+        Vaimei-Laga
+    skin = [npc_properties.skin]
+    hair
+      description
+        [c.has_hairstyle = false, "a bald head (placeholder)"]
+  aasimar
+    race_name = aasimar
+    init() =>
+      c.secondary_subrace =  race.human.subrace.selectOne.getName
+      c.secondary_subrace_source = race.human.subrace[c.secondary_subrace]
+    generate_name() =>
+      if(c.secondary_subrace_source.hasOwnProperty('generate_name')){
+        c.secondary_subrace_source.generate_name()
+        return 1;
+      }
+        name_source = race.human.subrace[c.secondary_subrace].names
+      if(c.gender == "nonbinary") c.name = name_source.first_name.selectOne + " " + name_source.last_name.selectOne;
+      else c.name = name_source.first_name[c.gender].selectOne + " " + name_source.last_name.selectOne;
+    generate_skin() =>
+      skin_source = (race.human.subrace[c.secondary_subrace].hasOwnProperty('skin') ?
+        race.human.subrace[c.secondary_subrace].skin : race.human.skin)
+      c.body.push(capitalise(c.possessive_pronoun) + " skin is " +
+        skin_source.description.selectOne + " reflecting " + c.possessive_pronoun + " " +
+        capitalise(c.secondary_subrace) + " heritage.")
+    subrace
+      fallen
+      protector
+      scourge
+      variant
+  bugbear
+    race_name = bugbear
+    generate_name() =>
+      if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne
+        else c.name = this.names.first_name[c.gender].selectOne
+    hair
+      description
+        [c.has_hairstyle = false, "full-body fur (placeholder)"]
+    skin
+      description
+        full-body fur (placeholder)
+    names = [race.orc.names]
+  firbolg
+    race_name = firbolg
+    generate_name() =>
+      if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne
+        else c.name = this.names.first_name[c.gender].selectOne
+    hair
+      description
+        firbolg hair (placeholder)
+    skin
+      description
+        fur (placeholder)
+    names = [race.elf.names]
+  goblin
+    race_name = goblin
+    generate_name() =>
+      if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne
+        else c.name = this.names.first_name[c.gender].selectOne
+    names = [race.orc.names]
+    hair
+      description
+        goblin hair (placeholder)
+    skin
+      description
+        [this.getParent.tone] 
+      tone
+        [npc_properties.skin.monster_tone.green_yellow]
+        [npc_properties.skin.monster_tone.grey_blue]
+  hobgoblin
+    race_name = hobgoblin
+    generate_name() =>
+      if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne
+        else c.name = this.names.first_name[c.gender].selectOne
+    names = [race.orc.names]
+    hair
+      description
+        hobgoblin hair (placeholder)
+    skin
+      description
+        hobgoblin skin (placeholder)
+  kenku
+    race_name = kenku
+    generate_name() =>
+      if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne
+        else c.name = this.names.first_name[c.gender].selectOne
+    hair
+      description
+        [c.has_hairstyle = false, "feathers (placeholder)"]
+    skin
+      description
+        feathers (placeholder)
+    names
+      first_name
+        male
+          Smasher
+          Clanger
+          Slicer
+          Basher
+          Rat Scratch
+          Whistler
+          Mouser
+          Growler
+        female
+          Smasher
+          Clanger
+          Slicer
+          Basher
+          Rat Scratch
+          Whistler
+          Mouser
+          Growler
+  kobold
+    race_name = kobold
+    generate_name() =>
+      c.name = this.names.selectOne
+    hair
+      description
+        [c.has_hairstyle = false, "no hair"]
+    skin
+      description
+        [this.getParent.tone]
+      tone
+        [npc_properties.skin.monster_tone.green_yellow]
+        [npc_properties.skin.monster_tone.grey_blue]
+    names
+      Arix
+      Molo
+      Eks
+      Ohsoss
+      Ett
+      Rotom
+      Galax
+      Sagin
+      Garu
+      Sik
+      Hagnar
+      Sniv
+      Hox
+      Taklak
+      Irtos
+      Tes
+      Kashak
+      Urak
+      Meepo
+      Varn
+  lizardfolk
+    race_name = lizardfolk
+    generate_name() =>
+      if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne
+        else c.name = this.names.first_name[c.gender].selectOne
+    generate_hair = [race.dragonborn.generate_hair]
+    skin
+      description
+        scales
+    names
+      first_name
+        male
+          Achuak (green)
+          Aryte (war)
+          Baeshra (animal)
+          Darastrix (dragon)
+          Garurt (axe)
+          Irhtos (secret)
+          Jhank (hammer)
+          Kepesk (storm)
+          Kethend (gem)
+          Korth (danger)
+          Kosj (small)
+          Kothar (demon)
+          Litrix (armor)
+          Mirik (song)
+          Othokent (smart)
+          Sauriv (eye)
+          Throden (many)
+          Thurkear (night)
+          Usk (iron)
+          Valignat (burn)
+          Vargach (battle)
+          Verthica (mountain)
+          Vutha (black)
+          Vyth (steel)
+        female
+          Achuak (green)
+          Aryte (war)
+          Baeshra (animal)
+          Darastrix (dragon)
+          Garurt (axe)
+          Irhtos (secret)
+          Jhank (hammer)
+          Kepesk (storm)
+          Kethend (gem)
+          Korth (danger)
+          Kosj (small)
+          Kothar (demon)
+          Litrix (armor)
+          Mirik (song)
+          Othokent (smart)
+          Sauriv (eye)
+          Throden (many)
+          Thurkear (night)
+          Usk (iron)
+          Valignat (burn)
+          Vargach (battle)
+          Verthica (mountain)
+          Vutha (black)
+          Vyth (steel)
+  orc
+    race_name = orc
+    generate_name() =>
+      if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne
+        else c.name = this.names.first_name[c.gender].selectOne
+    hair
+      description
+        orc hair
+    skin
+      description
+        [this.getParent.tone]
+      tone
+        [npc_properties.skin.monster_tone.green_yellow]
+        [npc_properties.skin.monster_tone.grey_blue]
+    names
+      first_name
+        male
+          Grutok
+          Lortar
+          Abzug
+          Shugog
+          Urzul
+          Ruhk
+          Mobad
+          Shamog
+          Mugrub
+          Bajok
+          Rhorog
+          Jahrukk
+        female
+          Kansif
+          Ownka
+          Emen
+          Sutha
+          Myev
+          Neega
+          Baggi
+          Shautha
+          Ovak
+          Vola
+          Engong
+          Volen
+      last_name
+        The Filthy
+        Skull Cleaver
+        Eye Gouger
+        Iron Tusk
+        Skin Flayer
+        Bone Crusher
+        Flesh Ripper
+        Doom Hammer
+        Elf Butcher
+        Spine Snapper
+        Death Spear
+        The Brutal
+  tabaxi
+    race_name = tabaxi
+    generate_name() =>
+      c.name = this.names.first_name.selectOne + " " + this.names.last_name.selectOne
+    skin
+      description
+        tabaxi skin (placeholder)
+    hair
+      description
+        [c.has_hairstyle = false, "tabaxi hair (placeholder)"]
+    names
+      first_name
+        Cloud on the Mountaintop (Cloud)
+        Five Timber (Timber)
+        Jade Shoe (Jade)
+        Left-Handed Hummingbird (Bird)
+        Seven Thundercloud (Thunder)
+        Skirt of Snakes (Snake)
+        Smoking Mirror (Smoke)
+      last_name
+        Bright Cliffs
+        Distant Rain
+        Mountain Tree
+        Rumbling River
+        Snoring Mountain
+        Clanless
+  triton
+    race_name = triton
+    generate_name() =>
+      if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne
+        else c.name = this.names.first_name[c.gender].selectOne
+    hair
+      description
+        triton hair (placeholder)
+    skin
+      description
+        triton skin (placeholder)
+    names
+      first_name
+        male
+          Corus
+          Delnis
+          Jhimas
+          Keros
+          Molos
+          Nalos
+          Vodos
+          Zunis
+        female
+          Aryn
+          Belthyn
+          Duthyn
+          Feloren
+          Otanyn
+          halryn
+          Vlaryn
+          Wolyn
+      last_name
+        Ahlorsath
+        Pumanath
+        Vuuvaxath
+  yuan-ti-pureblood
+    race_name = yuan-ti pureblood
+    generate_name() =>
+      c.name = this.names.first_name.selectOne
+    hair
+      description
+        yuan-ti hair (placeholder)
+    skin
+      description
+        [npc_properties.skin.description] with patches of [npc_properties.skin.monster_tone.green_yellow]
+        [npc_properties.skin.description]
+    names
+      first_name
+        Asutali
+        Eztli
+        Hessatal
+        Hitotee
+        Issahu
+        Itstli
+        Manuya
+        Meztli
+        Nesalli
+        Otleh
+        Shalkashlah
+        Sisava
+        Sitlali
+        Soakosh
+        Ssimalli
+        Suisatal
+        Talash
+        Teoshi
+        Yaotal
+        Zihu
+  tortle
+    race_name = tortle
+    generate_name() =>
+      c.name = this.names.first_name.selectOne
+    hair
+      description
+        [c.has_hairstyle = false, "no hair"]
+    skin
+      description
+        [this.getParent.tone]
+      tone = [npc_properties.skin.monster_tone.green_yellow]
+    names
+      first_name
+        Baka
+        Damu
+        Gar
+        Gura
+        Ini
+        Jappa
+        Kinlek
+        Krull
+        Lim
+        Lop
+        Nortle
+        Nulka
+        Olo
+        Ploqwat
+        Quee
+        Queg
+        Quott
+        Sunny
+        Tibor
+        Ubo
+        Uhok
+        Wabu
+        Xelbuk
+        Xopa
+        Yog
+  gith
+    race_name = gith
+    skin
+      description
+        [this.getParent.tone]
+      tone = [npc_properties.skin.monster_tone.green_yellow]
+    hair
+      description
+        gith hair (placeholder)
+    subrace
+      githyanki
+        generate_name() =>
+          if(c.gender == "male") c.name = this.names.first_name.male.selectOne;
+          if(c.gender == "female") c.name = this.names.first_name.female.selectOne;
+          if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne;
+        names
+          first_name
+            male
+              Elirdain
+              Gaath
+              Ja’adoc
+              Kar’i’nas
+              Lykus
+              Quith
+              Ris’a’an
+              Tropos
+              Viran
+              Xamodas
+            female
+              Aaryl
+              B’noor
+              Fenelzi’ir
+              Jen’lig
+              Pah’zel
+              Quorstyl
+              Sirruth
+              Vaira
+              Yessune
+              Zar’ryth
+      githzerai
+        generate_name() =>
+          if(c.gender == "male") c.name = this.names.first_name.male.selectOne;
+          if(c.gender == "female") c.name = this.names.first_name.female.selectOne;
+          if(c.gender == "nonbinary") c.name = this.names.first_name.selectOne;
+        names
+          first_name
+            male
+              Dak
+              Duurth
+              Ferzth
+              Hurm
+              Kalla
+              Muurg
+              Nurm
+              Shrakk
+              Xorm
+            female
+              Adaka
+              Adeya
+              Ella
+              Ezhelya
+              Immilzin
+              Izera
+              Janara
+              Loraya
+              Uweya
+              Vithka
+   
+npc_properties
+  gender
+    male
+      pronoun = he
+      possessive_pronoun = his
+    female
+      pronoun = she
+      possessive_pronoun = her
+    nonbinary^0.5/100
+      pronoun = they
+      possessive_pronoun = their
+  alignment
+    good_evil
+      good
+      neutral
+      evil
+    law_chaos
+      lawful
+      neutral
+      chaotic
+  height
+    unusually short
+    short in stature
+    average height
+    slightly above average height
+    well above average height
+    unusually tall
+  body_type
+    thin and delicate
+    of average build
+    well-muscled
+    slightly overweight
+    grotesquely obese ^0.1
+    lean and lanky
+    lithe and lean  
+    thin and wiry  
+    sinewy and strong  
+    flabby and weak  ^0.1
+    lumpy or bent  ^0.1
+    thin and flimsy  ^0.1
+    soft and chubby  
+    pudgy  ^0.1
+    broad
+    stocky and strong  
+    bony  
+    wide and ponderous ^0.1  
+    covered in hair  ^0.05
+  hair
+    style
+      unisex
+        short
+        long
+        in an undercut
+        slicked back
+        in a {lightly|heavily} layered shag cut
+        in a ponytail
+        in a bowl cut
+        in a crew cut
+        in a feather cut ^ 0.01
+        in a top knot
+				tousled
+      male
+        in a tonsure ^ 0.01
+        in a regular cut with {short|medium|long} back and sides
+        in a curtained style
+      female
+        long with light curls
+        in an elaborate updo
+        in a simple updo
+        in a twisted updo
+        in a double side-twist updo
+        in a messy bun
+        in a bun, dressed with a braid
+        in a beehive ^ 0.01
+        in an updo tucked into a hairband
+        {down|up} with a mohawk braid
+        in a side braid
+        in a double braid, meeting in a bun
+        {with bangs|flipped} in a low bun
+        {down|up} in a fishtail braid
+        up in a crown braid
+        up in a wrap around braid
+        up in a braided florette updo
+        in loose ringlets
+        in a bob cut
+    description
+      [npc_properties.hair.type.selectOne.texture.selectOne], [npc_properties.hair.colour.selectOne] hair
+      [c.has_hairstyle = false, "a shaved head"] ^0.1
+      [c.has_hairstyle = false, "no hair at all"] ^0.1
+    type
+      straight
+        texture
+          coarse
+          fine
+          gossamer
+          heavy
+          silky
+          sleek
+          slick
+          soft
+          thin
+          wispy      
+      wavy
+        texture
+          coarse
+          frizzy
+          heavy
+          lush
+          luxuriant
+          poufy
+          soft
+      curly
+        texture
+          bushy
+          coarse
+          dense
+          frizzy
+          heavy
+          lush
+          luxuriant
+          porous
+          shaggy
+          soft
+          springy
+          thick
+          wiry
+      coily
+        texture
+          bushy
+          coarse
+          dense
+          heavy
+          lush
+          luxuriant
+          porous
+          shaggy ^0.1
+          soft
+          springy
+          thick
+          wiry
+    colour
+      black
+        ebony
+        inky
+        jet
+        raven
+      dark_brown
+        dark brown
+        brunette
+        mahogany
+      light_brown
+        raw umber
+        light chestnut
+        ash brown
+        russet
+        bronze
+        tawny
+      auburn
+        burnt umber
+        auburn
+      red
+        amber
+        copper
+      red_purple
+        crimson
+        maroon
+        wine-coloured
+      blonde
+        strawberry blonde
+        platinum blonde
+        dirty blonde
+        golden
+        sandy
+      grey
+        ashen
+        salt and pepper
+        silvery
+      white
+        alabaster
+        ashen
+        frosted
+        platinum
+        pearly
+        snowy
+  skin
+    description
+      [npc_properties.skin.human_tone.selectOne]
+      [npc_properties.skin.human_tone.selectOne] with [npc_properties.skin.undertone.selectOne] undertones
+    human_tone
+      very_pale
+        white
+        alabaster
+        ivory
+        porcelain
+      pale
+        cream-coloured
+        a sandy beige
+        beige
+        a soft pink
+        pale with a rosy hue
+        ruddy
+        peach
+      medium
+        a warm beige
+        a golden beige
+        terra cotta
+        olive
+        dusky
+        a tawny beige
+        copper
+        bronze
+        olive
+        a khaki tone
+        fawny
+      light_brown
+        a light golden brown
+        deep gold
+        a reddish-brown sepia
+        taupe
+        a soft brown ochre
+      brown
+        burnished amber
+        a deep golden brown
+        russet brown
+        brown
+        the dark yellow-brown of raw umber
+      dark_brown
+        dark mahogany
+        a pitchy bistre
+        dark brown
+        almost obsidian
+        almost onyx
+    monster_tone
+      green_yellow
+        pale green
+        pale yellow
+        yellowish-green
+        sallow
+        yellowish-brown
+        a dirty reddish-brown
+      grey_blue
+        grey-blue
+        a sickly grey      
+    undertone
+      warm
+      cool
+      jewel
+      neutral
+  mood
+    calm
+      agreeable
+      carefree
+      curious
+      eager
+      friendly
+      happy
+      hopeful
+      upbeat
+      indifferent
+      bored
+      focused
+      suspicious
+      tired
+      withdrawn
+      disagreeable
+      despondent
+      gloomy
+      jovial
+      honest
+      kind
+      intelligent
+      helpful
+      ponderous
+      arrogant
+      wise
+      delightful
+      compassionate
+      cheerful
+      reserved
+      outspoken
+      uninterested
+      gruff
+      eager
+      deceitful
+      foolish
+      strict
+      agreeable
+      mischeivious
+      angry
+      fearful
+      manipulative
+      devout
+      greedy
+      funny
+      dour
+      fun-loving
+      lazy
+      driven
+      boastful
+      artistic
+      assertive
+      carefree
+      cautious
+      confident
+      thoughtful
+      loyal
+      sophisticated
+      weak-willed
+      grumpy
+      boistrous
+      friendly
+      blustering
+      shrewd
+      nervous
+    stressed
+      rude
+      withdrawn
+      murderous
+      gloomy
+      obsessive
+      authoritarian
+      determined
+      brave
+      spiteful
+      belligerent
+      caustic
+      reckless
+      argumentative
+      gluttonous
+      overly protective
+      angry
+      cowardly
+      meticulous
+      sarcastic
+      stubborn
+      destructive
+      practical
+      nervous
+      pushy
+      fanatical
+      secretive
+      scornful
+      courageous
+      impractical
+      calculating
+      industrious
+      manipulative
+      destructive
+      optimistic
+      compulsive
+      intolerant
+      annoyed
+      quiet
+      blustering
+      agitated
+  
+//Gather inputs
+selected_race = random
+selected_subrace = random
+selected_gender = random
+
+generateCharacter() =>
+  populateRaces(this.race.getChildNames)
+  //These properties are all strings, with actual values fetched from race as required.
+  
+	//Instantiate character object
+  c = new Object;
+	//Get race selection from dropdown and set race_source
+  (selected_race == "random") ? c.race = race.selectOne.getName : c.race = selected_race
+  c.race_source = race[c.race]
+  
+	//If the race has a separate init step required, trigger it (e.g. aasimar)
+	if(c.race_source.hasOwnProperty('init'))
+    c.race_source.init(c,this)
+		
+	//Get subrace selection from dropdown and set subrace_source
+  selected_subrace == "random" ? c.subrace = c.race_source.hasOwnProperty('subrace') ? c.race_source.subrace.selectOne.getName : '' : c.subrace = selected_subrace
+  c.subrace_source = c.subrace ? c.race_source.subrace[c.subrace] : ''
+  
+	//Toggle subrace dropdown based on whether subraces are available
+  if(c.subrace && selected_race != "random") showSubraces(),populateSubraces(c.race_source.subrace.$children)
+  else hideSubraces()
+    
+	//If a racial description is available, populate race_description
+  c.subrace_source.hasOwnProperty("description") ? c.race_description = c.subrace_source.description  :
+		c.race_source.hasOwnProperty("description") ? c.race_description = c.race_source.description :
+			c.race_description = 'No information available about this race'
+
+	//Get gender selection from dropdown and set gender_source and pronouns
+	selected_gender == "random" ? c.gender= npc_properties.gender.selectOne.getName : c.gender = selected_gender
+  c.gender_source = npc_properties.gender[c.gender]	
+  c.pronoun = npc_properties.gender[c.gender].pronoun
+  c.possessive_pronoun = npc_properties.gender[c.gender].possessive_pronoun
+  c.pluralise_pronoun = (c.gender == 'nonbinary')
+	
+	//Randomise Alignment
+  c.alignment = npc_properties.alignment.law_chaos.selectOne + " " + npc_properties.alignment.good_evil.selectOne
+  
+	//Trigger Name Generation
+  c.subrace_source.hasOwnProperty('generate_name') ? 
+    c.subrace_source.generate_name(c,this) : c.race_source.hasOwnProperty('generate_name') ?
+      c.race_source.generate_name(c, this) : generateNameGeneric()
+  
+	//Trigger Hair Generation
+  c.has_hairstyle = true
+  c.subrace_source.hasOwnProperty('generate_hair') ? 
+    c.subrace_source.generate_hair(c,this) : c.race_source.hasOwnProperty('generate_hair') ?
+      c.race_source.generate_hair(c, this) : generateHairGeneric()
+  
+	//Randomise Body Properties
+  c.body = [];
+	
+  //This should be based on race but currently descriptions are modifiers to racial properties.
+  c.body.push(capitalise(c.pronoun) + " is " + npc_properties.height.selectOne + " for a " + c.race +
+    " and " + c.possessive_pronoun + " body is " + npc_properties.body_type.selectOne + ".");
+  
+	//Trigger Skin Generation - Append to body description
+	c.subrace_source.hasOwnProperty('generate_skin') ?
+    c.subrace_source.generate_skin(c,this) : c.race_source.hasOwnProperty('generate_skin') ?
+    c.race_source.generate_skin(c, this) : generateSkinGeneric()
+	  
+  //Select Shorthand Personality
+  c.mood_calm = [npc_properties.mood.calm]
+  c.mood_stressed = [npc_properties.mood.stressed]
+	
+	//Return character
+  return c;
+  
+generateDisplayRace(subrace, race, gender, alignment) =>
+  return "Medium humanoid (" + 
+  subrace + 
+  (subrace == '' ? '' : ' ')  + 
+  race + ", " + 
+  gender + ", " +  
+  (alignment == "neutral neutral" ? "true neutral" : alignment) + ")";
+  
+generateNameGeneric() =>
+  name_source = (c.subrace && c.subrace_source.hasOwnProperty('names') ?
+    c.subrace_source.names : c.race_source.names)
+  if(c.gender == "nonbinary") c.name = name_source.first_name.selectOne + " " + name_source.last_name.selectOne;
+  else c.name = name_source.first_name[c.gender].selectOne + " " + name_source.last_name.selectOne;
+
+generateSkinGeneric() =>
+  skin_source = (c.subrace && c.subrace_source.hasOwnProperty('skin') ?
+    c.subrace_source.skin : c.race_source.skin)
+  c.body.push(capitalise(c.possessive_pronoun) + " skin is " + skin_source.description.selectOne + ".")
+
+generateHairGeneric() =>
+  hair_source = (c.subrace && c.subrace_source.hasOwnProperty('hair') ?
+    c.subrace_source.hair : (c.race_source.hasOwnProperty('hair') ?
+      c.race_source.hair : npc_properties.hair))
+			 
+	//Make a list of suitable hairstyles and select one from it
+  hair_style_source = hair_source.hasOwnProperty('style') ? hair_source.style : npc_properties.hair.style
+	available_styles = []
+	hair_style_source.hasOwnProperty("male") && (c.gender == "male" || c.gender == "nonbinary") && 
+		available_styles.push(hair_style_source.male)
+	hair_style_source.hasOwnProperty("female") && (c.gender == "female" || c.gender == "nonbinary") && 
+		available_styles.push(hair_style_source.female)
+	hair_style_source.hasOwnProperty("unisex") &&
+		available_styles.push(hair_style_source.unisex)
+  hair_style = joinLists(available_styles).selectOne
+  
+  c.hair = capitalise(c.pronoun) + (c.pluralise_pronoun ? " have got " : " has got ") + 
+  hair_source.description
+	
+  c.has_hairstyle ? c.hair += " which is worn " + hair_style + "." : c.hair += "."
+  
+
+capitalise(s) =>
+  if (typeof s !== 'string') return '';
+  return s.charAt(0).toUpperCase() + s.slice(1);
+  
+joinLists (...lists) =>
+  let result = []
+  for(let i = 0; i < lists.length; i++) {
+    let items = lists[i].selectAll;
+    if(items === undefined || !Array.isArray(items)) return "(a parameter of join-lists was not a list?)";
+    result.push(...items)
+  }
+  result.toString = function() { return this.selectOne+""; }
+  return result;
+  
+selectRandom(array) =>
+  return array[Math.floor(Math.random() * array.length)];
+  
+createHtml(c) => 
+  let html = ``;
+  
+  let items = c.content.selectAll.map(c => c.evaluateItem).map(l => ({
+    type: l.split(";;;")[0].trim(),
+    params: l.split(";;;").slice(1).map(p => p.trim()),
+  }));
+
+  for(let i = 0; i < items.length; i++) {
+    let type = items[i].type;
+    let params = items[i].params;
+    if(type === "rule") {
+      html += `<svg height="5" width="100%" class="tapered-rule"><polyline points="0,0 270,2.5 0,5"></polyline></svg>`;
+    }
+    if(type === "property-line") {
+      let firstLastClass = !items[i-1] || items[i-1].type !== "property-line" ? "first" : "";
+      if(!firstLastClass && items[i+1] && items[i+1].type !== "property-line") firstLastClass = "last";
+      html += `<div class="property-line ${firstLastClass}"><h4>${params[0]}</h4> <p>${params[1]}</p></div>`;
+    }
+    if(type === "property-block") {
+      html += `<div class="property-block"><h4>${params[0]}</h4> <p>${params[1]}</p></div>`;
+    }
+    if(type === "stats") {
+      let statMap = params.reduce((a,v) => (a[v.split(":")[0]]=Number(v.split(":")[1]), a), {});
+      html += `<div class="abilities">`;
+      for(let [name, value] of Object.entries(statMap)) {
+        let mod;
+        html += `<div class="ability-intelligence"><h4>${name.toUpperCase()}</h4><p>${value} (${mod = Math.floor((value-10)/2), mod > 0 ? "+"+mod : mod})</p></div>`;
+      }
+      html += "</div>";
+    }
+    if(type === "header") {
+      html += `<h3>${params[0]}</h3>`;
+    }
+  }
+  return html;

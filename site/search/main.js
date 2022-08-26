@@ -21,7 +21,6 @@ function joinUrl (base, path) {
   return base + "/" + path;
 }
 
-<<<<<<< Updated upstream
 function escapeHtml (value) {
   return value.replace(/&/g, '&amp;')
     .replace(/"/g, '&quot;')
@@ -31,10 +30,6 @@ function escapeHtml (value) {
 
 function formatResult (location, title, summary) {
   return '<article><h3><a href="' + joinUrl(base_url, location) + '">'+ escapeHtml(title) + '</a></h3><p>' + escapeHtml(summary) +'</p></article>';
-=======
-function formatResult (location, title, summary) {
-  return '<article><h3><a href="' + joinUrl(base_url, location) + '">'+ title + '</a></h3><p>' + summary +'</p></article>';
->>>>>>> Stashed changes
 }
 
 function displayResults (results) {
