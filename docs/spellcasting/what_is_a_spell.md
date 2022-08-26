@@ -1,41 +1,47 @@
-# What Is a Spell? 
-A spell is a discrete magical effect, a single shaping of the magical energies that suffuse the multiverse into a specific, limited expression. In casting a spell, a character carefully plucks at the invisible strands of raw magic suffusing the world, pins them in place in a particular pattern, sets them vibrating in a specific way, and then releases them to unleash the desired effect--in most cases, all in the span of seconds.
+# **Что такое заклинание?**
 
-Spells can be versatile tools, weapons, or protective wards. They can deal damage or undo it, impose or remove conditions, drain life energy away, and restore life to the dead.
+Заклинание-это дискретный магический эффект, единое формирование магических энергий, которые наполняют мультивселенную в определенном, ограниченном выражении. При сотворении заклинания персонаж тщательно вырывает невидимые нити сырой магии, наполняющие мир, закрепляет их на месте в определенном порядке, заставляет их вибрировать определенным образом, а затем отпускает их, чтобы вызвать нужный эффект—в большинстве случаев все в течение нескольких секунд.
 
-Uncounted thousands of spells have been created over the course of the multiverse's history, and many of them are long forgotten. Some might yet lie recorded in crumbling spellbooks hidden in ancient ruins or trapped in the minds of dead gods. Or they might someday be reinvented by a character who has amassed enough power and wisdom to do so. 
+Заклинания могут быть универсальными инструментами, оружием, и даже защитой. Они могут наносить или устранять повреждения, накладывать и снимать состояния (смотрите приложение А), вытягивать жизненную энергию и возвращать к жизни.
 
-## Spell Level 
-Every spell has a level from 0 to 9. A spell's level is a general indicator of how powerful it is, with the lowly (but still impressive) **_magic missile_** at 1st level and the earth-shaking **_wish_** at 9th. Cantrips--simple but powerful spells that characters can cast almost by rote--are level 0. The higher a spell's level, the higher level a spellcaster must be to use that spell.
+За время существования мультивселенной было создано бессчётное множество заклинаний, и большая их часть давно забыта.  Часть из них записана в ветхих книгах заклинаний, спрятанных в древних руинах, или заперта в сознании мёртвых богов.  Или они могут быть когда-нибудь изобретены персонажем, который накопил достаточно силы и мудрости, чтобы сделать это.
 
-Spell level and character level don't correspond directly. Typically, a character has to be at least 17th level, not 9th level, to cast a 9th-level spell. 
+## **Круг Заклинаний**
 
-## Known and Prepared Spells 
-Before a spellcaster can use a spell, he or she must have the spell firmly fixed in mind, or must have access to the spell in a magic item. Members of a few classes, including bards and sorcerers, have a limited list of spells they know that are always fixed in mind. The same thing is true of many magic-using monsters. Other spellcasters, such as clerics and wizards, undergo a process of preparing spells. This process varies for different classes, as detailed in their descriptions.
+У каждого заклинания есть круг, от 0 до 9. Круг заклинания является общим показателем того, насколько он силен, с низкой (но все же впечатляющей) *магическим снарядом* на 1-м круге и потрясающим *желанием* на 9-м. Заговоры — простые, но мощные заклинания, которые персонажи могут накладывать без особых усилий, имеют 0 круг. Чем выше круг заклинания, тем больший уровень должен быть у заклинателя, собирающегося его использовать.
 
-In every case, the number of spells a caster can have fixed in mind at any given time depends on the character's level. 
+Круг заклинания и уровень персонажа связаны, но не линейно.  Обычно персонажу нужно иметь 17 уровень, чтобы сотворять заклинания 9 круга.
 
-## Spell Slots 
-Regardless of how many spells a caster knows or prepares, he or she can cast only a limited number of spells before resting. Manipulating the fabric of magic and channeling its energy into even a simple spell is physically and mentally taxing, and higher- level spells are even more so. Thus, each spellcasting class's description (except that of the warlock) includes a table showing how many spell slots of each spell level a character can use at each character level. For example, the 3rd-level wizard Umara has four 1st-level spell slots and two 2nd-level slots.
+## ` `**Известные и подготовленные заклинания** 
+Перед тем, как заклинатель сможет использовать заклинание, он должен зафиксировать его в сознании, или получить доступ к заклинанию, хранящемуся в магическом предмете. Представители некоторых классов, включая бардов и чародеев, обладают ограниченным набором заклинаний, который всегда находится в их сознании.  То же самое справедливо для большинства практикующих магию существ. Другие заклинатели, такие как клерики и волшебники, подготавливают свои заклинания. У всех классов этот процесс выглядит по-разному; подробности смотрите в их описании.
 
-When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively "filling" a slot with the spell. You can think of a spell slot as a groove of a certain size--small for a 1st-level slot, larger for a spell of higher level. A 1st-level spell fits into a slot of any size, but a 9th-level spell fits only in a 9th-level slot. So when Umara casts **_magic missile_**, a 1st-level spell, she spends one of her four 1st-level slots and has three remaining.
+В любом случае, количество заклинаний, которое заклинатель может удерживать в сознании, зависит от его собственного уровня.
 
-Finishing a long rest restores any expended spell slots.
+## **Ячейки заклинаний**
 
-Some characters and monsters have special abilities that let them cast spells without using spell slots. For example, a monk who follows the Way of the Four Elements, a warlock who chooses certain eldritch invocations, and a pit fiend from the Nine Hells can all cast spells in such a way. 
+Вне зависимости от того, сколько заклинаний знает или подготовил заклинатель, он может использовать ограниченное их количество, после чего ему вновь понадобиться отдохнуть.  Манипулирование тканью магии и пропускание через себя её энергии выматывает физически и умственно, особенно если заклинание высокоуровневое.  Таким образом, в описании всех классов заклинателей (колдун — исключение) есть таблица, показывающая, сколько ячеек заклинаний того или иного уровня заклинаний у персонажа есть на данном уровне.  Например, волшебник 3-го уровня Умара имеет четыре ячейки заклинаний 1-го круга и два ячейки 2-го круга.
 
-## Casting a Spell at a Higher Level 
-When a spellcaster casts a spell using a slot that is of a higher level than the spell, the spell assumes the higher level for that casting. For instance, if Umara casts **_magic missile_** using one of her 2nd-level slots, that **_magic missile_** is 2nd level. Effectively, the spell expands to fill the slot it is put into.
+Когда персонаж накладывает заклинание, он тратит ячейку с уровнем, не меньше, чем уровень заклинания, как будто бы «заполняя» ячейку заклинанием.  Можете считать ячейку заклинания ёмкостью определённого размера — ячейка 1 круга маленькая, а ячейки более высоких уровней большие. Заклинание 1 круга поместится в ячейку любого размера, но заклинание 9 круга поместится только в ячейку 9 круга .  Поэтому, когда Умара соторяет *Волшебную стрелу* заклинание 1-го круга, она тратит одну из своих четырех ячеек 1-го круга и у нее остается три ячейки
 
-Some spells, such as **_magic missile_** and **_cure wounds_**, have more powerful effects when cast at a higher level, as detailed in a spell's description. 
+Завершение длительного отдыха восстанавливает все потраченные ячейки заклинаний.
 
-> ### Casting in Armor 
-> Because of the mental focus and precise gestures required for spellcasting, you must be proficient with the armor you are wearing to cast a spell. You are otherwise too distracted and physically hampered by your armor for spellcasting.
+У некоторых персонажей и существ есть особые умения, позволяющие использовать заклинания без использования ячеек. Примерами могут послужить монах, следующий Пути четырёх стихий, колдун, выбравший особые воззвания, и Исчадие ада из Девяти Преисподних.
 
-## Cantrips 
-A cantrip is a spell that can be cast at will, without using a spell slot and without being prepared in advance. Repeated practice has fixed the spell in the caster's mind and infused the caster with the magic needed to produce the effect over and over. A cantrip's spell level is 0. 
+### *Сотворение заклинания с увеличенным кругом*
 
-## Rituals 
-Certain spells have a special tag: ritual. Such a spell can be cast following the normal rules for spellcasting, or the spell can be cast as a ritual. The ritual version of a spell takes 10 minutes longer to cast than normal. It also doesn't expend a spell slot, which means the ritual version of a spell can't be cast at a higher level.
+Когда заклинатель сотворяет заклинание, используя ячейку с кругом, превышающим круг заклинания, заклинание при этом считается имеющим увеличенный круг.  Например, если Умара сотворяет *Волшебная стрелу*, используя одну из ее ячеек 2-го круга, эта *Волшебная стрела* 2-го круга. Эффективно, заклинание расширяется, чтобы заполнить ячейку, в который оно помещено.
 
-To cast a spell as a ritual, a spellcaster must have a feature that grants the ability to do so. The cleric and the druid, for example, have such a feature. The caster must also have the spell prepared or on his or her list of spells known, unless the character's ritual feature specifies otherwise, as the wizard's does.
+Некоторые заклинания, такие как *Волшебная стрела* и *Лечение ран*, имеют более мощные эффекты при использовании на более высоком круге, как описано в описании заклинания.
+
+### Сотворение заклинаний в доспехе
+
+Из-за необходимости поддерживать концентрацию и совершать аккуратные движения, вы должны владеть доспехом, в котором собираетесь сотворять заклинание.  В противном случае ваши движения слишком стеснены, и вы теряете возможность использовать заклинания.
+
+## **Заговор**
+
+Заговор это заклинание, которое накладывается очень легко, без использования ячеек заклинаний и подготовки. Постоянное использование закрепило их в сознании заклинателя и даровало магию, необходимую для постоянного воплощения их эффектов. Круг заговоров всегда 0.
+
+## **Ритуалы**
+У некоторых заклинаний есть специальное ключевое слово: «ритуал». Такое заклинание можно использовать по обычным правилам использования заклинаний, или же использовать его как ритуал. Ритуальная версия сотворяется на 10 минут дольше, чем обычно. Она не использует ячейку заклинания, а значит, ритуальную версию заклинания нельзя использовать с увеличенным кругом.
+
+Для использования заклинания в качестве ритуала заклинатель должен иметь свойство, позволяющее делать это.  У Клериков и друидов, например, есть такое свойство.  Заклинатель должен при этом иметь это заклинание подготовленным или просто иметь его в списках известных заклинаний, если в ритуальном свойстве не сказано обратное, как, например, у волшебника.
