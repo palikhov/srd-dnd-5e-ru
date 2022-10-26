@@ -45,4 +45,4 @@ https://open5e.com/
 
 https://5thsrd.org/
 
-SRD 5.1 
+[SRD 5.1](/downloads/SRD-OGL_V5.1.pdf) 
