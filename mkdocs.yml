@@ -3,7 +3,6 @@ site_name: 5th Edition SRD
 copyright: Rules provided by Wizards of the Coast under the <a href="/license">OGL 1.0a</a>.
 
 theme:
-  name: bootstrap
   name: material
   
   language: ru 
