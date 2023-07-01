@@ -58,3 +58,5 @@ This work includes material taken from the System Reference Document 5.1 (“SRD
 
 Section 5 of [LICENSE TYPE] includes a Disclaimer of Warranties and Limitation of Liability that limits our liability to you.
 
+https://a5esrd.com/how-to-use-creative-commons
+
