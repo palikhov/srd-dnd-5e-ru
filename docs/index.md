@@ -145,10 +145,10 @@ SRD – это свод правил, практически изготовле�
 |                                                            | [Weapons](./adventuring/equipment/weapons.md)                         |
 
 
-## Character
-| Basic Character Rules                                                      | Character - Classes                          | Character - Races                            |
+## Персонаж
+| Базовые правила персонажа                                                      | Персонаж - Классы                          | Персонаж - Расы                            |
 |----------------------------------------------------------------------------|----------------------------------------------|----------------------------------------------|
-| [Alignment](./character/alignment.md)                                       | [Barbarian](./character/classes/barbarian.md) | [Dragonborn](./character/races/dragonborn.md) |
+| [Мировоззрение](./character/alignment.md)                                       | [Варвар](./character/classes/barbarian.md) | [Dragonborn](./character/races/dragonborn.md) |
 | [Backgrounds](./character/backgrounds.md)                                   | [Bard](./character/classes/bard.md)           | [Dwarf](./character/races/dwarf.md)           |
 | [Fantasy-Historical Pantheons](./character/fantasy-historical_pantheons.md) | [Cleric](./character/classes/cleric.md)       | [Elf](./character/races/elf.md)               |
 | [Languages](./character/languages.md)                                       | [Druid](./character/classes/druid.md)         | [Gnome](./character/races/gnome.md)           |
@@ -183,10 +183,10 @@ SRD – это свод правил, практически изготовле�
 |                                                                    | [Wisdom](./rules/abilities/wisdom.md)                 |
 
 
-## GM Rules
-| GM Rules                                                             | GM Rules - Magic Item Indexes                                          | GM Rules - Monster Indexes                                                |
+## Правила Мастера
+| Правила Мастера                                                             | равила Мастера - Magic Item Indexes                                          | Правила Мастера - Monster Indexes                                                |
 |----------------------------------------------------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| [Diseases](./gamemaster_rules/diseases.md)                            | [Items by Name](./gamemaster_rules/magic_item_indexes/items_by_name.md) | [Monsters by Name](./gamemaster_rules/monster_indexes/monsters_by_name.md) |
+| [Diseases](./gamemaster_rules/diseases.md)                            | [Предмет by Name](./gamemaster_rules/magic_item_indexes/items_by_name.md) | [Monsters by Name](./gamemaster_rules/monster_indexes/monsters_by_name.md) |
 | [Legendary Creatures](./gamemaster_rules/legendary_creatures.md)      | [Items by Type](./gamemaster_rules/magic_item_indexes/items_by_type.md) | [Monsters by Type](./gamemaster_rules/monster_indexes/monsters_by_type.md) |
 | [Madness](./gamemaster_rules/madness.md)                              |                                                                        | [Monsters by CR](./gamemaster_rules/monster_indexes/monsters_by_cr.md)     |
 | [Magic Items](./gamemaster_rules/magic_items.md)                      |                                                                        |                                                                           |
