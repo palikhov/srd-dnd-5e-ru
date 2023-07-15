@@ -52,6 +52,7 @@ extra:
 
 nav:
     - О ресурсе: 'index.md'
+    - Про проект: 'about.md'
     - 'Приключения':
         - Между Приключениями: 'adventuring/between_adventures.md'
         - Перемещение: 'adventuring/movement.md'
