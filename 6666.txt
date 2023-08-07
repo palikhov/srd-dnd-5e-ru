@@ -1,0 +1,1196 @@
+
+https://perchance.org/palant-npc-gen#edit
+
+//to-do list:
+//make it so a character can be either adult or child
+//fix hit points
+//finish adding race info
+//ability to choose whether you want to roll an npc or a pc (need class for pc). Maybe make a new generator for this?
+//how the heck do i fix passive perception???
+//childhood changes based on race
+//openable and closable race info space right under where it says the race?
+//openable and closable skill space?
+//can I add ability to save character? As picture maybe??
+//add comment section and ask for feedback
+//add to-do list
+//more accurate race names
+//add inventory space
+//add dragonborn racetraits
+//add hp and ac to all races
+//add quests
+//fix tabaxi names and figure out why normal first names (gender) are fcking upp
+
+//https://perchance.org/rpg-icon-plugin
+//https://perchance.org/print-button-plugin
+//9
+page
+	title = 5e NPC Generator
+	description = This is not finished yet
+
+cards
+	card1
+		content
+			property-line ;;; Armor Class ;;; {10-30} (natural armor)
+			property-line ;;; Hit Points ;;; X
+			property-line ;;; Speed ;;; [r.speed]
+			rule
+			stats ;;; str:{1-20} ;;; dex:{1-20} ;;; con:{1-20} ;;; int:{1-20} ;;; wis:{1-20} ;;; cha:{1-20}
+			rule
+			property-line ;;; Senses ;;; passive Perception X[r.senses]
+			property-line ;;; Languages ;;; [r.languages]<hr>
+      property-line ;;; Proficiencies ;;; [r.proficiencies]
+			rule
+			property-block ;;; ;;; [r.racetraits]
+			header ;;; Actions
+			property-block ;;;  ;;; 
+      
+			// Add more lines if you want, or remove lines. Just follow the format that you see above.
+
+cardgender
+  [g = gender.selectOne, ""] <b>Gender:</b> [g]<br><br>
+
+cardrace
+  <b>Race:</b> [r = race.selectOne]<br><br>
+  
+title
+  [n] [last_name] ^[r != "goblin" && r != "hobgoblin" && r != "bugbear" && r != "orc" && r != "kobold" && r != "kenku" && r != "changeling" && r != "aarakocra" && r != "tabaxi"]
+  [n] ^[r == "goblin"]
+  [n] ^[r == "aarakocra"]
+  [n] ^[r == "changeling"]
+  [n] ^[r == "kenku"]
+  [n] ^[r == "kobold"]
+  [n] ^[r == "orc"]
+  [n] ^[r == "bugbear"]
+  [n] ^[r == "hobgoblin"]
+  [fulln] ([n]) ^[r == "tabaxi"]
+
+subtitle
+  [alignment]
+
+cardoccupation
+  <b>Occupation:</b> [o = occupation.selectOne]<br><br>
+  
+cardtraits
+  <ul><li>[f = feature.selectOne]</li><li>[flaw]</li><li>[quirk]</li></ul><br>
+
+cardbackstory
+  <b>Backstory:</b><br><br>
+
+cardactualbackstort
+  [backstorybeginning]<br><br>[backstoryoccupation]
+
+// You can also add card2, card3, etc. (name them however you like), and give them different
+// chances (e.g. card1^4, card2^7, ...) of occurring. This would be useful if you have different
+// "categories" of cards that you want to generate within the same generator.
+
+
+// Template design credit:
+// https://valloric.github.io/statblock5e/
+// https://codepen.io/retractedhack/pen/gPLpWe
+createCardHtml(c) => 
+	let html = ``;
+	
+	let items = c.content.selectAll.map(c => c.evaluateItem).map(l => ({
+		type: l.split(";;;")[0].trim(),
+		params: l.split(";;;").slice(1).map(p => p.trim()),
+	}));
+
+	for(let i = 0; i < items.length; i++) {
+		let type = items[i].type;
+		let params = items[i].params;
+		if(type === "rule") {
+			html += `<svg height="5" width="100%" class="tapered-rule"><polyline points="0,0 270,2.5 0,5"></polyline></svg>`;
+		}
+		if(type === "property-line") {
+			let firstLastClass = !items[i-1] || items[i-1].type !== "property-line" ? "first" : "";
+			if(!firstLastClass && items[i+1] && items[i+1].type !== "property-line") firstLastClass = "last";
+		  html += `<div class="property-line ${firstLastClass}"><h4>${params[0]}</h4> <p>${params[1]}</p></div>`;
+		}
+		if(type === "property-block") {
+		  html += `<div class="property-block"><h4>${params[0]}</h4> <p>${params[1]}</p></div>`;
+		}
+		if(type === "stats") {
+			let statMap = params.reduce((a,v) => (a[v.split(":")[0]]=Number(v.split(":")[1]), a), {});
+			html += `<div class="abilities">`;
+			for(let [name, value] of Object.entries(statMap)) {
+				let mod;
+				html += `<div class="ability-intelligence"><h4>${name.toUpperCase()}</h4><p>${value} (${mod = Math.floor((value-10)/2), mod > 0 ? "+"+mod : mod})</p></div>`;
+			}
+			html += "</div>";
+		}
+		if(type === "header") {
+			html += `<h3>${params[0]}</h3>`;
+		}
+	}
+	return html;
+
+gender
+  female ^50
+  male ^50
+  nonbinary ^40
+
+first_name
+  [female_name] ^[g != "male" && g != "nonbinary" && r != "tabaxi"]
+  [male_name] ^[g != "female" && g != "nonbinary" && r != "tabaxi"]
+  [unisex_name] ^[g != "female" && g != "male" && r != "tabaxi"]
+  [tabaxi_name] ^[if (r == "tabaxi") {1} else {0}]
+  
+tabaxi_name
+  Big Heart
+    Big
+  Flight of a Robin
+    Robin
+  Shadow of a Star
+    Shadow
+  Patch in the Forest
+    Patch
+  Lost Trick
+    Lost
+  Quiet Berry
+    Berry
+  Art of Shadows
+    Art
+  Locket on a Heart
+    Locket
+  Flower in the Field
+    Flower
+  Mark of Life
+    Mark
+  Night of Dreams
+    Night
+  Flawless Grass
+    Flawless
+  Light Plume
+    Light
+  Wild Button
+    Wild
+  Remnants of History
+    Remnant
+  Golden Gift
+    Gift
+  Fragrance of Spring
+    Spring
+  Arctic Fish
+    Fish
+  Elite Poem
+    Poem
+  Fresh Jewel
+    Fresh
+  Ice in Summer
+    Ice
+  Crescent Moon
+    Moon
+  Gale of the Storm
+    Gale
+  Drifting Cloud
+    Cloud
+  Brave Sea
+    Sea
+  Flickering Fire
+    Fire
+  Call of a Bird
+    Bird
+  True Tale
+    True
+  Snow of the Mountain
+    Snow
+  Curious Spell
+    Curious
+  Ruby Wish
+    Ruby
+  Aura of Passion
+    Aura
+  Spark of Life
+    Spark
+  Stitch of Fabric
+    Stitch
+  Plume of Smoke
+    Smoke
+  Kind Wind
+    Kind
+  Gold Chains
+    Gold
+  Edge of the World
+    Edge
+  Nimble Bubble
+    Nimble
+  Brave Star
+    Star
+  Fire in the Distance
+    Fire
+  Lone Bell
+    Bell
+  Bird Feather
+    Bird
+  Golden Night
+    Golden
+  Sweet Scarf
+    Sweet
+  Fragile Riddle
+    Riddle
+  Humble Gift
+    Humble
+  Mist in the Morning
+    Mist
+  Leaping Frog
+    Frog
+  Bold Mark
+    Mark
+  Strength of Love
+    Love
+  Snapping Branch
+    Snap
+  Tale of Wonder
+    Tale
+  Loose String
+    String
+  Melting of Snow
+    Snow
+  Serene Ink
+    Ink
+  Faint Breath
+    Breath
+  Call to Action
+    Action
+  Sky of a Sunset
+    Sky
+  Cover of Clouds
+    Cover
+  Brave Book
+    Book
+  Jade Bird
+    Jade
+  Four-Leaf Clover
+    Clover
+  Pure Path
+    Pure
+  Winter Breath
+    Winter
+  Merry Pierce
+    Pierce
+  Sunshine at Night
+    Sunshine
+  Quill in the Grass
+    Quill
+  Emerald Child
+    Child
+  Angelic Thunder
+    Thunder
+  Fine Bite
+    Bite
+  Little Rock
+    Rock
+  Cloaking Dagger
+    Dagger
+  Drop in a Pond
+    Drop
+  Answered Riddle
+    Riddle
+  Mellow Scratch
+    Mellow
+  Sea of Opportunity
+    Sea
+  Glow of the Sun
+    Sun
+  Bright Thing
+    Bright
+  Piece of the Puzzle
+    Piece
+  Bite Marks
+    Bite
+  Rare River
+    River
+  Flame of the Spirit
+    Flame
+  Wonder of the World
+    Wonder
+  Ethereal Wing
+    Ethereal
+  Rainbow After Rain
+    Rainbow
+  Spring Blossom
+    Spring
+  Taste of Fruit
+    Taste
+  Page of a Book
+    Page
+  Defiant Child
+    Defiant
+  Hidden Treasure
+    Treasure
+  Drifting Snowflake
+    Snowflake
+  Grass of Spring
+    Grass
+  Dream of Days
+    Dream
+
+female_name
+  Lissa
+  Paloma
+  Adalynn
+  Edna
+  Palmira
+  Jocelyn
+  Piper
+  Brielle
+  Teri
+  Minka
+  Tatum
+  Blossom
+  Phoebe
+  Oraida
+  Resa
+  Corinna
+  Cecily
+  Quinn
+  Marcia
+  Eileen
+  Wanda
+  Brooke
+  Brigid
+  Carmen
+  Ursula
+  Fiona
+  Unice
+  Tilly
+  Elliott
+  Shiloh
+  Luna
+  Alexa
+  Ronna
+  Batel
+  Wendy
+  Judit
+  Brenna
+  Stine
+  Laikynn
+  Theodora
+  Beatrice
+  Poppy
+  Lily
+  Iris
+  Orchid
+  Brigitta
+  Annalise
+  Charmaine
+  Talulla
+  Gemma
+  Gillian
+  Harlow
+  Odette
+  Fern
+  Allegra
+  Caitríona
+  Christabel
+  Avalon
+  Aviva
+  Chantal
+  Birdie
+  Sibyl
+  Aaliyah
+  Athena
+  Thekla
+  Fionnuala
+  Arlette
+  Mattie
+  Myah
+  Winifred
+  Tallulah
+  Ellery
+  Elowyn
+  Arleth
+  Ruthie
+  Vida
+  Luz
+  Neveah
+  Arlette
+  
+male_name
+  Gary
+  Johnny
+  Aayan
+  Weylen
+  Evander
+  Rhodes
+  Casper
+  Cormac
+  Bronx
+  Caius
+  Bastian
+  Crue
+  Wiley
+  Vaughn
+  Florian
+  Yadiel
+  Terrell
+  Aletris
+  Olin
+  Bran
+  Macklin
+  Ulysses
+  Gadiel
+  Benny
+  Kross
+  Elio
+  Emeril
+  Dhruv
+  Ozzy
+  Calix
+  Jovani
+  Miguel
+  Irving
+  Jordy
+  Cory
+  Merlin
+  Darion
+  Gregor
+  Efrain
+  Donavan
+  Howard
+  Thane
+  Lennon
+  Robert
+  Huxley
+  Clarke
+  Ernest
+  Elmore
+  Perry
+  Joe
+  Pascale
+  Oleg
+  Baron
+  Brennan
+  Leopold
+  Albin
+  Ezio
+  Hubert
+  Nout
+  Bertie
+  Aziel
+  Woody
+  Freddy
+  Janvier
+  Egbert
+  Cree
+  Quinlan
+  Mickey
+  Georg
+  Ole
+  Ingo
+  Dewei
+  Aster
+  Beck
+  Syncere
+  
+unisex_name
+  Tandy
+  Bradie
+  Embry
+  Cameron
+  Sloan
+  Rin
+  Tinley
+  Micah
+  Dakota
+  Dae
+  Carmel
+  Ellison
+  Tobin
+  Poet
+  Emory
+  Zephyr
+  Praxis
+  Pion
+  Pike
+  Prague
+  Penn
+  Pilo
+  Pat
+  Pi
+  Pai
+  Prex
+  Mauve
+  Mick
+  Maple
+  Mausin
+  Eustace
+  Grey
+  Cyan
+  Ekin
+  Mo
+  Derby
+  Tatum
+  Sigi
+  Val
+  Beau
+  Emerson
+  Lindy
+  Alix
+  Pleun
+  Bonnie
+  Clover
+  
+last_name
+  Ruthless
+  Dickens
+  Decker
+  Woods
+  Fuentes
+  Vaughan
+  Madden
+  Whittle
+  Harding
+  Wilkinson
+  Hicks
+  Hawkcrest
+  Amberore
+  Arias
+  Gould
+  Branch
+  Foulley
+  Concino
+  Laperriere
+  Lutfi
+  Hartka
+  Quigley
+  Sartre
+  Georgi
+  Longuemare
+  Remak
+  Littlehale
+  Buckley
+  Brott
+  Prieto
+  Piper
+  Klerken
+  Ritter
+  Cruyssen
+  Warrick
+  Vastagh
+  Favre
+  Pereira
+  Faulkner
+  Catalano
+  Ruskin
+  Beckett
+  Bissette
+  Morse
+  Villanueva
+  Amatore
+  Krauss
+  Pokorny
+  Aguilar
+  Gutermuth
+  Moffett
+
+alignment
+  Lawful Good
+  Lawful Neutral
+  Lawful Evil
+  Neutral Good
+  True Neutral
+  Neutral Evil
+  Chaotic Good
+  Chaotic Neutral
+  Chaotic Evil
+
+feature
+  Albino ^0.01
+  Has vitiligo ^0.01
+  Has heterochromia ^0.01
+  Has a {small|large} scar {over one eye|across their hand|on their chest|on their back|across their cheek|on their leg|on their arm}
+  Missing tooth
+  Has a bow (accessory) somewhere on their person
+  Wears a bandanna
+  Abnormally tall for their race
+  Abnormally short for their race
+  Always wears a scarf. Even when it's really hot
+  Wears too much jewelry
+  Wears a straw hat
+  Has a small {heart|feather|leaf|sun|moon|key|arrow|flower|cloud|plant} tattoo {on their cheek|on their wrist|on their shoulder|on their thigh|on their arm|on their ankle|on their neck|right by their ear} ^[r != "tabaxi" && r != "aarakocra" && r != "bugbear" && r != "kenku"]
+  Has large tattoos {up their right arm|up their left art|up their right leg|up their left leg|up their neck|all over their chest|all over their back} ^[r != "tabaxi" && r != "aarakocra" && r != "bugbear" && r != "kenku"]
+  Sharp teeth
+  Wears an eyepatch
+  Is missing {an arm|a hand| a finger|a leg| a toe}
+  Has a {rat|scorpion|rabbit|turtle|squirrel|mouse|kitten|puppy|frog|bat|hedgehog|faerie dragon|crab|pixie|weasel} {hidden in their bag|with them at all times}
+  Has a monobrow ^0.05
+  Is heavily tattooed
+  Wears {a ring|multiple rings}
+  Wears a {shell|sun charm|moon charm|feather charm|feather|flower charm|bone|leaf charm|heart charm|butterfly charm|chain|gemstone} necklace
+  Has a noticable birthmark ^[r != "tabaxi" && r != "aarakocra" && r != "bugbear" && r != "kenku"]
+  Has a creepy smile
+  Has a stutter
+  Always talks very loudly, almost to the point of yelling
+  Always speaks very quietly, almost to the point of whispering
+  Blind (disadvantage on perception checks)
+  Deaf (disadvantage on perception checks)
+  Mute. {Communicates through writing|Communicates using sign language}
+  Wears {a brown|a purple|a blue|a black|a white|an orange|a pink|a red|a yellow|a turquoise|a green|a gray} newsboy hat
+  Wears {a large|a small|a} hat
+  Always has a hood up over their head
+  Always barefoot
+  Wears a braided bracelet
+  Cracks knuckles frequently
+  Very distinctive laugh
+  Points at people when talking about them
+  Always speaks very slowly
+  Tends to slouch
+  Rarely looks at someone while being spoken to or talking to/with them
+  Clears throat frequently
+
+flaw
+  Pyromaniac. Has obsessive desire to set things on fire
+  Depressed. Feels hopeless, always
+  Has anxiety
+  Has urges to compulsively self-isolate
+  Compulsively tells everyone everything. They can't hold secrets
+  Very easily startled
+  Crybaby
+  Can never remember the names of things (even struggles with the names of their parents,hometown, etc.)
+  Kleptomaniac. Experiences the irresistable impulse to yoink random things that aren't theirs
+  Compulsive liar. Lies all the time, even when there's no reason to
+  Compulsively puts things in their mouth (doesn't have to be edible or safe)
+  Has severe arachnophobia. Spiders are big scary
+  Has the attention span of a 3-year-old
+  Hates the feeling of water on their skin so they rarely bathe
+  Socially awkward
+  Extremely indecisive
+  Germophobe
+  Insomniac (pretty much constantly on one or more points of exhaustion)
+  Can't swim
+  Narcoleptic (must randomly make constitution saving throws with a DC of 12. If they fail they fall asleep)
+  Short-term memory loss
+  Illiterate ^[f != "Mute. {Communicates through writing|Communicates using sign language}" && f != "Blind (disadvantage on perception checks)"] 
+  Can't count
+  Suffers from migranes
+  Very allergic to [allergy]
+  Has agoraphobia. Scared to leave their home
+  An absolute coward that will try to run from any fight
+  Illegible handwriting
+  Has OCD
+  Has haphephobia (fear of being touched)
+  tendency to one-up other people's accomplishments
+
+quirk
+  Obsessed with scented oils
+  Collects {bottle corks|playing cards|candles|paint colors|buttons}
+  Absolutely loves {sweets|candy|jerky}
+  Big on feeling people, places, and thing's vibes
+  Always smells {very strongly|just slightly} of {beer even though they don't drink it|coffee even though they don't drink it|wood for some reason|smoke for some reason}
+  Pretends like they can understand what animals are saying
+  Talks to plants ^[f != "Mute. {Communicates through writing|Communicates using sign language}"]
+  Has a rock collection. Whenever they meet someone they really like they hand them a rock
+  Spiders seem to love them for some reason
+  Loves plants, but only {the ones that can kill people|carnivorous ones|really colorful ones|really plain ones|dead ones}
+  Collects living insects in jars and flasks ^[f != "Blind (disadvantage on perception checks)"]
+  Loves to sing and hum and does it pretty much all the time ^[f != "Mute. {Communicates through writing|Communicates using sign language}" && f != "Deaf (disadvantage on perception checks)"]
+  Loves delivering people bad news, even if said bad news is fake
+  Is a hopeless romantic that writes poetry about any little thing that makes their heart flutter ^[f != "Blind (disadvantage on perception checks)"]
+  Is a massive bookworm and really wants someone to write a book about them someday ^[f != "Blind (disadvantage on perception checks)"]
+  Often speaks in a fake accent ^[f != "Mute. {Communicates through writing|Communicates using sign language}" && f != "Deaf (disadvantage on perception checks)"]
+  Paints doodles and notes on their skin. Will also paint the name of a loved one if they are feeling particularly sad so they can look at the name and be grateful that they have that person in their life ^[f != "Blind (disadvantage on perception checks)"]
+  Mumbles things to themselves constantly ^[f != "mute"]
+  Never refers to people by their actual names, only nicknames ^[f != "Mute. {Communicates through writing|Communicates using sign language}"]
+  Will flirt with anyone
+  Loves hugs and will hug even the scariest of individuals
+  Loves tea and making tea for others
+  Collects and presses flowers
+  Thinks [creature] are very [opinion] ^[f != "Blind (disadvantage on perception checks)"]
+  Believes themselves to be {the best|a decent} matchmaker
+  Doesn't fully know one of their languages so they will mess up occasionally
+  Believes themselves to be terrible in whatever their best ability score is (Strength example: "No guys, I really won't be able to lift the big rock. I'm not strong. But I guess I could try. Oh... that was a light big rock")
+  Expert flower crown maker. WILL make anyone they like a flower crown. Doesn't necessarily have to be made of flowers if flowers and unavailable ^[f != "Blind (disadvantage on perception checks)"]
+  Loves throwing eggs. Will egg someone's house. Would love to have an egg throwing war ^[f != "Blind (disadvantage on perception checks)"]
+  An absolute simp for any [race] ^[f != "Blind (disadvantage on perception checks)"]
+  Hears voices in their head, most of which are {chaotic pieces of shit|friendly and helpful|very dirty-minded|unnecessarily violent|frightening to them|punny|ridiculously flirty|very confused and asking questions}
+
+allergy
+  pollen
+  cats
+  dogs
+  horses
+  birds
+  insect bites and stings
+  mould
+  wheat
+  dust mites
+
+creature
+  dragons
+  tarrasques
+  griffons
+  flumphs
+  owlbears
+  beholders
+  krakens
+  aboleths
+  gelatinous cubes
+  dire wolves
+  giants
+  goblins ^[r != "goblin"]
+  kenkus ^[r != "kenku"]
+  tabaxi ^[r != "tabaxi"]
+  kobolds ^[r != "kobold"]
+  troglodytes
+  gnolls
+  lizardfolk ^[r != "lizardfolk"]
+  pixies
+  faerie dragons
+  myconids
+  ettercaps
+  behirs
+  dragon turtles
+  ogremochs
+  orcs ^[r != "orc"]
+  pit fiends
+  solars
+  mind flayers
+  
+opinion
+  terrifying. If they see one they will probably cry. Will go to unreasonable lengths to avoid them
+  frightening. Will try their best to avoid them
+  interesting. They'd love to learn more about them
+  cute. They just wish to squish the little cutie pies
+  attractive 😳
+  pathetic. No thanks. Keep them away from that
+  frustrating. They just don't make sense! Why are they like that?!
+  beautiful. Will always spend some time admiring them any time they see them and if they think they know a place they'll be they will feel a need to go there
+
+race
+  human ^80
+    languages = Common, [language]
+    senses =.
+    speed = 30 ft.
+    age = {1-80}
+    racetraits =.
+    proficiencies =.
+  eldarin elf ^3
+    languages = Common, Elvish
+    senses =, Darkvision 60 ft.
+    speed = 30 ft.
+    age = {1-750}
+    racetraits = <b><i>Darkvision.</i></b> Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.<br><br><b><i>Fey Ancestry.</i></b> You have advantage on saving throws against being charmed, and magic can’t put you to sleep.<br><br><b><i>Trance.</i></b> Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.<br><br><b><i>Fey Step.</i></b> You can cast the misty step spell once using this trait. You regain the ability to do so when you finish a short or long rest.
+    proficiencies = Perception skill, longsword, shortsword, shortbow, longbow
+  high elf ^15
+    languages = Common, Elvish, [language]
+    senses =, Darkvision 60 ft.
+    speed = 30 ft.
+    age = {1-750}
+    racetraits = <b><i>Darkvision.</i></b> Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.<br><br><b><i>Fey Ancestry.</i></b> You have advantage on saving throws against being charmed, and magic can’t put you to sleep.<br><br><b><i>Trance.</i></b> Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.<br><br><b><i>Cantrip.</i></b> You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.
+    proficiencies = Perception skill, longsword, shortsword, shortbow, longbow
+  wood elf ^20
+    languages = Common, Elvish
+    senses =, Darkvision 60 ft.
+    speed = 35 ft.
+    age = {1-750}
+    racetraits = <b><i>Darkvision.</i></b> Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.<br><br><b><i>Fey Ancestry.</i></b> You have advantage on saving throws against being charmed, and magic can’t put you to sleep.<br><br><b><i>Trance.</i></b> Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.<br><br><b><i>Mask of the Wild.</i></b> You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.
+    proficiencies = Perception skill, longsword, shortsword, shortbow, longbow
+  hill dwarf ^35
+    languages = Common, Dwarvish
+    senses =, Darkvision 60 ft.
+    speed = 25 ft.
+    age = {1-350}
+    racetraits = <b><i>Darkvision.</i></b> Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.<br><br><b><i>Dwarven Resilience.</i></b> You have advantage on saving throws against poison, and you have resistance against poison damage (explained in the “Combat” section).<br><br><b><i>Stonecunning.</i></b> Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.<br><br><b><i>Dwarven Toughness.</i></b> Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.
+    proficiencies = battleaxe, handaxe, light hammer, warhammer, {smith's tools|brewer's supplies|mason's tools}
+  mountain dwarf ^40
+    languages = Common, Dwarvish
+    senses =, Darkvision 60 ft
+    speed = 25 ft.
+    age = {1-350}
+    racetraits = <b><i>Darkvision.</i></b> Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.<br><br><b><i>Dwarven Resilience.</i></b> You have advantage on saving throws against poison, and you have resistance against poison damage (explained in the “Combat” section).<br><br><b><i>Stonecunning.</i></b> Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.
+    proficiencies = battleaxe, handaxe, light hammer, warhammer, light armor, medium armor, {smith's tools|brewer's supplies|mason's tools}
+  half-elf ^25
+    languages = Common, Elvish, [language]
+    senses =, Darkvision 60 ft.
+    speed = 30 ft.
+    age = {1-180}
+    racetraits = <i><b>Darkvision.</b></i> Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.<br><br><i><b>Fey Ancestry.</b></i> You have advantage on saving throws against being charmed, and magic can’t put you to sleep.
+    proficiencies =.
+  dragonborn ^5
+    languages = Common, Draconic
+    senses =.
+    speed = 30 ft.
+    age = {1-80}
+    racetraits = 
+    proficiencies = 
+  deep gnome ^2
+    languages = Common, Gnomish
+    senses =, Darkvision 120 ft.
+    speed = 25 ft.
+    age = {1-490}
+    racetraits = <b><i>Superior Darkvision.</i></b> Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.<br><br><b><i>Gnome Cunning.</i></b> You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.<br><br><b><i>Stone Camouflage.</b></i> You have advantage on Dexterity (Stealth) checks to hide in rocky terrain.
+    proficiencies =.
+  rock gnome ^25
+    languages = Common, Gnomish
+    senses =, Darkvision 60 ft.
+    speed = 25 ft.
+    age = {1-490}
+    racetraits = <i><b>Darkvision.</b></i> Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.<br><br><b><i>Gnome Cunning.</b></i> You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.<br><br><b><i>Artificer’s Lore.</b></i> Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply.<br><br><b><i>Tinker.</b></i> Using artisan's tools (tinker's tools), you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time.<br><br>When you create a device, choose one of the following options:<br><br><i>Clockwork Toy.</i> This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.<br><br><i>Fire Starter.</i> The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.<br><br><i>Music Box.</i>When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song’s end or when it is closed.
+    proficiencies = tinker’s tools
+  drow ^2
+    languages = Elvish, Undercommon
+    senses =, Darkvision 120 ft.
+    speed = 30 ft.
+    age = {1-750}
+    racetraits = <i><b>Fey Ancestry.</b></i> The drow has advantage on Saving Throws against being Charmed, and magic can't put the drow to sleep.<br><br><b><i>Innate Spellcasting.</b></i> The drow's Spellcasting Ability is Charisma. It can innately cast the following Spells, requiring no material components:<br>At will: Dancing Lights<br>1/day each: Darkness, Faerie Fire<br><br><b><i>Sunlight Sensitivity.</b></i> While in sunlight, the drow has disadvantage on Attack Rolls, as well as on Wisdom (Perception) checks that rely on sight.
+    proficiencies =
+  lightfoot halfling ^30
+    languages = Common, Halfling
+    senses =.
+    speed = 25 ft.
+    age = {1-150}
+    racetraits = <i><b>Lucky.</b></i> When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.<br><br><b><i>Brave.</b></i> You have advantage on saving throws against being frightened.<br><br><b><i>Halfling Nimbleness.</b></i> You can move through the space of any creature that is of a size larger than yours.<br><br><b><i>Naturally Stealthy.</b></i> You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you.
+    proficiencies =.
+  stout halfling ^25
+    languages = Common, Halfling
+    senses =.
+    speed = 25 ft.
+    age = {1-150}
+    racetraits = <i><b>Lucky.</b></i> When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.<br><br><b><i>Brave.</b></i> You have advantage on saving throws against being frightened.<br><br><b><i>Halfling Nimbleness.</b></i> You can move through the space of any creature that is of a size larger than yours.<br><br><b><i>Stout Resilience.</b></i> You have advantage on saving throws against poison, and you have resistance against poison damage.
+    proficiencies =.
+  half-orc ^10
+    languages = Common, Orc
+    senses =, Darkvision 60 ft.
+    speed = 30 ft.
+    age = {1-75}
+    racetraits = <i><b>Darkvision.</b></i> Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.<br><br><b><i>Relentless Endurance.</b></i> When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest.<br><br><b><i>Savage Attacks.</b></i> When you score a critical hit with a melee weapon attack, you can roll one of the weapon’s damage dice one additional time and add it to the extra damage of the critical hit.
+    proficiencies = Intimidation skill
+  tiefling ^10
+    languages = Common, Infernal
+    senses = , Darkvision 60 ft.
+    speed = 30 ft.
+    age = {1-82}
+    racetraits = <i><b>Darkvision.</b></i> Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.<br><br><b><i>Hellish Resistance.</b></i> You have resistance to fire damage.<br><br><b><i>Infernal Legacy</b></i> You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.
+    proficiencies =.
+  aarakocra ^5
+    languages = Common, Aarakocra, Auran
+    senses =.
+    speed = 25 ft., 50 ft. (flight)
+    age = {1-30}
+    racetraits = <i><b>Flight.</b></i> You have a flying speed of 50 feet. To use this speed, you can’t be wearing medium or heavy armor.<br><br><b><i>Talons.</b></i> Your talons are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
+    proficiencies =.
+  fire genasi ^5
+    languages = Common, Primordial
+    senses =, Darkvision 60 ft.
+    speed = 30 ft.
+    age = {1-120}
+    racetraits = <i><b>Darkvision.</b></i> You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. Your ties to the Elemental Plane of Fire make your darkvision unusual: everything you see in darkness is in a shade of red.<br><br><b><i>Fire Resistance.</b></i> You have resistance to fire damage.<br><br><b><i>Reach to the Blaze.</b></i> You know the produce flame cantrip. Once you reach 3rd level, you can cast the burning hands spell once with this trait as a 1st-level spell, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells.
+    proficiencies =.
+  water genasi ^5
+    languages = Common, Primordial
+    senses =.
+    speed = 30 ft., 30 ft. (swimming)
+    age = {1-120}
+    racetraits = <i><b>Acid Resistance.</b></i> You have resistance to acid damage.<br><br><b><i>Amphibious.</b></i> You can breathe air and water.<br><br><b><i>Call to the Wave.</b></i> You know the shape water cantrip. When you reach 3rd level, you can cast the create or destroy water spell as a 2nd-level spell once with this trait, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells.
+    proficiencies =.
+  earth genasi ^5
+    languages = Common, Primordial
+    senses =.
+    speed = 30 ft.
+    age = {1-120}
+    racetraits = <i><b>Earth Walk.</b></i> You can move across difficult terrain made of earth or stone without expending extra movement.<br><br><b><i>Merge with Stone.</b></i> You can cast the pass without trace spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell.
+    proficiencies =.
+  air genasi ^5
+    languages = Common, Primordial
+    senses =.
+    speed = 30 ft.
+    age = {1-120}
+    racetraits = <i><b>Unending Breath.</b></i> You can hold your breath indefinitely while you’re not incapacitated.<br><br><b><i>Mingle with the Wind.</b></i> You can cast the levitate spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell.
+    proficiencies =.
+  goliath ^5
+    languages = Common, Giant
+    senses =.
+    speed = 30 ft.
+    age = {1-90}
+    racetraits = <i><b>Stone’s Endurance.</b></i> You can focus yourself to occasionally shrug off injury. When you take damage, you can use your reaction to roll a d12. Add your Constitution modifier to the number rolled and reduce the damage by that total. After you use this trait, you can’t use it again until you finish a short or long rest.<br><br><b><i>Powerful Build.</b></i> You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.<br><br><b><i>Mountain Born.</b></i> You have resistance to cold damage. You’re also acclimated to high altitude, including elevations above 20,000 feet.
+    proficiencies = Athletics skill
+  aasimar ^5
+    languages = Common, Celestial
+    senses =, Darkvision 60 ft.
+    speed = 30 ft.
+    age = {1-160}
+    racetraits = <i><b>Darkvision.</b></i> Blessed with a radiant soul, your vision can easily cut through darkness. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.<br><br><b><i>Celestial Resistance.</b></i> You have resistance to necrotic damage and radiant damage.<br><br><b><i>Healing Hands.</b></i> As an action, you can touch a creature and cause it to regain a number of hit points equal to your level. Once you use this trait, you can't use it again until you finish a long rest.<br><br><b><i>Light Bearer.</b></i> You know the Light cantrip. Charisma is your spellcasting ability for it.
+    proficiencies =.
+  bugbear ^6
+    languages = Common, Goblin
+    senses =, Darkvision 60 ft.
+    speed = 30 ft.
+    age = {1-80}
+    racetraits = <i><b>Darkvision.</b></i> You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.<br><br><i><b>Brute.</b></i> A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).<br><br><b><i>Surprise Attack.</b></i> If the bugbear surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage from the attack.
+    proficiencies = Stealth skill
+    hp = 27 (5d8+5)
+  firbolg ^5
+    languages = Common, Elvish, Giant
+    senses =.
+    speed = 30 ft.
+    age = {1-500}
+    racetraits = <i><b>Firbolg Magic.</b></i> You can cast Detect Magic and Disguise Self with this trait, using Wisdom as your spellcasting ability for them. Once you cast either spell, you can't cast it again with this trait until you finish a short or long rest. When you use this version of disguise self, you can seem up to 3 feet shorter than normal, allowing you to more easily blend in with humans and elves.<br><br><i><b>Hidden Step.</b></i> As a bonus action, you can magically turn invisible until the start of your next turn or until you attack, make a damage roll, or force someone to make a saving throw. Once you use this trait, you can't use it again until you finish a short or long rest.<br><br><i><b>Powerful Build.</b></i> You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.<br><br><i><b>Speech of Beast and Leaf.</b></i> You have the ability to communicate in a limited manner with beasts and plants. They can understand the meaning of your words, though you have no special ability to understand them in return. You have advantage on all Charisma checks you make to influence them.
+    proficiencies =.
+    hp = 39 (6d8+12)
+  goblin ^10
+    languages = Common, Goblin
+    senses =, Darkvision 60 ft.
+    speed = 30 ft.
+    age = {1-60}
+    racetraits = <i><b>Darkvision.</b></i> You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.<br><br><i><b>Fury of the Small.</b></i> When you damage a creature with an attack or a spell and the creature's size is larger than yours, you can cause the attack or spell to deal extra damage to the creature. The extra damage equals your level. Once you use this trait, you can't use it again until you finish a short or long rest.<br><br><i><b>Nimble Escape.</b></i> The goblin can take the Disengage or Hide action as a bonus action on each of its turns.
+    proficiencies =.
+    hp = 7 (2d6)
+    ac = 15 (Leather Armor, Shield)
+  hobgoblin ^6
+    languages = Common, Goblin
+    senses =, Darkvision 60 ft.
+    speed = 30 ft.
+    age = {1-80}
+    racetraits = <i><b>Darkvision.</b></i> You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.<br><br><i><b>Martial Advantage.</b></i> Once per turn, the hobgoblin can deal an extra 7 (2d6) damage to a creature it hits with a weapon attack if that creature is within 5 feet of an ally of the hobgoblin that isn't incapacitated.
+    proficiencies =.
+    hp = 11 (2d8 + 2)
+    ac = 18 (Chain Mail, Shield)
+  kenku ^5
+    languages = Common (read and write), Auran (read and write)
+    senses =.
+    speed = 30 ft.
+    age = {1-60}
+    racetraits = <i><b>Expert Forgery.</b></i> You can duplicate other creatures' handwriting and craftwork. You have advantage on all checks made to produce forgeries or duplicates of existing objects.<br><br><i><b>Mimicry.</b></i> You can mimic sounds you have heard, including voices. A creature that hears the sounds you make can tell they are imitations with a successful Wisdom (Insight) check opposed by your Charisma (Deception) check.
+    proficiencies = {Acrobatics skill, Deception skill|Acrobatics skill, Stealth skill|Acrobatics skill, Sleight of Hand skill|Deception skill, Stealth skill|Deception skill, Sleight of Hand skill|Sleight of Hand skill, Stealth skill}
+    hp = 13 (3d8)
+    ac = 13
+  kobold ^5
+    languages = 
+    senses =
+    speed = ft.
+    age = {1-}
+    racetraits = 
+    proficiencies =
+    hp =
+  lizardfolk ^5
+    languages = 
+    senses =
+    speed = ft.
+    age = {1-}
+    racetraits = 
+    proficiencies =
+    hp =
+  orc ^10
+    languages = 
+    senses =
+    speed = ft.
+    age = {1-}
+    racetraits = 
+    proficiencies =
+    hp =
+  tabaxi ^5
+    languages = 
+    senses =
+    speed = ft.
+    age = {1-}
+    racetraits = 
+    proficiencies =
+    hp =
+  triton ^5
+    languages = 
+    senses =
+    speed = ft.
+    age = {1-}
+    racetraits = 
+    proficiencies =
+    hp =
+  yuan-ti pureblood ^5
+    languages = 
+    senses =
+    speed = ft.
+    age = {1-}
+    racetraits = 
+    proficiencies =
+    hp =
+  changeling ^5
+    languages = 
+    senses =
+    speed = ft.
+    age = {1-}
+    racetraits = 
+    proficiencies =
+    hp =
+  shifter ^5
+    languages = 
+    senses =
+    speed = ft.
+    age = {1-}
+    racetraits = 
+    proficiencies =
+    hp =
+  warforged ^5
+    languages = 
+    senses =
+    speed = ft.
+    age = {1-}
+    racetraits = 
+    proficiencies =
+    hp =
+  kalashtar ^5
+    languages = 
+    senses =
+    speed = ft.
+    age = {1-}
+    racetraits = 
+    proficiencies =
+    hp =
+
+language
+  Common ^60
+  Dwarvish ^20
+  Elvish ^20
+  Giant ^12
+  Gnomish ^18
+  Goblin ^10
+  Halfling ^20
+  Orc ^10
+  Abyssal ^0.5
+  Celestial ^0.5
+  Draconic ^0.5
+  Deep Speech ^0.5
+  Infernal ^0.7
+  Primordial ^0.5
+  Sylvan ^0.5
+  Undercommon ^0.5
+
+occupation
+  shopkeeper
+  serf
+  servant
+  slave
+  prisoner
+  pilgrim
+  hermit
+  farmer
+  royalty
+  noble
+  wizard
+    abjurer
+  assassin
+
+village_start
+  Weald
+  Roch
+  Sher
+  South
+  Miller
+  Wool
+  Dark
+  Ash
+  Ponty
+  Wood
+  Mir
+  Huth
+  Sky
+  Pit
+
+village_end
+  stone
+  dale
+  field
+  Ville
+  hope
+  well
+  wold
+  borne
+  cester
+  pridd
+  shire
+  waite
+  medden
+
+town_start
+  Perth
+  Caer
+  Carden
+  East
+  Archen
+  Az
+  Ori
+
+town_end
+  ton
+  lochry
+  ford
+  foss
+  sheen
+  mar
+  lon
+  stead
+
+city_start
+  Luna
+  Sar
+
+city_end
+  ris
+  
+
+villageplace
+  down by the river
+  in the nearby forest
+  in a nearby field
+  at the local bakery
+  at the local blacksmith
+  in the stables
+  under a large tree on the outskirts of the village
+
+townplace
+  in a beautiful flower garden
+  
+backstorybeginning
+  [femalebackstorybeginning] ^[g != "male" && g != "nonbinary"]
+  [malebackstorybeginning] ^[g != "female" && g != "nonbinary"]
+  [unisexbackstorybeginning] ^[g != "female" && g != "male"]
+
+n_equals
+  [n = female_name.selectOne] ^[g != "female"]
+  [n = male_name.selectOne] ^[g != "male"]
+  [n = unisex_name.selectOne] ^[g != "unisex"]
+  [fulln = tabaxi_name.selectOne] ^[r == "tabaxi"]
+
+femalebackstorybeginning
+  <b>Poor Village.</b> [n_equals] [backstorybeginnings.female.poorvillage] ^[r != "tabaxi"]
+  <b>Poor Village.</b> [n_equals] ([n = fulln.selectOne]) [backstorybeginnings.unisex.poorvillage] ^[r == "tabaxi"]
+  <b>Trans Orphan.</b> [n_equals] [backstorybeginnings.female.transorphan] ^[r != "tabaxi"]
+  <b>Trans Orphan.</b> [n_equals] ([n = fulln.selectOne]) [backstorybeginnings.unisex.transorphan]  ^[r == "tabaxi"]
+
+malebackstorybeginning
+  <b>Poor Village.</b> [n_equals] [backstorybeginnings.male.poorvillage] ^[r != "tabaxi"]
+  <b>Poor Village.</b> [n_equals] ([n = fulln.selectOne]) [backstorybeginnings.unisex.poorvillage] ^[r == "tabaxi"]
+  <b>Trans Orphan.</b> [n_equals] [backstorybeginnings.male.transorphan] ^[r != "tabaxi"]
+  <b>Trans Orphan.</b> [n_equals] ([n = fulln.selectOne]) [backstorybeginnings.unisex.transorphan]  ^[r == "tabaxi"]
+
+unisexbackstorybeginning
+  <b>Poor Village.</b> [n_equals] [backstorybeginnings.unisex.poorvillage] ^[r != "tabaxi"]
+  <b>Poor Village.</b> [n_equals] ([n = fulln.selectOne]) [backstorybeginnings.unisex.poorvillage] ^[r == "tabaxi"]
+  <b>Trans Orphan.</b> [n_equals] [backstorybeginnings.unisex.transorphan] ^[r != "tabaxi"]
+  <b>Trans Orphan.</b> [n_equals] ([n = fulln.selectOne]) [backstorybeginnings.unisex.transorphan]  ^[r == "tabaxi"]
+
+backstorybeginnings
+  female
+    poorvillage
+      grew up in the small village of [v = village_start.selectOne + village_end.selectOne]. [v] was a rather poor place, but it was home, and it had good people. One of those good people was [n]'s [bond = "best friend"], [bffn = female_name.selectOne] [bfln = last_name.selectOne]. [bffn] was always rather shy, and so [n] learned to be more sociable to counter this. They would often spent time [villageplace] together.
+    transorphan
+      grew up with the world's gender roles forced upon her. The orphanage she grew up in told her to be boyish and to never play with dolls or wear dresses. This ended up pushing her into a very bad mental space in her teen years, but after reconnecting with her biological [bond = "mother"] everything seemed to get better. She allowed her to be who she was on the inside. The past is not forgotten, however. The words of the orphan caregivers still haunt [n] to this day.
+    forestdweller
+      had imaginary friends.
+  male
+    poorvillage
+      grew up in the small village of [v = village_start.selectOne + village_end.selectOne]. [v] was a rather poor place, but it was home, and it had good people. One of those good people was [n]'s [bond = "best friend"], [bffn = male_name.selectOne] [bfln = last_name.selectOne]. [bffn] was always rather shy, and so [n] learned to be more sociable to counter this. They would often spent time [villageplace] together.
+    transorphan
+      grew up with the world's gender roles forced upon him. The orphanage he grew up in told him to play with dolls and to dress in frilly dresses. He was not allowed to be "unlady-like". This ended up pushing him into a very bad mental space in his teen years, but after reconnecting with his biological [bond = "mother"] everything seemed to get better. She allowed him to be who he was on the inside. The past is not forgotten, however. The words of the orphan caregivers still haunt [n] to this day.
+  unisex
+    poorvillage
+      grew up in the small village of [v = village_start.selectOne + village_end.selectOne]. [v] was a rather poor place, but it was home, and it had good people. One of those good people was [n]'s [bond = "best friend"], [bffn = male_name.selectOne] [bfln = last_name.selectOne]. [bffn] was always rather shy, and so [n] learned to be more sociable to counter this. They would often spent time [villageplace] together.
+    transorphan
+      grew up with the world's gender roles forced upon them. The orphanage they grew up in told them to act like the gender they were assigned with at birth. This ended up pushing them into a very bad mental space in their teen years, but after reconnecting with their biological [bond = "mother"] everything seemed to get better. She allowed them to be who they were on the inside. The past is not forgotten, however. The words of the orphan caregivers still haunt [n] to this day.
+
+  
+//^[o != "baker" && o != "wizard" && o != "royalty" && o != "miner" && o != "farmer"]
+
+backstoryoccupation
+  shit ^[if (o == "royalty") {1} else {0}]
+  not yet done shh ^[if (o == "royalty") {0} else {1}]
+  
